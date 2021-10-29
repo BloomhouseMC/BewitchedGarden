@@ -82,6 +82,11 @@ repositories {
 		name = "jitpack"
 		url = "https://jitpack.io"
 	}
+	//GECKOLIB
+	maven {
+		name = 'GeckoLib'
+		url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+	}
 }
 
 dependencies {
@@ -118,6 +123,9 @@ dependencies {
 
 
 	modImplementation "curse.maven:bewitchment-394915:${project.bewitchment_version}"
+
+	//Geckolib
+	modImplementation "software.bernie.geckolib:geckolib-fabric-${gecko_version}"
 }
 
 processResources {
