@@ -1,7 +1,12 @@
 package dev.mrsterner.witcheskitchen.common.registry;
 
 import dev.mrsterner.witcheskitchen.WitchesKitchen;
+import dev.mrsterner.witcheskitchen.common.blocks.SausageBlock;
+import dev.mrsterner.witcheskitchen.common.blocks.blockentity.SausageBlockEntity;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
@@ -18,6 +23,15 @@ public class WKObjects {
     private static final Map<BlockEntityType<?>, Identifier> BLOCK_ENTITY_TYPES = new LinkedHashMap<>();
 
 
+    //Blocks
+    public static final Block SAUSAGE = register("sausage", new SausageBlock(FabricBlockSettings.copyOf(Blocks.STONE)), true);
+
+    //Block Entities
+    public static final BlockEntityType<SausageBlockEntity> SAUSAGE_BLOCK_ENTITY = register("sausage_block_entity", FabricBlockEntityTypeBuilder.create(SausageBlockEntity::new, SAUSAGE).build(null));
+
+
+
+
 
     private static <T extends BlockEntity> BlockEntityType<T> register(String id, BlockEntityType<T> type) {
         BLOCK_ENTITY_TYPES.put(type, new Identifier(WitchesKitchen.MODID, id));
@@ -31,7 +45,6 @@ public class WKObjects {
         }
         return block;
     }
-
 
 
     private static <T extends Item> T register(String name, T item) {

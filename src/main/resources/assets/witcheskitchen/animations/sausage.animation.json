@@ -1,0 +1,54 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sausage.one": {
+			"loop": true,
+			"bones": {
+				"hook2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"hook3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"hook4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.sausage.two": {
+			"loop": true,
+			"bones": {
+				"hook3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"hook4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.sausage.three": {
+			"loop": true,
+			"bones": {
+				"hook4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.sausage.four": {
+			"loop": true
+		}
+	},
+	"geckolib_format_version": 2
+}
