@@ -1,5 +1,7 @@
 package dev.mrsterner.witcheskitchen;
 
+import dev.mrsterner.witcheskitchen.common.registry.WKEntities;
+import dev.mrsterner.witcheskitchen.common.registry.WKObjects;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -15,6 +17,7 @@ public class WitchesKitchen implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		WKObjects.init();
+		WKEntities.init();
 	}
 }
