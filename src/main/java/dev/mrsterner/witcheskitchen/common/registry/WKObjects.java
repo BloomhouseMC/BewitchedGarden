@@ -42,7 +42,10 @@ public class WKObjects {
     // Items
     public static final Item LUNARIAN_SEEDS = register("lunarian_seeds", new AliasedBlockItem(LUNARIAN, gen()));
     public static final Item LUNAR_PETAL = register("lunar_petal", new Item(gen()));
+
+    // Oils
     public static final Item MOONLIGHT_INFUSION = register("moonlight_infusion", new Item(gen().recipeRemainder(Items.GLASS_BOTTLE)));
+    public static final Item ENDER_VIAL = register("ender_vial", new Item(gen().recipeRemainder(Items.GLASS_BOTTLE)));
 
 
     private static <T extends BlockEntity> BlockEntityType<T> register(String id, BlockEntityType<T> type) {

@@ -4,6 +4,7 @@
   "package": "dev.mrsterner.witcheskitchen.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "ItemEntityMixin"
   ],
   "client": [
     "ExampleMixin"

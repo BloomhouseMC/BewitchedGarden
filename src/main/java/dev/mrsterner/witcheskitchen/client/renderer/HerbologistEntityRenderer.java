@@ -1,4 +1,4 @@
-package dev.mrsterner.witcheskitchen.client.render;
+package dev.mrsterner.witcheskitchen.client.renderer;
 
 import dev.mrsterner.witcheskitchen.WitchesKitchen;
 import dev.mrsterner.witcheskitchen.common.entity.HerbologistEntity;
