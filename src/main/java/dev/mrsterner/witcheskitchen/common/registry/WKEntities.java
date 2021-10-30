@@ -2,6 +2,7 @@ package dev.mrsterner.witcheskitchen.common.registry;
 
 import dev.mrsterner.witcheskitchen.WitchesKitchen;
 import dev.mrsterner.witcheskitchen.common.entity.HerbologistEntity;
+import dev.mrsterner.witcheskitchen.common.entity.VenusEntity;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -21,6 +22,7 @@ public class WKEntities {
     public static final Map<EntityType<?>, Identifier> ENTITY_TYPES = new LinkedHashMap<>();
 
     public static final EntityType<HerbologistEntity> HERBOLOGIST = create("herbologist", FabricEntityTypeBuilder.<HerbologistEntity>create(SpawnGroup.CREATURE, HerbologistEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.95F)).trackRangeBlocks(10).build());
+    public static final EntityType<VenusEntity> VENUS_ENTITY = create("venus", FabricEntityTypeBuilder.<VenusEntity>create(SpawnGroup.CREATURE, VenusEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.95F)).build());
 
     private static <T extends Entity> EntityType<T> create(String name, EntityType<T> type) {
         ENTITY_TYPES.put(type, new Identifier(WitchesKitchen.MODID, name));
@@ -35,5 +37,6 @@ public class WKEntities {
         ENTITY_TYPES.keySet().forEach(entityType -> Registry.register(Registry.ENTITY_TYPE, ENTITY_TYPES.get(entityType), entityType));
 
         FabricDefaultAttributeRegistry.register(HERBOLOGIST, HerbologistEntity.createHerbologistAttributes());
+        FabricDefaultAttributeRegistry.register(VENUS_ENTITY, VenusEntity.createAttributes());
     }
 }
