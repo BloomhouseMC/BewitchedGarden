@@ -6,10 +6,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class WitchesKitchen implements ModInitializer {
 	public static final String MODID = "witcheskitchen";
@@ -19,5 +16,6 @@ public class WitchesKitchen implements ModInitializer {
 	public void onInitialize() {
 		WKObjects.init();
 		WKEntities.init();
+
 	}
 }

@@ -63,7 +63,7 @@ public class SausageBlock extends Block implements BlockEntityProvider {
 
     @Override
     public boolean canReplace(BlockState state, ItemPlacementContext context) {
-        if(context.getStack().getItem() == (WKObjects.SAUSAGE.asItem())){
+        if(context.getStack().getItem() == (WKObjects.SAUSAGE_ITEM.asItem())){
             return (Integer) state.get(SAUSAGES) < 4;
         }
         return super.canReplace(state, context);
@@ -82,7 +82,7 @@ public class SausageBlock extends Block implements BlockEntityProvider {
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         super.onBreak(world, pos, state, player);
         for(int i = state.get(SAUSAGES); i > 0;i--){
-            dropStack(world, pos, new ItemStack(WKObjects.SAUSAGE));
+            dropStack(world, pos, new ItemStack(WKObjects.SAUSAGE_ITEM));
         }
     }
 }
