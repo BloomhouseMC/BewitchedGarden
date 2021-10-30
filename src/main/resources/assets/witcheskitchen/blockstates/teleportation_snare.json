@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "closed=false": {
+      "model": "witcheskitchen:block/teleportation_snare"
+    },
+    "closed=true": {
+      "model": "witcheskitchen:block/teleportation_snare_closed"
+    }
+  }
+}

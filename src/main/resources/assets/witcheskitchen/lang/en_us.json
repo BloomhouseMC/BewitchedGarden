@@ -1,10 +1,21 @@
 {
   "itemGroup.witcheskitchen.witcheskitchen": "Witches Kitchen",
+
   "item.witcheskitchen.venus_poison": "Venus Poison",
   "item.witcheskitchen.jupiter_bulb": "Jupiter Bulb",
   "item.witcheskitchen.saturn_stem": "Saturn Stem",
   "block.witcheskitchen.sausage": "Sausage",
   "entity.witcheskitchen.venus": "Venus Flytrap",
   "entity.witcheskitchen.jupiter": "Jupiter Lightjack",
-  "entity.witcheskitchen.satrun": "Saturn Smellsack"
+  "entity.witcheskitchen.satrun": "Saturn Smellsack",
+  
+  "block.witcheskitchen.lunarian": "Lunarian",
+  "block.witcheskitchen.teleportation_snare": "Teleportation Snare",
+  "item.witcheskitchen.lunarian_seeds": "Lunarian Seeds",
+  "item.witcheskitchen.lunar_petal": "Lunar Petal",
+  "item.witcheskitchen.moonlight_infusion": "Moonlight Infusion",
+  "item.witcheskitchen.ender_vial": "Ender Vial",
+
+  "entity.witcheskitchen.herbologist": "Herbologist"
 }
+
