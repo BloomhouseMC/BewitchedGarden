@@ -3,6 +3,7 @@ package dev.mrsterner.witcheskitchen.common.registry;
 import dev.mrsterner.witcheskitchen.WitchesKitchen;
 import dev.mrsterner.witcheskitchen.common.blocks.LunarianCropBlock;
 import dev.mrsterner.witcheskitchen.common.blocks.SausageBlock;
+import dev.mrsterner.witcheskitchen.common.blocks.TeleportationSnareBlock;
 import dev.mrsterner.witcheskitchen.common.blocks.blockentity.SausageBlockEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
@@ -31,8 +32,9 @@ public class WKObjects {
     //Blocks
     public static final Block SAUSAGE = register("sausage", new SausageBlock(FabricBlockSettings.copyOf(Blocks.STONE)), true);
 
-    // Crops
+    // Crops/Plants
     public static final Block LUNARIAN = register("lunarian", new LunarianCropBlock(FabricBlockSettings.of(Material.PLANT).breakInstantly().ticksRandomly().noCollision().sounds(BlockSoundGroup.CROP)), false);
+    public static final Block TELEPORTATION_SNARE = register("teleportation_snare", new TeleportationSnareBlock(FabricBlockSettings.of(Material.PLANT).noCollision().strength(0.3F).sounds(BlockSoundGroup.BAMBOO)), true);
 
     //Block Entities
     public static final BlockEntityType<SausageBlockEntity> SAUSAGE_BLOCK_ENTITY = register("sausage_block_entity", FabricBlockEntityTypeBuilder.create(SausageBlockEntity::new, SAUSAGE).build(null));

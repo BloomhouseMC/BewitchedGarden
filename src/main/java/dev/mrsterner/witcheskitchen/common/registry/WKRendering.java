@@ -10,5 +10,6 @@ public class WKRendering {
         EntityRendererRegistry.INSTANCE.register(WKEntities.HERBOLOGIST, HerbologistEntityRenderer::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(WKObjects.LUNARIAN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(WKObjects.TELEPORTATION_SNARE, RenderLayer.getCutout());
     }
 }
