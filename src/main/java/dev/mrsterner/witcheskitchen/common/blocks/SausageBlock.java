@@ -4,13 +4,11 @@ import dev.mrsterner.witcheskitchen.WitchesKitchen;
 import dev.mrsterner.witcheskitchen.common.WKUtils;
 import dev.mrsterner.witcheskitchen.common.blocks.blockentity.SausageBlockEntity;
 import dev.mrsterner.witcheskitchen.common.registry.WKObjects;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockEntityProvider;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
@@ -18,7 +16,11 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 
 public class SausageBlock extends Block implements BlockEntityProvider {
@@ -26,6 +28,14 @@ public class SausageBlock extends Block implements BlockEntityProvider {
     public SausageBlock(Settings settings) {
         super(settings.nonOpaque().breakInstantly());
         setDefaultState(getStateManager().getDefaultState().with(SAUSAGES, 1));
+    }
+    private static final VoxelShape SHAPE =
+    VoxelShapes.union(
+    createCuboidShape(2, 0, 2, 14, 16, 14));
+
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return SHAPE;
     }
 
     @Override
@@ -42,28 +52,30 @@ public class SausageBlock extends Block implements BlockEntityProvider {
     @Override
     public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
         state.with(SAUSAGES, 1);
-        //placer.getStackInHand(placer.getActiveHand()).split(1);
         super.onPlaced(world, pos, state, placer, itemStack);
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if(state.get(SAUSAGES) < 4 && player.getStackInHand(hand).getItem() == WKObjects.SAUSAGE.asItem()){
-            //state.with(SAUSAGES, state.get(SAUSAGES)+1);
-            world.setBlockState(pos, state.with(SAUSAGES, state.get(SAUSAGES)+1));
-            player.getStackInHand(hand).split(1);
-            System.out.println("if"+state.get(SAUSAGES));
-            return ActionResult.SUCCESS;
-        }else if(state.get(SAUSAGES) < 4 && state.get(SAUSAGES) > 1 && player.getStackInHand(hand).isEmpty()){
-            world.setBlockState(pos, state.with(SAUSAGES, state.get(SAUSAGES) - 1));
-            WKUtils.addItemToInventoryAndConsume(player,hand,new ItemStack(WKObjects.SAUSAGE));
-            System.out.println("elseif"+state.get(SAUSAGES));
-        }else{
-            world.setBlockState(pos, Blocks.AIR.getDefaultState());
-            WKUtils.addItemToInventoryAndConsume(player,hand,new ItemStack(WKObjects.SAUSAGE));
-            System.out.println("else"+state.get(SAUSAGES));
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        BlockState blockState = world.getBlockState(pos.up());
+        return !blockState.isOf(Blocks.AIR);
+    }
+
+    @Override
+    public boolean canReplace(BlockState state, ItemPlacementContext context) {
+        if(context.getStack().getItem() == (WKObjects.SAUSAGE.asItem())){
+            return (Integer) state.get(SAUSAGES) < 4;
         }
-        return ActionResult.PASS;
+        return super.canReplace(state, context);
+
+    }
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        BlockState blockState = ctx.getWorld().getBlockState(ctx.getBlockPos());
+        if (blockState.isOf(this)) {
+            return (BlockState)blockState.with(SAUSAGES, Math.min(4, (Integer)blockState.get(SAUSAGES) + 1));
+        }
+        return (BlockState)super.getPlacementState(ctx);
     }
 
     @Override
