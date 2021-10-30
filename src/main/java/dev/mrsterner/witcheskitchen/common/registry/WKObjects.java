@@ -22,6 +22,10 @@ public class WKObjects {
     public static final Map<Item, Identifier> ITEMS = new LinkedHashMap<>();
     private static final Map<BlockEntityType<?>, Identifier> BLOCK_ENTITY_TYPES = new LinkedHashMap<>();
 
+    //Items
+    public static final Item VENUS_POISON = register("venus_poison", new Item(gen()));
+    public static final Item JUPITER_BULB = register("jupiter_bulb", new Item(gen()));
+    public static final Item SATURN_STEM = register("saturn_stem", new Item(gen()));
 
     //Blocks
     public static final Block SAUSAGE = register("sausage", new SausageBlock(FabricBlockSettings.copyOf(Blocks.STONE)), true);
