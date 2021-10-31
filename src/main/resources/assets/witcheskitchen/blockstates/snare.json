@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "closed=false": {
+      "model": "witcheskitchen:block/snare"
+    },
+    "closed=true": {
+      "model": "witcheskitchen:block/snare_closed"
+    }
+  }
+}

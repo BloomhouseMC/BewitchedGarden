@@ -3,6 +3,8 @@ package dev.mrsterner.witcheskitchen.common.registry;
 import dev.mrsterner.witcheskitchen.WitchesKitchen;
 import dev.mrsterner.witcheskitchen.common.blocks.*;
 import dev.mrsterner.witcheskitchen.common.blocks.blockentity.SausageBlockEntity;
+import dev.mrsterner.witcheskitchen.common.blocks.snares.SnareBlock;
+import dev.mrsterner.witcheskitchen.common.blocks.snares.TeleportationSnareBlock;
 import dev.mrsterner.witcheskitchen.common.items.SausageItem;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
@@ -31,8 +33,10 @@ public class WKObjects {
 
     // Crops/Plants
     public static final Block LUNARIAN = register("lunarian", new LunarianCropBlock(FabricBlockSettings.of(Material.PLANT).breakInstantly().ticksRandomly().noCollision().sounds(BlockSoundGroup.CROP)), false);
-    public static final Block TELEPORTATION_SNARE = register("teleportation_snare", new TeleportationSnareBlock(FabricBlockSettings.of(Material.PLANT).noCollision().strength(0.3F).sounds(BlockSoundGroup.BAMBOO)), true);
     public static final Block MINT = register("mint", new HerbPlantBlock(FabricBlockSettings.of(Material.PLANT).breakInstantly().noCollision().sounds(BlockSoundGroup.GRASS)), true);
+        // Snares
+        public static final Block SNARE = register("snare", new SnareBlock(FabricBlockSettings.of(Material.PLANT).noCollision().strength(0.3F).sounds(BlockSoundGroup.BAMBOO)), true);
+        public static final Block TELEPORTATION_SNARE = register("teleportation_snare", new TeleportationSnareBlock(FabricBlockSettings.of(Material.PLANT).noCollision().strength(0.3F).sounds(BlockSoundGroup.BAMBOO)), true);
 
     //Items
     public static final Item VENUS_POISON = register("venus_poison", new Item(gen()));
