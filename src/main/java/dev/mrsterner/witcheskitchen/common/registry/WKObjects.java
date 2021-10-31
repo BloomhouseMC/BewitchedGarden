@@ -1,9 +1,7 @@
 package dev.mrsterner.witcheskitchen.common.registry;
 
 import dev.mrsterner.witcheskitchen.WitchesKitchen;
-import dev.mrsterner.witcheskitchen.common.blocks.LunarianCropBlock;
-import dev.mrsterner.witcheskitchen.common.blocks.SausageBlock;
-import dev.mrsterner.witcheskitchen.common.blocks.TeleportationSnareBlock;
+import dev.mrsterner.witcheskitchen.common.blocks.*;
 import dev.mrsterner.witcheskitchen.common.blocks.blockentity.SausageBlockEntity;
 import dev.mrsterner.witcheskitchen.common.items.SausageItem;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -41,6 +39,9 @@ public class WKObjects {
 
     //Blocks
     public static final Block SAUSAGE = register("sausage", new SausageBlock(FabricBlockSettings.copyOf(Blocks.STONE)), false);
+    public static final Block CORRUPTED_GRASS = register("corrupted_grass", new CorruptedGrass(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK)), true);
+    public static final Block CORRUPTED_DIRT = register("corrupted_dirt", new CorruptedDirt(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK)), true);
+
 
     // Crops/Plants
     public static final Block LUNARIAN = register("lunarian", new LunarianCropBlock(FabricBlockSettings.of(Material.PLANT).breakInstantly().ticksRandomly().noCollision().sounds(BlockSoundGroup.CROP)), false);
