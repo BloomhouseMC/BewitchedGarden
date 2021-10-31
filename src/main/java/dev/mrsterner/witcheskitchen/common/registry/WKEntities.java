@@ -40,9 +40,13 @@ public class WKEntities {
         ENTITY_TYPES.keySet().forEach(entityType -> Registry.register(Registry.ENTITY_TYPE, ENTITY_TYPES.get(entityType), entityType));
 
         FabricDefaultAttributeRegistry.register(HERBOLOGIST, HerbologistEntity.createHerbologistAttributes());
-
+        FabricDefaultAttributeRegistry.register(VENUS_ENTITY, BasePlantEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(JUPITER_ENTITY, BasePlantEntity.createAttributes());
+        /*
         for(EntityType entityType : WKEntities.ENTITY_TYPES.keySet()){
             FabricDefaultAttributeRegistry.register(entityType, BasePlantEntity.createAttributes());
          }
+
+         */
     }
 }
