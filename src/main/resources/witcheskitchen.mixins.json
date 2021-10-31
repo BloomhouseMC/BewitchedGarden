@@ -4,10 +4,11 @@
   "package": "dev.mrsterner.witcheskitchen.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "ItemEntityMixin"
+    "ItemEntityMixin",
+    "DefaultBiomeFeaturesMixin"
   ],
   "client": [
-    "ExampleMixin"
+
   ],
   "injectors": {
     "defaultRequire": 1

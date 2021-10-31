@@ -1,4 +1,4 @@
-package dev.mrsterner.witcheskitchen.common;
+package dev.mrsterner.witcheskitchen.common.util;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;

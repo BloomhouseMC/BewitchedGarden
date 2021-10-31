@@ -11,5 +11,6 @@ public class WKRendering {
 
         BlockRenderLayerMap.INSTANCE.putBlock(WKObjects.LUNARIAN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(WKObjects.TELEPORTATION_SNARE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(WKObjects.MINT, RenderLayer.getCutout());
     }
 }

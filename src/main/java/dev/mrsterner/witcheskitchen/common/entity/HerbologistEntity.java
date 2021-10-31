@@ -1,5 +1,6 @@
 package dev.mrsterner.witcheskitchen.common.entity;
 
+import dev.mrsterner.witcheskitchen.common.registry.WKObjects;
 import dev.mrsterner.witcheskitchen.common.util.HerbologistTrades;
 import moriyashiine.bewitchment.common.registry.BWObjects;
 import net.minecraft.entity.EntityType;
@@ -57,7 +58,7 @@ public class HerbologistEntity extends MerchantEntity {
         if (this.random.nextFloat() <= 0.3F) {
             return new ItemStack(BWObjects.BELLADONNA);
         } else if (this.random.nextFloat() <= 0.3F) {
-            return new ItemStack(BWObjects.GARLIC);
+            return new ItemStack(WKObjects.LUNAR_PETAL);
         }
         return new ItemStack(BWObjects.MANDRAKE_ROOT);
     }
