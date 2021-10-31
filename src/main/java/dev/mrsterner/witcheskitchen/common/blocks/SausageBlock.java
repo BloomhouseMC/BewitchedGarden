@@ -1,7 +1,5 @@
 package dev.mrsterner.witcheskitchen.common.blocks;
 
-import dev.mrsterner.witcheskitchen.WitchesKitchen;
-import dev.mrsterner.witcheskitchen.common.WKUtils;
 import dev.mrsterner.witcheskitchen.common.blocks.blockentity.SausageBlockEntity;
 import dev.mrsterner.witcheskitchen.common.registry.WKObjects;
 import net.minecraft.block.*;
@@ -12,9 +10,6 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;

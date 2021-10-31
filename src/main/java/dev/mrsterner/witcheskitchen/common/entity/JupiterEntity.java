@@ -4,6 +4,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.passive.SnowGolemEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -11,7 +12,7 @@ import net.minecraft.world.World;
 import software.bernie.geckolib3.core.IAnimatable;
 
 public class JupiterEntity extends BasePlantEntity implements IAnimatable {
-    public JupiterEntity(EntityType<? extends MobEntity> entityType, World world) {
+    public JupiterEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
 
