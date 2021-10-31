@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "snowy=false": [
+      {
+        "model": "witcheskitchen:block/corrupted_dirt"
+      },
+      {
+        "model": "witcheskitchen:block/corrupted_dirt",
+        "y": 90
+      },
+      {
+        "model": "witcheskitchen:block/corrupted_dirt",
+        "y": 180
+      },
+      {
+        "model": "witcheskitchen:block/corrupted_dirt",
+        "y": 270
+      }
+    ],
+    "snowy=true": {
+      "model": "witcheskitchen:block/corrupted_dirt"
+    }
+  }
+}
