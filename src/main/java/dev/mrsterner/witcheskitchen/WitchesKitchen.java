@@ -1,6 +1,7 @@
 package dev.mrsterner.witcheskitchen;
 
 import dev.mrsterner.witcheskitchen.common.entity.VenusEntity;
+import dev.mrsterner.witcheskitchen.common.events.WKEvents;
 import dev.mrsterner.witcheskitchen.common.registry.WKEntities;
 import dev.mrsterner.witcheskitchen.common.registry.WKObjects;
 import moriyashiine.bewitchment.common.item.TaglockItem;
@@ -28,24 +29,7 @@ public class WitchesKitchen implements ModInitializer {
 	public void onInitialize() {
 		WKObjects.init();
 		WKEntities.init();
+		WKEvents.init();
 
-		UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
-			if(world.isClient() || !Hand.MAIN_HAND.equals(hand)){
-				return ActionResult.PASS;
-			}
-			ItemStack itemStack = player.getStackInHand(hand);
-			if(player.getStackInHand(hand).isOf(itemStack.getItem())){
-				System.out.println("First: "+itemStack);
-				if(hitResult.getEntity() instanceof VenusEntity venusEntity){
-					UUID owner = TaglockItem.getTaglockUUID(itemStack);
-					System.out.println("GetOwner: "+itemStack.getOrCreateNbt().get("Owner"));
-					System.out.println("GetOr: "+itemStack.getOrCreateNbt());
-					System.out.println("Owner: "+owner);
-					venusEntity.setOwner(owner);
-
-				}
-			}
-			return ActionResult.PASS;
-		});
 	}
 }
