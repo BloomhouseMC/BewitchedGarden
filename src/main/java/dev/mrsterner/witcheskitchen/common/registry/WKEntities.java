@@ -1,10 +1,7 @@
 package dev.mrsterner.witcheskitchen.common.registry;
 
 import dev.mrsterner.witcheskitchen.WitchesKitchen;
-import dev.mrsterner.witcheskitchen.common.entity.BasePlantEntity;
-import dev.mrsterner.witcheskitchen.common.entity.HerbologistEntity;
-import dev.mrsterner.witcheskitchen.common.entity.JupiterEntity;
-import dev.mrsterner.witcheskitchen.common.entity.VenusEntity;
+import dev.mrsterner.witcheskitchen.common.entity.*;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -26,6 +23,7 @@ public class WKEntities {
     public static final EntityType<HerbologistEntity> HERBOLOGIST = create("herbologist", FabricEntityTypeBuilder.<HerbologistEntity>create(SpawnGroup.CREATURE, HerbologistEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.95F)).trackRangeBlocks(10).build());
     public static final EntityType<VenusEntity> VENUS_ENTITY = create("venus", FabricEntityTypeBuilder.<VenusEntity>create(SpawnGroup.CREATURE, VenusEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.95F)).build());
     public static final EntityType<JupiterEntity> JUPITER_ENTITY = create("jupiter", FabricEntityTypeBuilder.<JupiterEntity>create(SpawnGroup.CREATURE, JupiterEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.95F)).build());
+    public static final EntityType<SaturnEntity> SATURN_ENTITY = create("saturn", FabricEntityTypeBuilder.<SaturnEntity>create(SpawnGroup.CREATURE, SaturnEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.95F)).build());
 
     private static <T extends Entity> EntityType<T> create(String name, EntityType<T> type) {
         ENTITY_TYPES.put(type, new Identifier(WitchesKitchen.MODID, name));
@@ -42,6 +40,7 @@ public class WKEntities {
         FabricDefaultAttributeRegistry.register(HERBOLOGIST, HerbologistEntity.createHerbologistAttributes());
         FabricDefaultAttributeRegistry.register(VENUS_ENTITY, BasePlantEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(JUPITER_ENTITY, BasePlantEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(SATURN_ENTITY, BasePlantEntity.createAttributes());
         /*
         for(EntityType entityType : WKEntities.ENTITY_TYPES.keySet()){
             FabricDefaultAttributeRegistry.register(entityType, BasePlantEntity.createAttributes());

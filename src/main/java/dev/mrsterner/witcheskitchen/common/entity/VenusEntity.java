@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class VenusEntity extends BasePlantEntity implements IAnimatable, TaglockHolder {
+public class VenusEntity extends BasePlantEntity {
     public VenusEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }

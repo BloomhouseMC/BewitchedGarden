@@ -17,6 +17,7 @@ public class WKRendering {
         //Plants
         EntityRendererRegistry.INSTANCE.register(WKEntities.JUPITER_ENTITY, BasePlantEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(WKEntities.VENUS_ENTITY, BasePlantEntityRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(WKEntities.SATURN_ENTITY, BasePlantEntityRenderer::new);
 
         //LayerMaps
         BlockRenderLayerMap.INSTANCE.putBlock(WKObjects.LUNARIAN, RenderLayer.getCutout());

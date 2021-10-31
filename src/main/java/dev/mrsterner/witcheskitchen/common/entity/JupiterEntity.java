@@ -11,7 +11,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import software.bernie.geckolib3.core.IAnimatable;
 
-public class JupiterEntity extends BasePlantEntity implements IAnimatable {
+public class JupiterEntity extends BasePlantEntity {
     public JupiterEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }

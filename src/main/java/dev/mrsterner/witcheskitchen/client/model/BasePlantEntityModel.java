@@ -41,4 +41,5 @@ public class BasePlantEntityModel extends AnimatedGeoModel<BasePlantEntity> {
             //head.setRotationY(extraData.netHeadYaw * ((float) Math.PI / 180F));
         }
     }
+
 }

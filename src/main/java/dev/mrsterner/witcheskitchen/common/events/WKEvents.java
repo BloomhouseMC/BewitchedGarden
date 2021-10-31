@@ -6,6 +6,8 @@ import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.EntityHitResult;
@@ -25,6 +27,7 @@ public class WKEvents {
                 if(hitResult.getEntity() instanceof VenusEntity venusEntity){
                     UUID owner = TaglockItem.getTaglockUUID(itemStack);
                     venusEntity.setOwner(owner);
+                    venusEntity.playSound(SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP,0.5F,1);
                 }
             }
             return ActionResult.PASS;
