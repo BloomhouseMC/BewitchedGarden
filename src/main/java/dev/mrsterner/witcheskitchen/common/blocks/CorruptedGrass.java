@@ -24,7 +24,7 @@ public class CorruptedGrass extends SpreadableBlock {
         super(settings);
     }
 
-    private static boolean canBeGrass(BlockState state, WorldView worldView, BlockPos pos) {
+    private static boolean canBeCorrupted(BlockState state, WorldView worldView, BlockPos pos) {
         BlockPos blockPos = pos.up();
         BlockState blockState = worldView.getBlockState(blockPos);
         if (blockState.isOf(Blocks.SNOW) && blockState.get(SnowBlock.LAYERS) == 1) {
@@ -39,7 +39,7 @@ public class CorruptedGrass extends SpreadableBlock {
 
     private static boolean canPropagate(BlockState state, WorldView worldView, BlockPos pos) {
         BlockPos blockPos = pos.up();
-        return canBeGrass(state, worldView, pos) && !worldView.getFluidState(blockPos).isIn(FluidTags.WATER);
+        return canBeCorrupted(state, worldView, pos) && !worldView.getFluidState(blockPos).isIn(FluidTags.WATER);
     }
 
     @Override

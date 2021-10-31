@@ -19,7 +19,7 @@ public class CorruptedDirt extends SpreadableBlock {
         super(settings);
     }
 
-    private static boolean canBeGrass(BlockState state, WorldView worldView, BlockPos pos) {
+    private static boolean canBeCorrupted(BlockState state, WorldView worldView, BlockPos pos) {
         BlockPos blockPos = pos.up();
         BlockState blockState = worldView.getBlockState(blockPos);
         if (blockState.isOf(Blocks.SNOW) && blockState.get(SnowBlock.LAYERS) == 1) {
@@ -36,7 +36,7 @@ public class CorruptedDirt extends SpreadableBlock {
 
     public static boolean canPropagate(BlockState state, WorldView worldView, BlockPos pos) {
         BlockPos blockPos = pos.up();
-        return canBeGrass(state, worldView, pos) && !worldView.getFluidState(blockPos).isIn(FluidTags.WATER);
+        return canBeCorrupted(state, worldView, pos) && !worldView.getFluidState(blockPos).isIn(FluidTags.WATER);
     }
 
     @Override
@@ -44,7 +44,7 @@ public class CorruptedDirt extends SpreadableBlock {
         BlockState blockState = this.getDefaultState();
         for (int i = 0; i < 4; ++i) {
             BlockPos blockPos = pos.add(random.nextInt(3) - 1, random.nextInt(5) - 3, random.nextInt(3) - 1);
-            System.out.println(world.getBlockState(blockPos).isOf(Blocks.DIRT)+" : "+canBeGrass(blockState, world, blockPos));
+            System.out.println(world.getBlockState(blockPos).isOf(Blocks.DIRT)+" : "+canBeCorrupted(blockState, world, blockPos));
             if (world.getBlockState(blockPos).isOf(Blocks.DIRT)){
                 world.setBlockState(blockPos, blockState);
             }
