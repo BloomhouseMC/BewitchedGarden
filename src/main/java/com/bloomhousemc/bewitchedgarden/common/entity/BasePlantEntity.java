@@ -125,7 +125,10 @@ public class BasePlantEntity extends PathAwareEntity implements IAnimatable, Ang
     private <E extends IAnimatable> PlayState basicMovement(AnimationEvent<E> event) {
         if(this.dataTracker.get(STATE) >= 1){
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation."+getEntity(this)+".attack", true));
-        }else{
+        }else if(event.getLimbSwingAmount()>0.1F){
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation."+getEntity(this)+".move", true));
+        }
+        else{
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation."+getEntity(this)+".idle", true));
         }
         return PlayState.CONTINUE;

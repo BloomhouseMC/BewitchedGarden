@@ -22,6 +22,6 @@ public class BasePlantEntityModel extends AnimatedGeoModel<BasePlantEntity> {
 
     @Override
     public Identifier getTextureLocation(BasePlantEntity entity) {
-        return new Identifier(BewitchedGarden.MODID, "textures/entity/plant/plants.png");
+        return new Identifier(BewitchedGarden.MODID, "textures/entity/plant/"+getEntity(entity)+".png");
     }
 }

@@ -21,6 +21,7 @@ public class BGEntities {
     public static final EntityType<VenusEntity> VENUS_ENTITY = create("venus", FabricEntityTypeBuilder.<VenusEntity>create(SpawnGroup.CREATURE, VenusEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.95F)).build());
     public static final EntityType<JupiterEntity> JUPITER_ENTITY = create("jupiter", FabricEntityTypeBuilder.<JupiterEntity>create(SpawnGroup.CREATURE, JupiterEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.95F)).build());
     public static final EntityType<SaturnEntity> SATURN_ENTITY = create("saturn", FabricEntityTypeBuilder.<SaturnEntity>create(SpawnGroup.CREATURE, SaturnEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.95F)).build());
+    public static final EntityType<ElderEntity> ELDER_ENTITY = create("elder", FabricEntityTypeBuilder.<ElderEntity>create(SpawnGroup.CREATURE, ElderEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.95F)).build());
 
     private static <T extends Entity> EntityType<T> create(String name, EntityType<T> type) {
         ENTITY_TYPES.put(type, new Identifier(BewitchedGarden.MODID, name));
@@ -38,6 +39,7 @@ public class BGEntities {
         FabricDefaultAttributeRegistry.register(VENUS_ENTITY, BasePlantEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(JUPITER_ENTITY, BasePlantEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(SATURN_ENTITY, BasePlantEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(ELDER_ENTITY, BasePlantEntity.createAttributes());
         /*
         for(EntityType entityType : WKEntities.ENTITY_TYPES.keySet()){
             FabricDefaultAttributeRegistry.register(entityType, BasePlantEntity.createAttributes());

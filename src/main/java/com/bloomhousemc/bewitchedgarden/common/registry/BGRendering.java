@@ -19,6 +19,7 @@ public class BGRendering {
         EntityRendererRegistry.INSTANCE.register(BGEntities.JUPITER_ENTITY, BasePlantEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(BGEntities.VENUS_ENTITY, BasePlantEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(BGEntities.SATURN_ENTITY, BasePlantEntityRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(BGEntities.ELDER_ENTITY, BasePlantEntityRenderer::new);
 
         //LayerMaps
         BlockRenderLayerMap.INSTANCE.putBlock(BGObjects.LUNARIAN, RenderLayer.getCutout());
@@ -27,6 +28,6 @@ public class BGRendering {
 
         //BlockEntity
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.SAUSAGE_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new SausageBlockEntityRenderer());
-        
+
     }
 }
