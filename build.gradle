@@ -24,27 +24,27 @@ repositories {
 		}
 	}
 	maven {
-		name = "wood api"
+		name = "Wood API"
 		url = "https://maven.terraformersmc.com/"
 	}
 	maven {
-		name = "reach"
+		name = "Reach"
 		url = "https://maven.jamieswhiteshirt.com/libs-release"
 	}
 	maven {
-		name = "somnus"
+		name = "Somnus"
 		url = "https://maven.theillusivec4.top"
 	}
 	maven {
-		name = "cardinal"
+		name = "Cardinal Components API"
 		url = "https://maven.abusedmaster.xyz/"
 	}
 	maven {
-		name = "cloth config"
+		name = "Cloth Config"
 		url = "https://maven.shedaniel.me/"
 	}
 	maven {
-		name = "patchouli"
+		name = "Patchouli"
 		url = "https://maven.blamejared.com"
 	}
 	maven {
@@ -70,19 +70,18 @@ repositories {
 		url = "https://minecraft.curseforge.com/api/maven"
 	}
 	maven {
-		name "appleskin"
+		name "Appleskin"
 		url "https://maven.ryanliptak.com/"
 	}
 	maven {
-		name "impersonate"
+		name "Impersonate"
 		url "https://oss.sonatype.org/content/repositories/snapshots"
 	}
 
 	maven {
-		name = "jitpack"
+		name = "Jitpack"
 		url = "https://jitpack.io"
 	}
-	//GECKOLIB
 	maven {
 		name = 'GeckoLib'
 		url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
@@ -90,38 +89,58 @@ repositories {
 }
 
 dependencies {
-	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	// Fabric API. This is technically optional, but you probably want it anyway.
+	// Fabric API
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
+	//Wood API
 	modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_wood_api_version}"
 	include "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_wood_api_version}"
+
+	//Reach
 	modImplementation "com.jamieswhiteshirt:reach-entity-attributes:${project.reach_version}"
 	include "com.jamieswhiteshirt:reach-entity-attributes:${project.reach_version}"
-	modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 
+	//Step Height
 	modImplementation "com.github.emilyploszaj:step-height-entity-attribute:${step_height_version}"
+
+	//Player Ability Lib
 	modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 	include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 
+	//Cloth Config
 	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
+
+	//Somnus
 	modImplementation "top.theillusivec4.somnus:somnus-fabric:${project.somnus_version}"
+
+	//Pekhui
 	modImplementation("com.github.virtuoel:pehkui:${project.pehkui_version}") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
+
+	//Impersonate
 	modImplementation "io.github.ladysnake:impersonate:${impersonate_version}"
+
+	//Pathouli
 	modImplementation "vazkii.patchouli:Patchouli:${project.patchouli_version}"
+
+	//Trinkets
 	modImplementation "com.github.emilyalexandra:trinkets:${trinkets_version}"
+
+	//Modmenu
 	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 
+	//Satin
+	modImplementation "io.github.ladysnake:satin:${satin_version}"
+	include "io.github.ladysnake:satin:${satin_version}"
 
-
+	//Bewitchment
 	modImplementation "curse.maven:bewitchment-394915:${project.bewitchment_version}"
 
 	//Geckolib
@@ -129,7 +148,7 @@ dependencies {
 }
 
 loom {
-	accessWidenerPath = file("src/main/resources/witcheskitchen.accessWidener")
+	accessWidenerPath = file("src/main/resources/bewitchedgarden.accessWidener")
 }
 
 processResources {
@@ -141,20 +160,11 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	// ensure that the encoding is set to UTF-8, no matter what the system default is
-	// this fixes some edge cases with special characters not displaying correctly
-	// see http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html
-	// If Javadoc is generated, this must be specified in that task too.
 	it.options.encoding = "UTF-8"
-
-	// Minecraft 1.17 (21w19a) upwards uses Java 16.
 	it.options.release = 16
 }
 
 java {
-	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-	// if it is present.
-	// If you remove this line, sources will not be generated.
 	withSourcesJar()
 }
 
@@ -164,25 +174,7 @@ jar {
 	}
 }
 
-// configure the maven publication
 publishing {
-	publications {
-		mavenJava(MavenPublication) {
-			// add all the jars that should be included when publishing to maven
-			artifact(remapJar) {
-				builtBy remapJar
-			}
-			artifact(sourcesJar) {
-				builtBy remapSourcesJar
-			}
-		}
-	}
-
-	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
 	repositories {
-		// Add repositories to publish to here.
-		// Notice: This block does NOT have the same function as the block in the top level.
-		// The repositories here will be used for publishing your artifact, not for
-		// retrieving dependencies.
 	}
 }

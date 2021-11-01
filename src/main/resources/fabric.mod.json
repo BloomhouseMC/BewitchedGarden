@@ -1,34 +1,35 @@
 {
   "schemaVersion": 1,
-  "id": "witcheskitchen",
+  "id": "bewitchedgarden",
   "version": "${version}",
 
-  "name": "Witches Kitchen",
-  "description": "Its about Kitchin with at Witchin",
+  "name": "Bewitched Garden",
+  "description": "Its about Gardin with at Witchin",
   "authors": [
-    "MrSterner"
+    "MrSterner",
+    "Safro"
   ],
   "contact": {
-    "sources": "https://github.com/BloomhouseMC/WitchesKitchen"
+    "sources": "https://github.com/BloomhouseMC/BewitchedGarden"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/witcheskitchen/icon.png",
+  "icon": "assets/bewitchedgarden/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.mrsterner.witcheskitchen.WitchesKitchen"
+      "dev.mrsterner.bewitchedgarden.BewitchedGarden"
     ],
     "client": [
-      "dev.mrsterner.witcheskitchen.WitchesKitchenClient"
+      "dev.mrsterner.bewitchedgarden.BewitchedGardenClient"
     ],
     "modmenu": [
-      "dev.mrsterner.witcheskitchen.compat.WKModMenu"
+      "dev.mrsterner.bewitchedgarden.common.compat.BGModMenu"
     ]
   },
   "mixins": [
-    "witcheskitchen.mixins.json"
+    "bewitchedgarden.mixin.json"
   ],
 
   "depends": {
@@ -37,5 +38,5 @@
     "minecraft": "1.17.x",
     "java": ">=16"
   },
-  "accessWidener": "witcheskitchen.accessWidener"
+  "accessWidener": "bewitchedgarden.accessWidener"
 }
