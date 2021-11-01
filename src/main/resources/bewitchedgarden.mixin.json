@@ -1,14 +1,13 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "dev.mrsterner.bewitchedgarden.mixin",
+  "package": "com.bloomhousemc.bewitchedgarden.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "ItemEntityMixin",
-    "DefaultBiomeFeaturesMixin"
+    "DefaultBiomeFeaturesMixin",
+    "ItemEntityMixin"
   ],
   "client": [
-
   ],
   "injectors": {
     "defaultRequire": 1

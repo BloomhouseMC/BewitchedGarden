@@ -1,10 +1,10 @@
 {   "parent": "block/block",
   "textures": {
-    "particle": "witcheskitchen:block/corrupted/corrupted",
-    "bottom": "witcheskitchen:block/corrupted/corrupted",
-    "top": "witcheskitchen:block/corrupted/corrupted_top",
-    "side": "witcheskitchen:block/corrupted/corrupted_side",
-    "overlay": "witcheskitchen:block/corrupted/corrupted_side"
+    "particle": "bewitchedgarden:block/corrupted/corrupted",
+    "bottom": "bewitchedgarden:block/corrupted/corrupted",
+    "top": "bewitchedgarden:block/corrupted/corrupted_top",
+    "side": "bewitchedgarden:block/corrupted/corrupted_side",
+    "overlay": "bewitchedgarden:block/corrupted/corrupted_side"
   },
   "elements": [
     {   "from": [ 0, 0, 0 ],

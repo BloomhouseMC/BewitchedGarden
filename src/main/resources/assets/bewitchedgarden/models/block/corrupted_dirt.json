@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "witcheskitchen:block/corrupted/corrupted"
+    "all": "bewitchedgarden:block/corrupted/corrupted"
   }
 }

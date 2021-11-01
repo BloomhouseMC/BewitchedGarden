@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "witcheskitchen:mint"
+      "item": "bewitchedgarden:mint"
     }
   ],
   "result": {
-    "item": "witcheskitchen:mint_leaves",
+    "item": "bewitchedgarden:mint_leaves",
     "count": 2
   }
 }

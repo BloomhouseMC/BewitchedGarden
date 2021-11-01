@@ -19,13 +19,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.mrsterner.bewitchedgarden.BewitchedGarden"
+      "com.bloomhousemc.bewitchedgarden.BewitchedGarden"
     ],
     "client": [
-      "dev.mrsterner.bewitchedgarden.BewitchedGardenClient"
+      "com.bloomhousemc.bewitchedgarden.BewitchedGardenClient"
     ],
     "modmenu": [
-      "dev.mrsterner.bewitchedgarden.common.compat.BGModMenu"
+      "com.bloomhousemc.bewitchedgarden.common.compat.BGModMenu"
     ]
   },
   "mixins": [

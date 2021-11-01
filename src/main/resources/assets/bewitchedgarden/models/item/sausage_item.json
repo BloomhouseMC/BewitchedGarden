@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "witcheskitchen:item/sausage"
+    "layer0": "bewitchedgarden:item/sausage"
   }
 }

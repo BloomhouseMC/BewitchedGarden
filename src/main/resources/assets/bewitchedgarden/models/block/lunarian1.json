@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/crop",
   "textures": {
-    "crop": "witcheskitchen:block/lunarian1"
+    "crop": "bewitchedgarden:block/lunarian1"
   }
 }

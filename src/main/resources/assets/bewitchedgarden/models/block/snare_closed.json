@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "witcheskitchen:block/snare_closed"
+    "cross": "bewitchedgarden:block/snare_closed"
   }
 }

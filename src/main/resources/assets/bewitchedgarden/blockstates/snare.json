@@ -1,10 +1,10 @@
 {
   "variants": {
     "closed=false": {
-      "model": "witcheskitchen:block/snare"
+      "model": "bewitchedgarden:block/snare"
     },
     "closed=true": {
-      "model": "witcheskitchen:block/snare_closed"
+      "model": "bewitchedgarden:block/snare_closed"
     }
   }
 }

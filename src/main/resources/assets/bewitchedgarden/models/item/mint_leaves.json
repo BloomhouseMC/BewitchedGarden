@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "witcheskitchen:item/mint_leaves"
+    "layer0": "bewitchedgarden:item/mint_leaves"
   }
 }

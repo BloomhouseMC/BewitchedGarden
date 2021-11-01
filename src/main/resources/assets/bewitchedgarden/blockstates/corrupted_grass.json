@@ -2,23 +2,23 @@
   "variants": {
     "snowy=false": [
       {
-        "model": "witcheskitchen:block/corrupted_grass"
+        "model": "bewitchedgarden:block/corrupted_grass"
       },
       {
-        "model": "witcheskitchen:block/corrupted_grass",
+        "model": "bewitchedgarden:block/corrupted_grass",
         "y": 90
       },
       {
-        "model": "witcheskitchen:block/corrupted_grass",
+        "model": "bewitchedgarden:block/corrupted_grass",
         "y": 180
       },
       {
-        "model": "witcheskitchen:block/corrupted_grass",
+        "model": "bewitchedgarden:block/corrupted_grass",
         "y": 270
       }
     ],
     "snowy=true": {
-      "model": "witcheskitchen:block/corrupted_grass"
+      "model": "bewitchedgarden:block/corrupted_grass"
     }
   }
 }

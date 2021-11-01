@@ -5,7 +5,7 @@
     "dstrgb": "zero"
   },
   "vertex": "sobel",
-  "fragment": "witcheskitchen:toxic",
+  "fragment": "bewitchedgarden:toxic",
   "attributes": [ "Position" ],
   "samplers": [
     { "name": "DiffuseSampler" }

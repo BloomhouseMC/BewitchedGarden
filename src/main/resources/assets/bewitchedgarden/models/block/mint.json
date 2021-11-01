@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "witcheskitchen:block/mint"
+    "cross": "bewitchedgarden:block/mint"
   }
 }

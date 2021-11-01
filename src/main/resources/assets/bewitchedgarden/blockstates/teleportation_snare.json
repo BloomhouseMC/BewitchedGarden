@@ -1,10 +1,10 @@
 {
   "variants": {
     "closed=false": {
-      "model": "witcheskitchen:block/teleportation_snare"
+      "model": "bewitchedgarden:block/teleportation_snare"
     },
     "closed=true": {
-      "model": "witcheskitchen:block/teleportation_snare_closed"
+      "model": "bewitchedgarden:block/teleportation_snare_closed"
     }
   }
 }

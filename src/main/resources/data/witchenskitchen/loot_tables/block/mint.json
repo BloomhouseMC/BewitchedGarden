@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "witcheskitchen:mint"
+          "name": "bewitchedgarden:mint"
         }
       ],
       "conditions": [

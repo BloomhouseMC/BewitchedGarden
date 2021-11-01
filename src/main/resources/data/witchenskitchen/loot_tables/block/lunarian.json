@@ -13,17 +13,17 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "witcheskitchen:lunarian",
+                  "block": "bewitchedgarden:lunarian",
                   "properties": {
                     "age": "7"
                   }
                 }
               ],
-              "name": "witcheskitchen:lunar_petal"
+              "name": "bewitchedgarden:lunar_petal"
             },
             {
               "type": "minecraft:item",
-              "name": "witcheskitchen:lunarian_seeds"
+              "name": "bewitchedgarden:lunarian_seeds"
             }
           ]
         }
@@ -46,13 +46,13 @@
               }
             }
           ],
-          "name": "witcheskitchen:lunarian_seeds"
+          "name": "bewitchedgarden:lunarian_seeds"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "witcheskitchen:lunarian",
+          "block": "bewitchedgarden:lunarian",
           "properties": {
             "age": "7"
           }

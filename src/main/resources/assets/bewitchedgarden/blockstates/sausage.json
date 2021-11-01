@@ -1,16 +1,16 @@
 {
   "variants": {
     "sausage=1": {
-      "model": "witcheskitchen:block/sausage"
+      "model": "bewitchedgarden:block/sausage"
     },
     "sausage=2": {
-      "model": "witcheskitchen:block/sausage"
+      "model": "bewitchedgarden:block/sausage"
     },
     "sausage=3": {
-      "model": "witcheskitchen:block/sausage"
+      "model": "bewitchedgarden:block/sausage"
     },
     "sausage=4": {
-      "model": "witcheskitchen:block/sausage"
+      "model": "bewitchedgarden:block/sausage"
     }
   }
 }

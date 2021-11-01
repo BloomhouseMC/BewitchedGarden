@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "witcheskitchen:teleportation_snare"
+          "name": "bewitchedgarden:teleportation_snare"
         }
       ],
       "conditions": [

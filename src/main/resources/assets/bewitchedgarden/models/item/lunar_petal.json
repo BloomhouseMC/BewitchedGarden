@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "witcheskitchen:item/lunar_petal"
+    "layer0": "bewitchedgarden:item/lunar_petal"
   }
 }

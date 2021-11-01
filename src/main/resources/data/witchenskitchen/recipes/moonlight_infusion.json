@@ -8,11 +8,11 @@
       "item": "minecraft:sugar"
     },
     {
-      "item": "witcheskitchen:lunar_petal"
+      "item": "bewitchedgarden:lunar_petal"
     }
   ],
   "result": {
-    "item": "witcheskitchen:moonlight_infusion"
+    "item": "bewitchedgarden:moonlight_infusion"
   },
   "color": 15921634
 }
