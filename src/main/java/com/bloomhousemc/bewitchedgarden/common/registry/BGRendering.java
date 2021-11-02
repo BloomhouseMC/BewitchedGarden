@@ -3,6 +3,7 @@ package com.bloomhousemc.bewitchedgarden.common.registry;
 import com.bloomhousemc.bewitchedgarden.client.renderer.BasePlantEntityRenderer;
 import com.bloomhousemc.bewitchedgarden.client.renderer.HerbologistEntityRenderer;
 import com.bloomhousemc.bewitchedgarden.client.renderer.SausageBlockEntityRenderer;
+import com.bloomhousemc.bewitchedgarden.client.renderer.WispBlockEntityRenderer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
@@ -28,6 +29,6 @@ public class BGRendering {
 
         //BlockEntity
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.SAUSAGE_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new SausageBlockEntityRenderer());
-
+        BlockEntityRendererRegistry.INSTANCE.register(BGObjects.WISP_BLOCK_ENTITY, ctx -> new WispBlockEntityRenderer());
     }
 }

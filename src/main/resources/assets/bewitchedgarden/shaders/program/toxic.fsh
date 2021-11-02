@@ -56,5 +56,5 @@ void main() {
     vec4 rgb = texture(DiffuseSampler, texCoord + offset);
     vec3 hsv = RGBtoHSV(rgb.rgb);
     hsv.x = fract(hsv.x + Time);
-    fragColor = texture(DiffuseSampler, texCoord + offset) + vec4(HSVtoRGB(hsv), 1.0) * Prog;
+    fragColor = texture(DiffuseSampler, texCoord + offset) + vec4(HSVtoRGB(hsv), 1.0 * Prog) ;
 }

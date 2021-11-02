@@ -2,6 +2,7 @@ package com.bloomhousemc.bewitchedgarden.common.registry;
 
 import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import com.bloomhousemc.bewitchedgarden.common.blocks.*;
+import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.WispBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.FierySnareBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.NightSnareBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.SnareBlock;
@@ -15,10 +16,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.item.AliasedBlockItem;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -51,18 +49,28 @@ public class BGObjects {
     public static final Item MINT_LEAVES = register("mint_leaves", new Item(gen()));
 
     public static final Item SAUSAGE_ITEM = register("sausage_item", new SausageItem(gen().food(TIER_5_FOOD)));
+    public static final Item BLOODROOT = register("bloodroot", new Item(gen()));
 
     //Blocks
     public static final Block SAUSAGE = register("sausage", new SausageBlock(FabricBlockSettings.copyOf(Blocks.STONE)), false);
     public static final Block CORRUPTED_GRASS = register("corrupted_grass", new CorruptedGrass(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK)), true);
     public static final Block CORRUPTED_DIRT = register("corrupted_dirt", new CorruptedDirt(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK)), true);
+    public static final Block WISP = register("wisp", new WispBlock(FabricBlockSettings.copyOf(Blocks.STONE)), true);
 
     //Block Entities
     public static final BlockEntityType<SausageBlockEntity> SAUSAGE_BLOCK_ENTITY = register("sausage_block_entity", FabricBlockEntityTypeBuilder.create(SausageBlockEntity::new, SAUSAGE).build(null));
+    public static final BlockEntityType<WispBlockEntity> WISP_BLOCK_ENTITY = register("wisp_block_entity", FabricBlockEntityTypeBuilder.create(WispBlockEntity::new, WISP).build(null));
 
-    // Oils
+    //Oils
     public static final Item MOONLIGHT_INFUSION = register("moonlight_infusion", new Item(gen().recipeRemainder(Items.GLASS_BOTTLE)));
-    public static final Item ENDER_VIAL = register("ender_vial", new Item(gen().recipeRemainder(Items.GLASS_BOTTLE)));
+    public static final Item ENDER_VIAL = register("ender_vial", new Item(gen().recipeRemainder(Items.GLASS_BOTTLE)));//0x70922d
+
+    //Spawn Eggs
+    public static final Item VENUS_SPAWN_EGG = register("venus_spawn_egg", new SpawnEggItem(BGEntities.VENUS_ENTITY, 0x70922d, 0x44101c, gen()));
+    public static final Item JUPITER_SPAWN_EGG = register("jupiter_spawn_egg", new SpawnEggItem(BGEntities.JUPITER_ENTITY, 0x70922d, 0x7FFAED, gen()));
+    public static final Item SATURN_SPAWN_EGG = register("saturn_spawn_egg", new SpawnEggItem(BGEntities.SATURN_ENTITY, 0x70922d, 0x5C1148, gen()));
+    public static final Item ELDER_SPAWN_EGG = register("elder_spawn_egg", new SpawnEggItem(BGEntities.ELDER_ENTITY, 0x70922d, 0x382E12, gen()));
+
 
 
     private static <T extends BlockEntity> BlockEntityType<T> register(String id, BlockEntityType<T> type) {

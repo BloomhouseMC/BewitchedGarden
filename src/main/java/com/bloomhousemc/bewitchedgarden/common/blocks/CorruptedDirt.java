@@ -44,7 +44,6 @@ public class CorruptedDirt extends SpreadableBlock {
         BlockState blockState = this.getDefaultState();
         for (int i = 0; i < 4; ++i) {
             BlockPos blockPos = pos.add(random.nextInt(3) - 1, random.nextInt(5) - 3, random.nextInt(3) - 1);
-            System.out.println(world.getBlockState(blockPos).isOf(Blocks.DIRT)+" : "+canBeCorrupted(blockState, world, blockPos));
             if (world.getBlockState(blockPos).isOf(Blocks.DIRT)){
                 world.setBlockState(blockPos, blockState);
             }

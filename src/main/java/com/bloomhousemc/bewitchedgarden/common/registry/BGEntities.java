@@ -19,9 +19,9 @@ public class BGEntities {
 
     public static final EntityType<HerbologistEntity> HERBOLOGIST = create("herbologist", FabricEntityTypeBuilder.<HerbologistEntity>create(SpawnGroup.CREATURE, HerbologistEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.95F)).trackRangeBlocks(10).build());
     public static final EntityType<VenusEntity> VENUS_ENTITY = create("venus", FabricEntityTypeBuilder.<VenusEntity>create(SpawnGroup.CREATURE, VenusEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.95F)).build());
-    public static final EntityType<JupiterEntity> JUPITER_ENTITY = create("jupiter", FabricEntityTypeBuilder.<JupiterEntity>create(SpawnGroup.CREATURE, JupiterEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.95F)).build());
-    public static final EntityType<SaturnEntity> SATURN_ENTITY = create("saturn", FabricEntityTypeBuilder.<SaturnEntity>create(SpawnGroup.CREATURE, SaturnEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.95F)).build());
-    public static final EntityType<ElderEntity> ELDER_ENTITY = create("elder", FabricEntityTypeBuilder.<ElderEntity>create(SpawnGroup.CREATURE, ElderEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.95F)).build());
+    public static final EntityType<JupiterEntity> JUPITER_ENTITY = create("jupiter", FabricEntityTypeBuilder.<JupiterEntity>create(SpawnGroup.CREATURE, JupiterEntity::new).dimensions(EntityDimensions.fixed(0.6F, 0.5F)).build());
+    public static final EntityType<SaturnEntity> SATURN_ENTITY = create("saturn", FabricEntityTypeBuilder.<SaturnEntity>create(SpawnGroup.CREATURE, SaturnEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1.95F)).build());
+    public static final EntityType<ElderEntity> ELDER_ENTITY = create("elder", FabricEntityTypeBuilder.<ElderEntity>create(SpawnGroup.CREATURE, ElderEntity::new).dimensions(EntityDimensions.fixed(3F, 3F)).build());
 
     private static <T extends Entity> EntityType<T> create(String name, EntityType<T> type) {
         ENTITY_TYPES.put(type, new Identifier(BewitchedGarden.MODID, name));
