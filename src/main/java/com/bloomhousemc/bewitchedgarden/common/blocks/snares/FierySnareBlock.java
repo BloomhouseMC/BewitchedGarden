@@ -29,8 +29,8 @@ public class FierySnareBlock extends SnareBlock {
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (entity instanceof LivingEntity user) {
+            entity.slowMovement(state, new Vec3d(0.800000011920929D, 0.75D, 0.800000011920929D));
             if (!world.isClient) {
-                entity.slowMovement(state, new Vec3d(0.800000011920929D, 0.75D, 0.800000011920929D));
                 user.setOnFireFor(5);
                 world.setBlockState(pos, (BlockState)state.with(CLOSED, true), 3);
                 world.getBlockTickScheduler().schedule(pos, this, 30);
@@ -49,6 +49,7 @@ public class FierySnareBlock extends SnareBlock {
             stack.decrement(stack.getCount());
             ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY(), pos.getX(), output);
             world.playSound(pos.getX() + world.random.nextDouble(), pos.getY() + 1.0D, pos.getZ() + world.random.nextDouble(), SoundEvents.BLOCK_LAVA_EXTINGUISH, SoundCategory.BLOCKS, 0.2F + world.random.nextFloat() * 0.2F, 0.9F + world.random.nextFloat() * 0.15F, false);
+            itemEntity.refreshPositionAndAngles(pos.getX(), pos.getY(), pos.getX(), 0.0F, 0.0F);
             world.spawnEntity(itemEntity);
             return ActionResult.CONSUME;
         }

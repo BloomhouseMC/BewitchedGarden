@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "closed=false": {
+      "model": "bewitchedgarden:block/capture_snare"
+    },
+    "closed=true": {
+      "model": "bewitchedgarden:block/capture_snare_closed"
+    }
+  }
+}
