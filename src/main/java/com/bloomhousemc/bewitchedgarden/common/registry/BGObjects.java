@@ -2,6 +2,7 @@ package com.bloomhousemc.bewitchedgarden.common.registry;
 
 import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import com.bloomhousemc.bewitchedgarden.common.blocks.*;
+import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.LeechChestBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.WispBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.*;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.SausageBlockEntity;
@@ -54,10 +55,12 @@ public class BGObjects {
     public static final Block CORRUPTED_GRASS = register("corrupted_grass", new CorruptedGrass(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK)), true);
     public static final Block CORRUPTED_DIRT = register("corrupted_dirt", new CorruptedDirt(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK)), true);
     public static final Block WISP = register("wisp", new WispBlock(FabricBlockSettings.copyOf(Blocks.STONE)), true);
+    public static final Block LEECH_CHEST = register("leech_chest", new LeechChestBlock(FabricBlockSettings.of(Material.PLANT).strength(2.5F).sounds(BlockSoundGroup.MOSS_BLOCK)), true);
 
     //Block Entities
     public static final BlockEntityType<SausageBlockEntity> SAUSAGE_BLOCK_ENTITY = register("sausage_block_entity", FabricBlockEntityTypeBuilder.create(SausageBlockEntity::new, SAUSAGE).build(null));
     public static final BlockEntityType<WispBlockEntity> WISP_BLOCK_ENTITY = register("wisp_block_entity", FabricBlockEntityTypeBuilder.create(WispBlockEntity::new, WISP).build(null));
+    public static final BlockEntityType<LeechChestBlockEntity> LEECH_CHEST_BLOCK_ENTITY = register("leech_chest_block_entity", FabricBlockEntityTypeBuilder.create(LeechChestBlockEntity::new, LEECH_CHEST).build(null));
 
     //Oils
     public static final Item MOONLIGHT_INFUSION = register("moonlight_infusion", new Item(gen().recipeRemainder(Items.GLASS_BOTTLE)));
