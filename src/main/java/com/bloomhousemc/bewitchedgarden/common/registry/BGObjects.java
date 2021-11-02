@@ -8,6 +8,7 @@ import com.bloomhousemc.bewitchedgarden.common.blocks.snares.NightSnareBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.SnareBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.SausageBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.TeleportationSnareBlock;
+import com.bloomhousemc.bewitchedgarden.common.items.MutandisItem;
 import com.bloomhousemc.bewitchedgarden.common.items.SausageItem;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
@@ -50,12 +51,13 @@ public class BGObjects {
 
     public static final Item SAUSAGE_ITEM = register("sausage_item", new SausageItem(gen().food(TIER_5_FOOD)));
     public static final Item BLOODROOT = register("bloodroot", new Item(gen()));
+    public static final Item MUTANDIS = register("mutandis", new MutandisItem(gen()));
 
     //Blocks
     public static final Block SAUSAGE = register("sausage", new SausageBlock(FabricBlockSettings.copyOf(Blocks.STONE)), false);
     public static final Block CORRUPTED_GRASS = register("corrupted_grass", new CorruptedGrass(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK)), true);
     public static final Block CORRUPTED_DIRT = register("corrupted_dirt", new CorruptedDirt(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK)), true);
-    public static final Block WISP = register("wisp", new WispBlock(FabricBlockSettings.copyOf(Blocks.STONE)), true);
+    public static final Block WISP = register("wisp", new WispBlock(FabricBlockSettings.copyOf(Blocks.STONE)), false);
 
     //Block Entities
     public static final BlockEntityType<SausageBlockEntity> SAUSAGE_BLOCK_ENTITY = register("sausage_block_entity", FabricBlockEntityTypeBuilder.create(SausageBlockEntity::new, SAUSAGE).build(null));
