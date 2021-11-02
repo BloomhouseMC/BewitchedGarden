@@ -23,7 +23,7 @@ public class BGRendering {
 
         //LayerMaps
         BlockRenderLayerMap.INSTANCE.putBlock(BGObjects.LUNARIAN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BGObjects.TELEPORTATION_SNARE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BGObjects.SNARE, BGObjects.FIERY_SNARE, BGObjects.NIGHT_SNARE, BGObjects.TELEPORTATION_SNARE);
         BlockRenderLayerMap.INSTANCE.putBlock(BGObjects.MINT, RenderLayer.getCutout());
 
         //BlockEntity

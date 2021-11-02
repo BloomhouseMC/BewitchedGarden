@@ -27,7 +27,7 @@ public class SnareBlock extends PlantBlock {
         if (entity instanceof LivingEntity user) {
             if (!world.isClient) {
                 entity.slowMovement(state, new Vec3d(0.800000011920929D, 0.75D, 0.800000011920929D));
-                user.damage(new SnareDamageSource(), 2.0F);
+                user.damage(new SnareDamageSource(), 1.0F);
                 world.setBlockState(pos, (BlockState)state.with(CLOSED, true), 3);
                 world.getBlockTickScheduler().schedule(pos, this, 30);
             }

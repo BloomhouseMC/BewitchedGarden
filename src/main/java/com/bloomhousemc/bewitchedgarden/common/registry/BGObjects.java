@@ -2,6 +2,8 @@ package com.bloomhousemc.bewitchedgarden.common.registry;
 
 import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import com.bloomhousemc.bewitchedgarden.common.blocks.*;
+import com.bloomhousemc.bewitchedgarden.common.blocks.snares.FierySnareBlock;
+import com.bloomhousemc.bewitchedgarden.common.blocks.snares.NightSnareBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.SnareBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.SausageBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.TeleportationSnareBlock;
@@ -37,6 +39,8 @@ public class BGObjects {
         // Snares
         public static final Block SNARE = register("snare", new SnareBlock(FabricBlockSettings.of(Material.PLANT).noCollision().strength(0.3F).sounds(BlockSoundGroup.BAMBOO)), true);
         public static final Block TELEPORTATION_SNARE = register("teleportation_snare", new TeleportationSnareBlock(FabricBlockSettings.of(Material.PLANT).noCollision().strength(0.3F).sounds(BlockSoundGroup.BAMBOO)), true);
+        public static final Block NIGHT_SNARE = register("night_snare", new NightSnareBlock(FabricBlockSettings.copyOf(SNARE)), true);
+        public static final Block FIERY_SNARE = register("fiery_snare", new FierySnareBlock(FabricBlockSettings.copyOf(SNARE)), true);
 
     //Items
     public static final Item VENUS_POISON = register("venus_poison", new Item(gen()));

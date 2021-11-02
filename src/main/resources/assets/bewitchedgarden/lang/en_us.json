@@ -10,6 +10,8 @@
   "block.bewitchedgarden.teleportation_snare": "Teleportation Snare",
   "block.bewitchedgarden.sausage": "Sausage",
   "block.bewitchedgarden.snare": "Snare",
+  "block.bewitchedgarden.night_snare": "Night Snare",
+  "block.bewitchedgarden.fiery_snare": "Fiery Snare",
 
   "item.bewitchedgarden.lunarian_seeds": "Lunarian Seeds",
   "item.bewitchedgarden.lunar_petal": "Lunar Petal",
@@ -19,6 +21,6 @@
   "item.bewitchedgarden.jupiter_bulb": "Jupiter Bulb",
   "item.bewitchedgarden.saturn_stem": "Saturn Stem",
 
-  "death.attack.snare": "&s was crunched by a snare"
+  "death.attack.snare": "&s was crunched in a snare"
 }
 

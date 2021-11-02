@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "closed=false": {
+      "model": "bewitchedgarden:block/night_snare"
+    },
+    "closed=true": {
+      "model": "bewitchedgarden:block/night_snare_closed"
+    }
+  }
+}

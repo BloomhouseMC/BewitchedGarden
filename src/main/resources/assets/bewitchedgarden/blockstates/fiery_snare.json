@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "closed=false": {
+      "model": "bewitchedgarden:block/fiery_snare"
+    },
+    "closed=true": {
+      "model": "bewitchedgarden:block/fiery_snare_closed"
+    }
+  }
+}
