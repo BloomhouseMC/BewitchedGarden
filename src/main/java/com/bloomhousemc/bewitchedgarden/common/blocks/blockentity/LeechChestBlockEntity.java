@@ -4,6 +4,7 @@ import com.bloomhousemc.bewitchedgarden.common.registry.BGObjects;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.*;
+import net.minecraft.client.block.ChestAnimationProgress;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
@@ -21,9 +22,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-public class LeechChestBlockEntity extends LockableContainerBlockEntity {
+public class LeechChestBlockEntity extends LockableContainerBlockEntity implements ChestAnimationProgress {
     private DefaultedList<ItemStack> inventory;
     private final ViewerCountManager stateManager;
+    private final ChestLidAnimator lidAnimator;
 
     public LeechChestBlockEntity(BlockPos pos, BlockState state) {
         this(BGObjects.LEECH_CHEST_BLOCK_ENTITY, pos, state);
@@ -54,6 +56,11 @@ public class LeechChestBlockEntity extends LockableContainerBlockEntity {
                 }
             }
         };
+        this.lidAnimator = new ChestLidAnimator();
+    }
+
+    public static void clientTick(World world, BlockPos pos, BlockState state, LeechChestBlockEntity blockEntity) {
+        blockEntity.lidAnimator.step();
     }
 
     public int size() {
@@ -78,6 +85,7 @@ public class LeechChestBlockEntity extends LockableContainerBlockEntity {
 
     public boolean onSyncedBlockEvent(int type, int data) {
         if (type == 1) {
+            this.lidAnimator.setOpen(data > 0);
             return true;
         } else {
             return super.onSyncedBlockEvent(type, data);
@@ -95,6 +103,10 @@ public class LeechChestBlockEntity extends LockableContainerBlockEntity {
             this.stateManager.closeContainer(player, this.getWorld(), this.getPos(), this.getCachedState());
         }
 
+    }
+
+    public float getAnimationProgress(float tickDelta) {
+        return this.lidAnimator.getProgress(tickDelta);
     }
 
     protected DefaultedList<ItemStack> getInvStackList() {
