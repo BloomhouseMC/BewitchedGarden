@@ -24,7 +24,6 @@ import net.minecraft.world.World;
 public class LeechChestBlockEntity extends LockableContainerBlockEntity {
     private DefaultedList<ItemStack> inventory;
     private final ViewerCountManager stateManager;
-    private static PlayerEntity leechedPlayer;
 
     public LeechChestBlockEntity(BlockPos pos, BlockState state) {
         this(BGObjects.LEECH_CHEST_BLOCK_ENTITY, pos, state);
@@ -88,18 +87,7 @@ public class LeechChestBlockEntity extends LockableContainerBlockEntity {
     public void onOpen(PlayerEntity player) {
         if (!this.removed && !player.isSpectator()) {
             this.stateManager.openContainer(player, this.getWorld(), this.getPos(), this.getCachedState());
-            if (!player.getAbilities().creativeMode) {
-                leechedPlayer = player;
-            }
         }
-    }
-
-    public static PlayerEntity getLeechedPlayer() {
-        return leechedPlayer;
-    }
-
-    public static void setLeechedPlayer(PlayerEntity player) {
-        leechedPlayer = player;
     }
 
     public void onClose(PlayerEntity player) {

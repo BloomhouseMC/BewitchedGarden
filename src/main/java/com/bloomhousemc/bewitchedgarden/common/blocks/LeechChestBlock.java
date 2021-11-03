@@ -8,7 +8,6 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.ChestBlockEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
-import net.minecraft.entity.mob.PiglinBrain;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -37,6 +36,7 @@ public class LeechChestBlock extends AbstractChestBlock<LeechChestBlockEntity> i
     public static final DirectionProperty FACING;
     public static final BooleanProperty WATERLOGGED;
     protected static final VoxelShape SHAPE;
+    private PlayerEntity leechedPlayer;
 
     public LeechChestBlock(Settings settings) {
         super(settings, () -> {
@@ -53,9 +53,9 @@ public class LeechChestBlock extends AbstractChestBlock<LeechChestBlockEntity> i
         if (world.isClient) {
             return ActionResult.SUCCESS;
         } else if (player.isSneaking() && player.getStackInHand(hand).isOf(BWObjects.TAGLOCK)) {
-            if (world.getBlockEntity(pos) instanceof LeechChestBlockEntity && LeechChestBlockEntity.getLeechedPlayer() != null) {
-                TaglockItem.useTaglock(player, LeechChestBlockEntity.getLeechedPlayer(), hand, true, false);
-                LeechChestBlockEntity.setLeechedPlayer(null);
+            if (this.getLeechedPlayer() != null) {
+                TaglockItem.useTaglock(player, this.getLeechedPlayer(), hand, true, false);
+                this.setLeechedPlayer(null);
             } else {
                 player.sendMessage(new LiteralText("No Blood Sample Found").formatted(Formatting.GREEN), false);
             }
@@ -64,11 +64,21 @@ public class LeechChestBlock extends AbstractChestBlock<LeechChestBlockEntity> i
             if (namedScreenHandlerFactory != null) {
                 player.openHandledScreen(namedScreenHandlerFactory);
                 player.incrementStat(Stats.CUSTOM.getOrCreateStat(Stats.OPEN_CHEST));
-                PiglinBrain.onGuardedBlockInteracted(player, true);
+                if (!player.isCreative()) {
+                    leechedPlayer = player;
+                }
             }
             return ActionResult.CONSUME;
         }
         return ActionResult.PASS;
+    }
+
+    public PlayerEntity getLeechedPlayer() {
+        return leechedPlayer;
+    }
+
+    public void setLeechedPlayer(PlayerEntity player) {
+        leechedPlayer = player;
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
