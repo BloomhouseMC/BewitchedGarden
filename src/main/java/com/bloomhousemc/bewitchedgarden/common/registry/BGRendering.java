@@ -1,9 +1,6 @@
 package com.bloomhousemc.bewitchedgarden.common.registry;
 
-import com.bloomhousemc.bewitchedgarden.client.renderer.BasePlantEntityRenderer;
-import com.bloomhousemc.bewitchedgarden.client.renderer.HerbologistEntityRenderer;
-import com.bloomhousemc.bewitchedgarden.client.renderer.SausageBlockEntityRenderer;
-import com.bloomhousemc.bewitchedgarden.client.renderer.WispBlockEntityRenderer;
+import com.bloomhousemc.bewitchedgarden.client.renderer.*;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
@@ -15,6 +12,7 @@ public class BGRendering {
     public static void init() {
         //Entities
         EntityRendererRegistry.INSTANCE.register(BGEntities.HERBOLOGIST, HerbologistEntityRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(BGEntities.LEAFLET, LeafletEntityRenderer::new);
 
         //Plants
         EntityRendererRegistry.INSTANCE.register(BGEntities.JUPITER_ENTITY, BasePlantEntityRenderer::new);
