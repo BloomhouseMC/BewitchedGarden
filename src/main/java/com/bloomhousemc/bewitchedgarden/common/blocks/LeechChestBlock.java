@@ -50,25 +50,26 @@ public class LeechChestBlock extends AbstractChestBlock<LeechChestBlockEntity> i
     }
 
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (world.isClient) {
-            return ActionResult.SUCCESS;
-        } else if (player.isSneaking() && player.getStackInHand(hand).isOf(BWObjects.TAGLOCK)) {
-            if (this.getLeechedPlayer() != null) {
-                TaglockItem.useTaglock(player, this.getLeechedPlayer(), hand, true, false);
-                this.setLeechedPlayer(null);
-            } else {
-                player.sendMessage(new LiteralText("No Blood Sample Found").formatted(Formatting.GREEN), false);
-            }
-        } else {
-            NamedScreenHandlerFactory namedScreenHandlerFactory = this.createScreenHandlerFactory(state, world, pos);
-            if (namedScreenHandlerFactory != null) {
-                player.openHandledScreen(namedScreenHandlerFactory);
-                player.incrementStat(Stats.CUSTOM.getOrCreateStat(Stats.OPEN_CHEST));
-                if (!player.isCreative()) {
-                    leechedPlayer = player;
+        if (!world.isClient) {
+            if (player.isSneaking() && player.getStackInHand(hand).isOf(BWObjects.TAGLOCK)) {
+                System.out.println(this.getLeechedPlayer());
+                if (this.getLeechedPlayer() != null) {
+                    TaglockItem.useTaglock(player, this.getLeechedPlayer(), hand, true, false);
+                    this.setLeechedPlayer(null);
+                } else {
+                    player.sendMessage(new LiteralText("No Blood Sample Found").formatted(Formatting.GREEN), false);
                 }
+            } else {
+                NamedScreenHandlerFactory namedScreenHandlerFactory = this.createScreenHandlerFactory(state, world, pos);
+                if (namedScreenHandlerFactory != null) {
+                    player.openHandledScreen(namedScreenHandlerFactory);
+                    player.incrementStat(Stats.CUSTOM.getOrCreateStat(Stats.OPEN_CHEST));
+                    if (!player.isCreative()) {
+                        this.leechedPlayer = player;
+                    }
+                }
+                return ActionResult.CONSUME;
             }
-            return ActionResult.CONSUME;
         }
         return ActionResult.PASS;
     }
