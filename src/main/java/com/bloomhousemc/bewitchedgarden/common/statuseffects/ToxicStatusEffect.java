@@ -5,6 +5,7 @@ import net.minecraft.entity.attribute.AttributeContainer;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 
+
 public class ToxicStatusEffect extends StatusEffect {
     public ToxicStatusEffect(StatusEffectCategory category, int color) {
         super(category, color);
@@ -12,7 +13,7 @@ public class ToxicStatusEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        super.applyUpdateEffect(entity, amplifier);
+
     }
 
     @Override

@@ -4,13 +4,15 @@
   "package": "com.bloomhousemc.bewitchedgarden.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "ClientPlayerEntityMixin",
     "DefaultBiomeFeaturesMixin",
     "ItemEntityMixin",
     "LivingEntityMixin",
     "ServerPlayerInteractionManagerMixin"
   ],
   "client": [
+    "GameRendererMixin",
+    "RenderLayerAccessor",
+    "ClientPlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

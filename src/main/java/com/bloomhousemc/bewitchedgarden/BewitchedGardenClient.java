@@ -14,6 +14,6 @@ public class BewitchedGardenClient implements ClientModInitializer {
     public void onInitializeClient() {
         BGRendering.init();
         toxicShader.init();
-        EntityRendererRegistry.INSTANCE.register(BGEntities.MUTANDIS_ENTITY_ENTITY_TYPE, (context) -> new FlyingItemEntityRenderer(context));
+
     }
 }

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "bewitchedgarden:mint",
+    "bewitchedgarden:snare",
+    "bewitchedgarden:teleportation_snare",
+    "bewitchedgarden:night_snare",
+    "bewitchedgarden:fiery_snare",
+    "bewitchedgarden:capture_snare",
+    "bewitchedgarden:lunarian"
+  ]
+}

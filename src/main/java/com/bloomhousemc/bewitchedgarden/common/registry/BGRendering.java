@@ -1,14 +1,12 @@
 package com.bloomhousemc.bewitchedgarden.common.registry;
 
-import com.bloomhousemc.bewitchedgarden.client.renderer.BasePlantEntityRenderer;
-import com.bloomhousemc.bewitchedgarden.client.renderer.HerbologistEntityRenderer;
-import com.bloomhousemc.bewitchedgarden.client.renderer.SausageBlockEntityRenderer;
-import com.bloomhousemc.bewitchedgarden.client.renderer.WispBlockEntityRenderer;
+import com.bloomhousemc.bewitchedgarden.client.renderer.*;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
+import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.entity.EntityType;
 
 public class BGRendering {
@@ -30,5 +28,10 @@ public class BGRendering {
         //BlockEntity
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.SAUSAGE_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new SausageBlockEntityRenderer());
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.WISP_BLOCK_ENTITY, ctx -> new WispBlockEntityRenderer());
+        BlockEntityRendererRegistry.INSTANCE.register(BGObjects.HEAVENS_GATE_BLOCK_ENTITY, ctx -> new HeavensGateBlockEntityRenderer());
+        //BlockEntityRendererRegistry.INSTANCE.register(BGObjects.HEAVENS_GATE_BLOCK_ENTITY, HeavensGateBlockEntityRenderer::new);
+
+        //ItemEntity
+        EntityRendererRegistry.INSTANCE.register(BGEntities.MUTANDIS_ENTITY_ENTITY_TYPE, (context) -> new FlyingItemEntityRenderer(context));
     }
 }

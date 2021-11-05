@@ -1,16 +1,12 @@
 {
   "variants": {
     "sausage=1": {
-      "model": "bewitchedgarden:block/sausage"
-    },
-    "sausage=2": {
-      "model": "bewitchedgarden:block/sausage"
-    },
+      "model": "bewitchedgarden:block/sausage", "uvlock": true },
+    "sausage=2":  {
+      "model": "bewitchedgarden:block/sausage", "uvlock": true },
     "sausage=3": {
-      "model": "bewitchedgarden:block/sausage"
-    },
-    "sausage=4": {
-      "model": "bewitchedgarden:block/sausage"
-    }
+      "model": "bewitchedgarden:block/sausage", "uvlock": true },
+    "sausage=4":  {
+      "model": "bewitchedgarden:block/sausage", "uvlock": true }
   }
 }

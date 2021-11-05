@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "bewitchedgarden:block/empty"
+    },
+    "facing=west": {
+      "model": "bewitchedgarden:block/empty",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "bewitchedgarden:block/empty",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "bewitchedgarden:block/empty",
+      "y": 270
+    }
+  }
+}

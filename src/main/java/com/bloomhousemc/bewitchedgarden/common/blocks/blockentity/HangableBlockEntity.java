@@ -33,15 +33,6 @@ public class HangableBlockEntity extends BlockEntity implements IAnimatable {
         return PlayState.CONTINUE;
     }
 
-    @Override
-    public void readNbt(NbtCompound nbt) {
-        super.readNbt(nbt);
-    }
-
-    @Override
-    public NbtCompound writeNbt(NbtCompound nbt) {
-        return super.writeNbt(nbt);
-    }
 
     @Override
     public void registerControllers(AnimationData animationData) {
