@@ -23,6 +23,7 @@ public class BGEntities {
     public static final EntityType<JupiterEntity> JUPITER_ENTITY = create("jupiter", FabricEntityTypeBuilder.<JupiterEntity>create(SpawnGroup.CREATURE, JupiterEntity::new).dimensions(EntityDimensions.fixed(0.6F, 0.5F)).build());
     public static final EntityType<SaturnEntity> SATURN_ENTITY = create("saturn", FabricEntityTypeBuilder.<SaturnEntity>create(SpawnGroup.CREATURE, SaturnEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1.95F)).build());
     public static final EntityType<ElderEntity> ELDER_ENTITY = create("elder", FabricEntityTypeBuilder.<ElderEntity>create(SpawnGroup.CREATURE, ElderEntity::new).dimensions(EntityDimensions.fixed(3F, 3F)).build());
+    public static final EntityType<LeafletEntity> LEAFLET = create("leaflet", FabricEntityTypeBuilder.<LeafletEntity>create(SpawnGroup.CREATURE, LeafletEntity::new).dimensions(EntityDimensions.fixed(0.5F, 0.6F)).build());
 
     public static final EntityType<MutandisEntity> MUTANDIS_ENTITY_ENTITY_TYPE = Registry.register(Registry.ENTITY_TYPE, new Identifier(BewitchedGarden.MODID, "mutanis_entity"),
     FabricEntityTypeBuilder.<MutandisEntity>create(SpawnGroup.MISC, MutandisEntity::new)
@@ -46,6 +47,7 @@ public class BGEntities {
         FabricDefaultAttributeRegistry.register(JUPITER_ENTITY, BasePlantEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(SATURN_ENTITY, BasePlantEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(ELDER_ENTITY, BasePlantEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(LEAFLET, LeafletEntity.createLeafletAttributes());
         /*
         for(EntityType entityType : WKEntities.ENTITY_TYPES.keySet()){
             FabricDefaultAttributeRegistry.register(entityType, BasePlantEntity.createAttributes());

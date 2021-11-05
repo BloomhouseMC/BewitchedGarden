@@ -1,0 +1,66 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-4, 3, -4], "size": [8, 8, 8], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "left_leg",
+					"pivot": [2, 3, 0],
+					"cubes": [
+						{"origin": [1, 0, -0.8], "size": [1.4, 3, 1.5], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "right_leg",
+					"pivot": [-2, 3, 0],
+					"cubes": [
+						{"origin": [-2.5, 0, -0.8], "size": [1.5, 3, 1.5], "uv": [3, 3]}
+					]
+				},
+				{
+					"name": "plant",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "stem_1",
+					"parent": "plant",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, 11, -0.5], "size": [1, 2, 1], "uv": [0, 16]}
+					]
+				},
+				{
+					"name": "stem_2",
+					"parent": "plant",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, 13, -0.5], "size": [1, 2, 1], "uv": [4, 0]}
+					]
+				},
+				{
+					"name": "leaf",
+					"parent": "plant",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-2.5, 15, -2.5], "size": [5, 1, 5], "uv": [0, 16]}
+					]
+				}
+			]
+		}
+	]
+}

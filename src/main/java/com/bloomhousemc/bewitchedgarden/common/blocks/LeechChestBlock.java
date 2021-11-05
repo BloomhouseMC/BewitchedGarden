@@ -2,11 +2,15 @@ package com.bloomhousemc.bewitchedgarden.common.blocks;
 
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.LeechChestBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.registry.BGObjects;
+import it.unimi.dsi.fastutil.floats.Float2FloatFunction;
 import moriyashiine.bewitchment.common.item.TaglockItem;
 import moriyashiine.bewitchment.common.registry.BWObjects;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.ChestBlockEntity;
+import net.minecraft.client.block.ChestAnimationProgress;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
@@ -29,7 +33,9 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class LeechChestBlock extends AbstractChestBlock<LeechChestBlockEntity> implements Waterloggable {
@@ -90,6 +96,7 @@ public class LeechChestBlock extends AbstractChestBlock<LeechChestBlockEntity> i
         return new LeechChestBlockEntity(pos, state);
     }
 
+    @Override
     public BlockRenderType getRenderType(BlockState state) {
         return BlockRenderType.ENTITYBLOCK_ANIMATED;
     }
@@ -134,6 +141,36 @@ public class LeechChestBlock extends AbstractChestBlock<LeechChestBlockEntity> i
             ((LeechChestBlockEntity)blockEntity).onScheduledTick();
         }
 
+    }
+
+    public static DoubleBlockProperties.PropertyRetriever<LeechChestBlockEntity, Float2FloatFunction> getAnimationProgressRetriever(ChestAnimationProgress chestAnimationProgress) {
+        return new DoubleBlockProperties.PropertyRetriever<LeechChestBlockEntity, Float2FloatFunction>() {
+            public Float2FloatFunction getFromBoth(LeechChestBlockEntity chestBlockEntity, LeechChestBlockEntity chestBlockEntity2) {
+                return (f) -> {
+                    return Math.max(chestBlockEntity.getAnimationProgress(f), chestBlockEntity2.getAnimationProgress(f));
+                };
+            }
+
+            public Float2FloatFunction getFrom(LeechChestBlockEntity chestBlockEntity) {
+                Objects.requireNonNull(chestBlockEntity);
+                return chestBlockEntity::getAnimationProgress;
+            }
+
+            public Float2FloatFunction getFallback() {
+                ChestAnimationProgress var10000 = chestAnimationProgress;
+                Objects.requireNonNull(var10000);
+                return var10000::getAnimationProgress;
+            }
+        };
+    }
+
+    public BlockEntityType<? extends LeechChestBlockEntity> getExpectedEntityType() {
+        return (BlockEntityType)this.entityTypeRetriever.get();
+    }
+
+    @Nullable
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return world.isClient ? checkType(type, this.getExpectedEntityType(), LeechChestBlockEntity::clientTick) : null;
     }
 
     static {

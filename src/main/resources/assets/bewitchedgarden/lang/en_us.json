@@ -1,10 +1,11 @@
 {
-  "itemGroup.bewitchedgarden.bewitchedgarden": "Witches Kitchen",
+  "itemGroup.bewitchedgarden.bewitchedgarden": "Bewitched Garden",
 
   "entity.bewitchedgarden.venus": "Venus Flytrap",
   "entity.bewitchedgarden.jupiter": "Jupiter Lightjack",
   "entity.bewitchedgarden.satrun": "Saturn Smellsack",
   "entity.bewitchedgarden.herbologist": "Herbologist",
+  "entity.bewitchedgarden.leaflet": "Leaflet",
   
   "block.bewitchedgarden.lunarian": "Lunarian",
   "block.bewitchedgarden.teleportation_snare": "Teleportation Snare",
