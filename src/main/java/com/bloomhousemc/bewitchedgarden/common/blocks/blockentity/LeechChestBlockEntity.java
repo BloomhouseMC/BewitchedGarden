@@ -22,7 +22,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-public class LeechChestBlockEntity extends LockableContainerBlockEntity implements ChestAnimationProgress {
+public class LeechChestBlockEntity extends ChestBlockEntity implements ChestAnimationProgress {
     private DefaultedList<ItemStack> inventory;
     private final ViewerCountManager stateManager;
     private final ChestLidAnimator lidAnimator;

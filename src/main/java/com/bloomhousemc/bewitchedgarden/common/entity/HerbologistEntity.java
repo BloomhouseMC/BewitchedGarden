@@ -39,19 +39,19 @@ public class HerbologistEntity extends MerchantEntity {
         this.goalSelector.add(1, new HoldInHandsGoal(this, getRandomHeldItem(), SoundEvents.ENTITY_WANDERING_TRADER_REAPPEARED, (entity) -> {
             return this.world.isDay();
         }));
-        this.goalSelector.add(1, new HoldInHandsGoal(this, new ItemStack(BWObjects.GLOWING_BRAMBLE), SoundEvents.ENTITY_WANDERING_TRADER_REAPPEARED, (entity) -> {
+        this.goalSelector.add(1, new HoldInHandsGoal(this, new ItemStack(BGObjects.MOONLIGHT_INFUSION), SoundEvents.ENTITY_WANDERING_TRADER_REAPPEARED, (entity) -> {
             return this.world.isNight();
         }));
         this.goalSelector.add(2, new FleeEntityGoal(this, HostileEntity.class, 8.0F, 0.5D, 0.5D));
         this.goalSelector.add(3, new EscapeDangerGoal(this, 0.5D));
         this.goalSelector.add(3, new StopFollowingCustomerGoal(this));
         this.goalSelector.add(3, new LookAtCustomerGoal(this));
-        this.goalSelector.add(4, new WanderAroundFarGoal(this, 0.35D));
+        this.goalSelector.add(4, new WanderAroundFarGoal(this, 1.0D));
         this.goalSelector.add(5, new LookAtEntityGoal(this, WitchEntity.class, 8.0F));
     }
 
     public static DefaultAttributeContainer.Builder createHerbologistAttributes() {
-        return HostileEntity.createHostileAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 20.0D).add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25D);
+        return HostileEntity.createHostileAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 20.0D).add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.26D);
     }
 
     private ItemStack getRandomHeldItem() {

@@ -5,6 +5,8 @@ import com.bloomhousemc.bewitchedgarden.common.blocks.*;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.HeavensGateBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.LeechChestBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.WispBlockEntity;
+import com.bloomhousemc.bewitchedgarden.common.blocks.crops.LunarianCropBlock;
+import com.bloomhousemc.bewitchedgarden.common.blocks.crops.PeasCropBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.*;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.SausageBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.TeleportationSnareBlock;
@@ -36,6 +38,7 @@ public class BGObjects {
     // Crops/Plants
     public static final Block LUNARIAN = register("lunarian", new LunarianCropBlock(FabricBlockSettings.of(Material.PLANT).breakInstantly().ticksRandomly().noCollision().sounds(BlockSoundGroup.CROP)), false);
     public static final Block MINT = register("mint", new HerbPlantBlock(FabricBlockSettings.of(Material.PLANT).breakInstantly().noCollision().sounds(BlockSoundGroup.GRASS)), true);
+    public static final Block PEAS = register("peas", new PeasCropBlock(FabricBlockSettings.copyOf(LUNARIAN)), false);
         // Snares
         public static final Block SNARE = register("snare", new SnareBlock(FabricBlockSettings.of(Material.PLANT).noCollision().strength(0.3F).sounds(BlockSoundGroup.BAMBOO)), true);
         public static final Block TELEPORTATION_SNARE = register("teleportation_snare", new TeleportationSnareBlock(FabricBlockSettings.of(Material.PLANT).noCollision().strength(0.3F).sounds(BlockSoundGroup.BAMBOO)), true);
@@ -50,6 +53,7 @@ public class BGObjects {
     public static final Item LUNARIAN_SEEDS = register("lunarian_seeds", new AliasedBlockItem(LUNARIAN, gen()));
     public static final Item LUNAR_PETAL = register("lunar_petal", new Item(gen()));
     public static final Item MINT_LEAVES = register("mint_leaves", new Item(gen()));
+    public static final Item PEA_POD = register("pea_pod", new AliasedBlockItem(PEAS, gen()));
 
     public static final Item SAUSAGE_ITEM = register("sausage_item", new SausageItem(gen().food(TIER_5_FOOD)));
     public static final Item BLOODROOT = register("bloodroot", new Item(gen()));

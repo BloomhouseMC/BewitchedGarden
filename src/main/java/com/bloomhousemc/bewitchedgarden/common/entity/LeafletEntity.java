@@ -64,7 +64,7 @@ public class LeafletEntity extends TameableEntity implements IAnimatable {
                     if (!player.getAbilities().creativeMode) {
                         itemStack.decrement(1);
                     }
-                    this.heal((float)item.getFoodComponent().getHunger());
+                    this.heal(2.0F);
                     this.emitGameEvent(GameEvent.MOB_INTERACT, this.getCameraBlockPos());
                     return ActionResult.SUCCESS;
                 }

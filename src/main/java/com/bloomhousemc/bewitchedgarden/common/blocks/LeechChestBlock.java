@@ -51,7 +51,7 @@ public class LeechChestBlock extends AbstractChestBlock<LeechChestBlockEntity> i
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)).with(WATERLOGGED, false));
     }
 
-    public DoubleBlockProperties.PropertySource<? extends ChestBlockEntity> getBlockEntitySource(BlockState state, World world, BlockPos pos, boolean ignoreBlocked) {
+    public DoubleBlockProperties.PropertySource<? extends LeechChestBlockEntity> getBlockEntitySource(BlockState state, World world, BlockPos pos, boolean ignoreBlocked) {
         return DoubleBlockProperties.PropertyRetriever::getFallback;
     }
 

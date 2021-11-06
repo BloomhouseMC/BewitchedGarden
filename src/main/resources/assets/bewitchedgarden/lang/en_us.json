@@ -14,6 +14,7 @@
   "block.bewitchedgarden.night_snare": "Night Snare",
   "block.bewitchedgarden.fiery_snare": "Fiery Snare",
   "block.bewitchedgarden.capture_snare": "Capture Snare",
+  "block.bewitchedgarden.peas": "Peas",
 
   "item.bewitchedgarden.lunarian_seeds": "Lunarian Seeds",
   "item.bewitchedgarden.lunar_petal": "Lunar Petal",
@@ -22,6 +23,7 @@
   "item.bewitchedgarden.venus_poison": "Venus Poison",
   "item.bewitchedgarden.jupiter_bulb": "Jupiter Bulb",
   "item.bewitchedgarden.saturn_stem": "Saturn Stem",
+  "item.bewitchedgarden.pea_pod": "Pea Pod",
 
   "container.bewitchedgarden.leech_chest": "Leech Chest",
 
