@@ -29,8 +29,9 @@ public class BGRendering {
         EntityRendererRegistry.INSTANCE.register(BGEntities.HERBOLOGIST, HerbologistEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(BGEntities.LEAFLET, LeafletEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(BGEntities.CRUPTID, CruptidEntityRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(BGEntities.EFFIGY, EffigyEntityRenderer::new);
 
-        //Plants
+        //PlantEntities
         EntityRendererRegistry.INSTANCE.register(BGEntities.JUPITER_ENTITY, BasePlantEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(BGEntities.VENUS_ENTITY, BasePlantEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(BGEntities.SATURN_ENTITY, BasePlantEntityRenderer::new);
