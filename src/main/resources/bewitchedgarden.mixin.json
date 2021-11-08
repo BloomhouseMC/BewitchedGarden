@@ -4,7 +4,6 @@
   "package": "com.bloomhousemc.bewitchedgarden.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "DefaultBiomeFeaturesMixin",
     "EntityMixin",
     "ItemEntityMixin",
     "LivingEntityMixin",
