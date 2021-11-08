@@ -30,10 +30,10 @@ public class BGWorldState extends PersistentState {
     public NbtCompound writeNbt(NbtCompound nbt) {
         NbtList effigiesList = new NbtList();
         for (Pair<UUID, NbtCompound> pair : this.effigies) {
-            NbtCompound familiarCompound = new NbtCompound();
-            familiarCompound.putUuid("Player", pair.getLeft());
-            familiarCompound.put("Effigies", pair.getRight());
-            effigiesList.add(familiarCompound);
+            NbtCompound effigyCompound = new NbtCompound();
+            effigyCompound.putUuid("Player", pair.getLeft());
+            effigyCompound.put("Effigies", pair.getRight());
+            effigiesList.add(effigyCompound);
         }
         nbt.put("Effigies", effigiesList);
         return nbt;

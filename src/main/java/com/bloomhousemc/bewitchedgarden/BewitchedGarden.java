@@ -40,41 +40,5 @@ public class BewitchedGarden implements ModInitializer {
 		BGEntities.init();
 		BGEvents.init();
 		BGStatusEffects.init();
-
-
-
-		UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
-			if(getEffigy(player) == null && player.getStackInHand(hand).getItem() instanceof TaglockItem && entity instanceof EffigyEntity effigyEntity){
-				ItemStack taglock = player.getStackInHand(hand);
-				UUID ownerUUID = TaglockItem.getTaglockUUID(taglock);
-				NbtCompound entityCompound = new NbtCompound();
-				effigyEntity.saveSelfNbt(entityCompound);
-				entityCompound.putUuid("Owner", ownerUUID);
-				if(entityCompound.contains("Owner") && player.getUuid().equals(entityCompound.getUuid("Owner"))){
-					BGWorldState bgWorldState = new BGWorldState();
-					NbtCompound effigiesCompound = new NbtCompound();
-					EffigyComponent.get(effigyEntity).setOwner(ownerUUID);
-					effigiesCompound.putUuid("UUID", entityCompound.getUuid("UUID"));
-					effigiesCompound.putString("id", Registry.ENTITY_TYPE.getId(effigyEntity.getType()).toString());
-					bgWorldState.effigies.add(new Pair<>(player.getUuid(), effigiesCompound));
-					bgWorldState.markDirty();
-				}
-			}
-			return ActionResult.PASS;
-		});
-	}
-
-
-
-	public static EntityType<?> getEffigy(PlayerEntity player) {
-		if (!player.world.isClient) {
-			BGWorldState bgWorldState = BGWorldState.get(player.world);
-			for (Pair<UUID, NbtCompound> pair : bgWorldState.effigies) {
-				if (player.getUuid().equals(pair.getLeft())) {
-					return Registry.ENTITY_TYPE.get(new Identifier(pair.getRight().getString("id")));
-				}
-			}
-		}
-		return null;
 	}
 }
