@@ -96,6 +96,14 @@ dependencies {
 	// Fabric API
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
+	//CCA
+	modApi "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-base:${cca_version}"
+	include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-base:${cca_version}"
+	modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-entity:${cca_version}"
+	include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-entity:${cca_version}"
+	modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-world:${cca_version}"
+	include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-world:${cca_version}"
+
 	//Wood API
 	modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_wood_api_version}"
 	include "com.terraformersmc.terraform-api:terraform-wood-api-v1:${project.terraform_wood_api_version}"

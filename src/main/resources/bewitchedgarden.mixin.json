@@ -5,14 +5,16 @@
   "compatibilityLevel": "JAVA_16",
   "mixins": [
     "DefaultBiomeFeaturesMixin",
+    "EntityMixin",
     "ItemEntityMixin",
     "LivingEntityMixin",
+    "ServerPlayerEntityMixin",
     "ServerPlayerInteractionManagerMixin"
   ],
   "client": [
+    "ClientPlayerEntityMixin",
     "GameRendererMixin",
-    "RenderLayerAccessor",
-    "ClientPlayerEntityMixin"
+    "RenderLayerAccessor"
   ],
   "injectors": {
     "defaultRequire": 1
