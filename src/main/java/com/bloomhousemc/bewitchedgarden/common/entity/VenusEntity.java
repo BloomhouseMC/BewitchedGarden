@@ -36,7 +36,6 @@ public class VenusEntity extends BasePlantEntity {
     @Override
     public void setTarget(@Nullable LivingEntity target) {
         if (target != null && target.getUuid() == getOwner()) {
-            System.out.println("setTarget");
             target = null;
         }
         super.setTarget(target);

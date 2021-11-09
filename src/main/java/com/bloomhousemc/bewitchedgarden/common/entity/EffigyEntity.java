@@ -1,10 +1,12 @@
 package com.bloomhousemc.bewitchedgarden.common.entity;
 
+import com.bloomhousemc.bewitchedgarden.common.components.EffigyComponent;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Arm;
@@ -41,6 +43,11 @@ public class EffigyEntity extends LivingEntity implements IAnimatable {
             case HAND -> this.handItems.get(slot.getEntitySlotId());
             case ARMOR -> this.armorItems.get(slot.getEntitySlotId());
         };
+    }
+
+    @Override
+    public void tickMovement() {
+
     }
 
     @Override
