@@ -2,7 +2,7 @@ package com.bloomhousemc.bewitchedgarden.client.renderer;
 
 import com.bloomhousemc.bewitchedgarden.client.model.BasePlantEntityModel;
 import com.bloomhousemc.bewitchedgarden.common.entity.BasePlantEntity;
-import com.bloomhousemc.bewitchedgarden.common.entity.SaturnEntity;
+import com.bloomhousemc.bewitchedgarden.common.entity.GrabberEntity;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
@@ -37,8 +37,8 @@ public class BasePlantEntityRenderer extends GeoEntityRenderer<BasePlantEntity> 
 
     @Override
     public void renderEarly(BasePlantEntity basePlantEntity, MatrixStack stackIn, float ticks, VertexConsumerProvider vertexConsumerProvider, VertexConsumer vertexBuilder, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float partialTicks) {
-        if(basePlantEntity instanceof SaturnEntity saturnEntity){
-            this.itemStack = saturnEntity.getInventory().getStack(0);
+        if(basePlantEntity instanceof GrabberEntity grabberEntity){
+            this.itemStack = grabberEntity.getInventory().getStack(0);
         }
         super.renderEarly(basePlantEntity, stackIn, ticks, vertexConsumerProvider, vertexBuilder, packedLightIn, packedOverlayIn, red,
         green, blue, partialTicks);

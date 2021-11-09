@@ -39,7 +39,9 @@ public class BGObjects {
     public static final Block LUNARIAN = register("lunarian", new LunarianCropBlock(FabricBlockSettings.of(Material.PLANT).breakInstantly().ticksRandomly().noCollision().sounds(BlockSoundGroup.CROP)), false);
     public static final Block MINT = register("mint", new HerbPlantBlock(FabricBlockSettings.of(Material.PLANT).breakInstantly().noCollision().sounds(BlockSoundGroup.GRASS)), true);
     public static final Block PEAS = register("peas", new PeasCropBlock(FabricBlockSettings.copyOf(LUNARIAN)), false);
-        // Snares
+    public static final Block BLOODROOT = register("bloodroot", new HerbPlantBlock(FabricBlockSettings.of(Material.PLANT).breakInstantly().noCollision().sounds(BlockSoundGroup.GRASS)), false);
+
+    // Snares
         public static final Block SNARE = register("snare", new SnareBlock(FabricBlockSettings.of(Material.PLANT).noCollision().strength(0.3F).sounds(BlockSoundGroup.BAMBOO)), true);
         public static final Block TELEPORTATION_SNARE = register("teleportation_snare", new TeleportationSnareBlock(FabricBlockSettings.of(Material.PLANT).noCollision().strength(0.3F).sounds(BlockSoundGroup.BAMBOO)), true);
         public static final Block NIGHT_SNARE = register("night_snare", new NightSnareBlock(FabricBlockSettings.copyOf(SNARE)), true);
@@ -56,7 +58,7 @@ public class BGObjects {
     public static final Item PEA_POD = register("pea_pod", new AliasedBlockItem(PEAS, gen()));
 
     public static final Item SAUSAGE_ITEM = register("sausage_item", new SausageItem(gen().food(TIER_5_FOOD)));
-    public static final Item BLOODROOT = register("bloodroot", new Item(gen()));
+    public static final Item BLOODROOT_ITEM = register("bloodroot_item", new Item(gen()));
     public static final Item MUTANDIS = register("mutandis", new MutandisItem(gen()));
     public static final Item MUTANDIS_BREW = register("mutandis_brew", new MutandisBrew(gen()));
 
@@ -82,9 +84,9 @@ public class BGObjects {
     public static final Item ENDER_VIAL = register("ender_vial", new Item(gen().recipeRemainder(Items.GLASS_BOTTLE)));//0x70922d
 
     //Spawn Eggs
-    public static final Item VENUS_SPAWN_EGG = register("venus_spawn_egg", new SpawnEggItem(BGEntities.VENUS_ENTITY, 0x70922d, 0x44101c, gen()));
-    public static final Item JUPITER_SPAWN_EGG = register("jupiter_spawn_egg", new SpawnEggItem(BGEntities.JUPITER_ENTITY, 0x70922d, 0x7FFAED, gen()));
-    public static final Item SATURN_SPAWN_EGG = register("saturn_spawn_egg", new SpawnEggItem(BGEntities.SATURN_ENTITY, 0x70922d, 0x5C1148, gen()));
+    public static final Item MUNCHER_SPAWN_EGG = register("muncher_spawn_egg", new SpawnEggItem(BGEntities.MUNCHER_ENTITY, 0x70922d, 0x44101c, gen()));
+    public static final Item GLOW_SHRUB_SPAWN_EGG = register("glowshrub_spawn_egg", new SpawnEggItem(BGEntities.GLOW_SHRUB_ENTITY, 0x70922d, 0x7FFAED, gen()));
+    public static final Item GRABBER_SPAWN_EGG = register("grabber_spawn_egg", new SpawnEggItem(BGEntities.GRABBER_ENTITY, 0x70922d, 0x5C1148, gen()));
     public static final Item ELDER_SPAWN_EGG = register("elder_spawn_egg", new SpawnEggItem(BGEntities.ELDER_ENTITY, 0x70922d, 0x382E12, gen()));
 
 

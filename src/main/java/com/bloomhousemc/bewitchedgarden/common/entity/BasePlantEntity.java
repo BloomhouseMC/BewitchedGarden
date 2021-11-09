@@ -152,9 +152,9 @@ public class BasePlantEntity extends PathAwareEntity implements IAnimatable, Ang
         private int updateCountdownTicks;
         private final boolean pauseWhenMobIdle;
 
-        public PlantAttackGoal(VenusEntity venusEntity, double speed, boolean pauseWhenMobIdle) {
-            super(venusEntity, speed, pauseWhenMobIdle);
-            this.parentEntity = venusEntity;
+        public PlantAttackGoal(MuncherEntity muncherEntity, double speed, boolean pauseWhenMobIdle) {
+            super(muncherEntity, speed, pauseWhenMobIdle);
+            this.parentEntity = muncherEntity;
             this.pauseWhenMobIdle = pauseWhenMobIdle;
         }
 

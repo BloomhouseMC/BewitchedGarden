@@ -11,6 +11,7 @@ import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Arm;
 import net.minecraft.util.collection.DefaultedList;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -46,9 +47,11 @@ public class EffigyEntity extends LivingEntity implements IAnimatable {
     }
 
     @Override
-    public void tickMovement() {
-
+    protected boolean isImmobile() {
+        return true;
     }
+
+
 
     @Override
     public void equipStack(EquipmentSlot slot, ItemStack stack) {

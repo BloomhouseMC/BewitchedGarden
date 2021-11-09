@@ -2,15 +2,13 @@ package com.bloomhousemc.bewitchedgarden.common.events;
 
 import com.bloomhousemc.bewitchedgarden.common.components.EffigyComponent;
 import com.bloomhousemc.bewitchedgarden.common.entity.EffigyEntity;
-import com.bloomhousemc.bewitchedgarden.common.entity.VenusEntity;
+import com.bloomhousemc.bewitchedgarden.common.entity.MuncherEntity;
 import moriyashiine.bewitchment.common.item.TaglockItem;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
 
 import java.util.UUID;
 
@@ -29,11 +27,11 @@ public class BGEvents {
          * @param  entity to check if the target is an instance of VenusEntity
          */
         UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
-            if(!world.isClient() && entity instanceof VenusEntity venusEntity && player.getStackInHand(hand).getItem() instanceof TaglockItem taglockItem){
+            if(!world.isClient() && entity instanceof MuncherEntity muncherEntity && player.getStackInHand(hand).getItem() instanceof TaglockItem taglockItem){
                 ItemStack itemStack = player.getStackInHand(hand);
                 UUID owner = TaglockItem.getTaglockUUID(itemStack);
-                venusEntity.setOwner(owner);
-                venusEntity.playSound(SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, 0.5F, 1);
+                muncherEntity.setOwner(owner);
+                muncherEntity.playSound(SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, 0.5F, 1);
                 taglockItem.getDefaultStack().decrement(1);
             }
             return ActionResult.PASS;

@@ -1,0 +1,6 @@
+{
+  "parent": "bewitchedgarden:block/bloodroot_parent",
+  "textures": {
+    "cross": "bewitchedgarden:block/bloodroot_base"
+  }
+}
