@@ -32,21 +32,19 @@ public class BGRendering {
         EntityRendererRegistry.INSTANCE.register(BGEntities.EFFIGY, EffigyEntityRenderer::new);
 
         //PlantEntities
-        EntityRendererRegistry.INSTANCE.register(BGEntities.JUPITER_ENTITY, BasePlantEntityRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(BGEntities.VENUS_ENTITY, BasePlantEntityRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(BGEntities.SATURN_ENTITY, BasePlantEntityRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(BGEntities.MUNCHER_ENTITY, BasePlantEntityRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(BGEntities.GLOW_SHRUB_ENTITY, BasePlantEntityRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(BGEntities.GRABBER_ENTITY, BasePlantEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(BGEntities.ELDER_ENTITY, BasePlantEntityRenderer::new);
 
         //LayerMaps
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BGObjects.LUNARIAN, BGObjects.PEAS);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BGObjects.LUNARIAN, BGObjects.PEAS, BGObjects.MINT, BGObjects.BLOODROOT);
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BGObjects.SNARE, BGObjects.FIERY_SNARE, BGObjects.NIGHT_SNARE, BGObjects.TELEPORTATION_SNARE, BGObjects.CAPTURE_SNARE);
-        BlockRenderLayerMap.INSTANCE.putBlock(BGObjects.MINT, RenderLayer.getCutout());
 
         //BlockEntity
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.SAUSAGE_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new SausageBlockEntityRenderer());
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.WISP_BLOCK_ENTITY, ctx -> new WispBlockEntityRenderer());
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.HEAVENS_GATE_BLOCK_ENTITY, ctx -> new HeavensGateBlockEntityRenderer());
-        //BlockEntityRendererRegistry.INSTANCE.register(BGObjects.HEAVENS_GATE_BLOCK_ENTITY, HeavensGateBlockEntityRenderer::new);
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.LEECH_CHEST_BLOCK_ENTITY, LeechChestEntityRenderer::new);
 
         //ItemEntity

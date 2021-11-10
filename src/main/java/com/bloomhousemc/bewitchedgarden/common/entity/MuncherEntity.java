@@ -9,8 +9,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class VenusEntity extends BasePlantEntity {
-    public VenusEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
+public class MuncherEntity extends BasePlantEntity {
+    public MuncherEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -36,7 +36,6 @@ public class VenusEntity extends BasePlantEntity {
     @Override
     public void setTarget(@Nullable LivingEntity target) {
         if (target != null && target.getUuid() == getOwner()) {
-            System.out.println("setTarget");
             target = null;
         }
         super.setTarget(target);

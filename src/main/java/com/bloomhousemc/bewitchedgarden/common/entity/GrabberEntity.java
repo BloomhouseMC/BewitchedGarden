@@ -15,9 +15,9 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.annotation.Debug;
 import net.minecraft.world.World;
 
-public class SaturnEntity extends BasePlantEntity implements InventoryOwner {
+public class GrabberEntity extends BasePlantEntity implements InventoryOwner {
     private final SimpleInventory inventory = new SimpleInventory(1);
-    public SaturnEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
+    public GrabberEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
 

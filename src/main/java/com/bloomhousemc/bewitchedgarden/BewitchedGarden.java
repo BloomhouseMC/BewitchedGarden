@@ -1,9 +1,9 @@
 package com.bloomhousemc.bewitchedgarden;
 
+import com.bloomhousemc.bewitchedgarden.common.registry.BGStatusEffects;
 import com.bloomhousemc.bewitchedgarden.common.events.BGEvents;
 import com.bloomhousemc.bewitchedgarden.common.registry.BGEntities;
 import com.bloomhousemc.bewitchedgarden.common.registry.BGObjects;
-import com.bloomhousemc.bewitchedgarden.common.registry.BGStatusEffects;
 import com.bloomhousemc.bewitchedgarden.common.registry.BGWorld;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;

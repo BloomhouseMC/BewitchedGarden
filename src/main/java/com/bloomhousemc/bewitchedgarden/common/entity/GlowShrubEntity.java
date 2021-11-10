@@ -9,8 +9,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
-public class JupiterEntity extends BasePlantEntity {
-    public JupiterEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
+public class GlowShrubEntity extends BasePlantEntity {
+    public GlowShrubEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -25,5 +25,9 @@ public class JupiterEntity extends BasePlantEntity {
             this.world.setBlockState(blockPos, blockState);
         }
         super.tick();
+    }
+
+    @Override
+    protected void initGoals() {
     }
 }
