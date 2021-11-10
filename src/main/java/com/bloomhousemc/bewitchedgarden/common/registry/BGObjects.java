@@ -4,12 +4,12 @@ import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import com.bloomhousemc.bewitchedgarden.common.blocks.*;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.HeavensGateBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.LeechChestBlockEntity;
+import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.SausageBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.WispBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.crops.LunarianCropBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.crops.PeasCropBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.*;
-import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.SausageBlockEntity;
-import com.bloomhousemc.bewitchedgarden.common.blocks.snares.TeleportationSnareBlock;
+import com.bloomhousemc.bewitchedgarden.common.items.BGMusicDisc;
 import com.bloomhousemc.bewitchedgarden.common.items.MutandisBrew;
 import com.bloomhousemc.bewitchedgarden.common.items.MutandisItem;
 import com.bloomhousemc.bewitchedgarden.common.items.SausageItem;
@@ -23,11 +23,13 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
-import static com.bloomhousemc.bewitchedgarden.common.registry.BGFoodComponents.*;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+
+import static com.bloomhousemc.bewitchedgarden.common.registry.BGFoodComponents.TIER_5_FOOD;
 
 
 public class BGObjects {
@@ -62,6 +64,7 @@ public class BGObjects {
     public static final Item MUTANDIS = register("mutandis", new MutandisItem(gen()));
     public static final Item MUTANDIS_BREW = register("mutandis_brew", new MutandisBrew(gen()));
 
+    public static final Item MUSIC_DISC_PETALS = register("music_disc_petals", new BGMusicDisc(7, BGSounds.MUSIC_DISC_PETALS, gen().maxCount(1).rarity(Rarity.RARE)));
 
     //Blocks
     public static final Block SAUSAGE = register("sausage", new SausageBlock(FabricBlockSettings.copyOf(Blocks.STONE)), false);
