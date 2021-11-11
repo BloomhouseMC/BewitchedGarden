@@ -28,6 +28,7 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
+import java.util.Objects;
 import java.util.UUID;
 
 public class BasePlantEntity extends PathAwareEntity implements IAnimatable, Angerable, TaglockHolder {
@@ -125,7 +126,7 @@ public class BasePlantEntity extends PathAwareEntity implements IAnimatable, Ang
     private <E extends IAnimatable> PlayState basicMovement(AnimationEvent<E> event) {
         if(this.dataTracker.get(STATE) >= 1){
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation."+getEntity(this)+".attack", true));
-        }else if(event.getLimbSwingAmount()>0.1F){
+        }else if(event.getLimbSwingAmount()>0.1F && Objects.equals(getEntity(this), "elder")){
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation."+getEntity(this)+".move", true));
         }
         else{

@@ -1,9 +1,11 @@
 package com.bloomhousemc.bewitchedgarden.common.entity;
 
+import com.bloomhousemc.bewitchedgarden.common.registry.BGObjects;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.ActiveTargetGoal;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
@@ -39,6 +41,12 @@ public class MuncherEntity extends BasePlantEntity {
             target = null;
         }
         super.setTarget(target);
+    }
+
+    @Override
+    public void onDeath(DamageSource source) {
+        if(world.getBlockState(this.getBlockPos()).isAir()) world.setBlockState(this.getBlockPos(), BGObjects.POISON_PUDDLE.getDefaultState());
+        super.onDeath(source);
     }
 
     @Override

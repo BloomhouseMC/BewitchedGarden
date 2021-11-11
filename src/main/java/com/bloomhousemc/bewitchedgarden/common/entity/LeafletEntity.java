@@ -1,7 +1,5 @@
 package com.bloomhousemc.bewitchedgarden.common.entity;
 
-import com.bloomhousemc.bewitchedgarden.common.registry.BGTags;
-import moriyashiine.bewitchment.common.registry.BWTags;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
@@ -10,15 +8,12 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.DyeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.tag.ItemTags;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.DyeColor;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;

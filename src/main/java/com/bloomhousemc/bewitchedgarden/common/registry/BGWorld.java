@@ -2,16 +2,9 @@ package com.bloomhousemc.bewitchedgarden.common.registry;
 
 import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import com.bloomhousemc.bewitchedgarden.common.world.feature.BloodRootFeature;
-import net.fabricmc.fabric.api.biome.v1.BiomeModification;
-import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
-import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import net.fabricmc.fabric.api.biome.v1.ModificationPhase;
-import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.decorator.ChanceDecoratorConfig;
 import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.feature.*;

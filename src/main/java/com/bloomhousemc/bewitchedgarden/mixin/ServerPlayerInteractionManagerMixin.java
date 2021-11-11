@@ -1,6 +1,5 @@
 package com.bloomhousemc.bewitchedgarden.mixin;
 
-import com.bloomhousemc.bewitchedgarden.common.blocks.LeechChestBlock;
 import com.bloomhousemc.bewitchedgarden.common.registry.BGObjects;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;

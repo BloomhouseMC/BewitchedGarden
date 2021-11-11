@@ -1,0 +1,18 @@
+{
+  "category": "bewitchedgarden:plants",
+  "name": "Effigy",
+  "icon": "bewitchedgarden:bloodroot_item",
+  "entry_color": "12C275",
+  "pages": [
+    {
+      "type": "text",
+      "text": ""
+    },
+    {
+      "type": "entity",
+      "entity": "bewitchedgarden:effigy",
+      "offset": 0.45,
+      "scale": 0.8
+    }
+  ]
+}

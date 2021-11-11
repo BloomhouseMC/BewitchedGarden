@@ -1,0 +1,17 @@
+{
+  "category": "bewitchedgarden:plants",
+  "name": "Grabber",
+  "icon": "bewitchedgarden:grabber_spawn_egg",
+  "entry_color": "12C275",
+  "pages": [
+    {
+      "type": "text",
+      "text": ""
+    },
+    {
+      "type": "entity",
+      "entity": "bewitchedgarden:grabber",
+      "offset": 0.1
+    }
+  ]
+}

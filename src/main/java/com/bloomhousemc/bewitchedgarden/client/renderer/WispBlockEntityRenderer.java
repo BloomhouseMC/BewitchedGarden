@@ -1,15 +1,12 @@
 package com.bloomhousemc.bewitchedgarden.client.renderer;
 
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.WispBlockEntity;
-import moriyashiine.bewitchment.common.registry.BWParticleTypes;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 public class WispBlockEntityRenderer implements BlockEntityRenderer<WispBlockEntity> {

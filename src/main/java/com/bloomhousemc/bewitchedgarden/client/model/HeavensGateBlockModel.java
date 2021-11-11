@@ -1,9 +1,7 @@
 package com.bloomhousemc.bewitchedgarden.client.model;
 
 import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
-import com.bloomhousemc.bewitchedgarden.common.blocks.HeavensGateBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.HeavensGateBlockEntity;
-import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.SausageBlockEntity;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 

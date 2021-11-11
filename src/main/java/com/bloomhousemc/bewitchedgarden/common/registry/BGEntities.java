@@ -3,7 +3,6 @@ package com.bloomhousemc.bewitchedgarden.common.registry;
 import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import com.bloomhousemc.bewitchedgarden.common.entity.*;
 import com.bloomhousemc.bewitchedgarden.common.items.itementity.MutandisEntity;
-import com.sun.jna.platform.win32.GL;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;

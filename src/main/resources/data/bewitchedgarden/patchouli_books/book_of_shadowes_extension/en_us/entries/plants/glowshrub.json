@@ -1,0 +1,18 @@
+{
+  "category": "bewitchedgarden:plants",
+  "name": "Glowshrub",
+  "icon": "bewitchedgarden:glowshrub_spawn_egg",
+  "entry_color": "12C275",
+  "pages": [
+    {
+      "type": "text",
+      "text": ""
+    },
+    {
+      "type": "entity",
+      "entity": "bewitchedgarden:glowshrub",
+      "offset": 0.2,
+      "scale": 0.6
+    }
+  ]
+}

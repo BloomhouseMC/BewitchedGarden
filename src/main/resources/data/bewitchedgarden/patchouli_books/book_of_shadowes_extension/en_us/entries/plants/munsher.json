@@ -1,0 +1,17 @@
+{
+  "category": "bewitchedgarden:plants",
+  "name": "Muncher",
+  "icon": "bewitchedgarden:muncher_spawn_egg",
+  "entry_color": "12C275",
+  "pages": [
+    {
+      "type": "text",
+      "text": ""
+    },
+    {
+      "type": "entity",
+      "entity": "bewitchedgarden:muncher",
+      "offset": 0.1
+    }
+  ]
+}

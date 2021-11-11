@@ -12,7 +12,6 @@ import net.minecraft.world.World;
 
 
 public class WispBlockEntity extends BlockEntity {
-    public int color = 0xffd450;
     public int lifetime = 40;
     public WispBlockEntity(BlockPos pos, BlockState state) {
         super(BGObjects.WISP_BLOCK_ENTITY, pos, state);

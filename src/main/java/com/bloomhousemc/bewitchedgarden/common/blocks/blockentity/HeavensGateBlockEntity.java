@@ -1,24 +1,9 @@
 package com.bloomhousemc.bewitchedgarden.common.blocks.blockentity;
 
-import com.bloomhousemc.bewitchedgarden.common.blocks.SausageBlock;
 import com.bloomhousemc.bewitchedgarden.common.registry.BGObjects;
-import net.fabricmc.fabric.api.block.entity.BlockEntityClientSerializable;
-import net.fabricmc.fabric.api.util.NbtType;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.DoorBlock;
-import net.minecraft.block.TallFlowerBlock;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityTicker;
-import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.block.enums.DoubleBlockHalf;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.nbt.NbtElement;
-import net.minecraft.nbt.NbtList;
-import net.minecraft.screen.PropertyDelegate;
-import net.minecraft.state.property.EnumProperty;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -35,7 +20,7 @@ import static com.bloomhousemc.bewitchedgarden.common.blocks.HeavensGateBlock.OP
 public class HeavensGateBlockEntity extends BlockEntity implements IAnimatable {
     public final List<Long> blockList = new ArrayList<>();
     public int counter = 0;
-    public int MAX_COUNT = 60;
+    public int MAX_COUNT = 100;
     private final AnimationFactory factory = new AnimationFactory(this);
     public HeavensGateBlockEntity(BlockPos pos, BlockState state) {
         super(BGObjects.HEAVENS_GATE_BLOCK_ENTITY, pos, state);

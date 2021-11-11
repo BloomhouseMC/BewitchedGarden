@@ -1,13 +1,9 @@
 package com.bloomhousemc.bewitchedgarden.common.items;
 
 import com.bloomhousemc.bewitchedgarden.common.items.itementity.MutandisEntity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.thrown.PotionEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ThrowablePotionItem;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;

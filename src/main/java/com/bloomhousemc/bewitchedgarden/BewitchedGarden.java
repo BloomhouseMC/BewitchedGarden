@@ -14,7 +14,7 @@ import software.bernie.geckolib3.GeckoLib;
 
 public class BewitchedGarden implements ModInitializer {
 	public static final String MODID = "bewitchedgarden";
-	public static final ItemGroup BEWITCHEDGARDEN_GROUP = FabricItemGroupBuilder.build(new Identifier(MODID, MODID), () -> new ItemStack(BGObjects.VENUS_POISON));
+	public static final ItemGroup BEWITCHEDGARDEN_GROUP = FabricItemGroupBuilder.build(new Identifier(MODID, MODID), () -> new ItemStack(BGObjects.BLOODROOT_ITEM));
 
 	@Override
 	public void onInitialize() {

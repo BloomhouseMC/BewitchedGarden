@@ -1,17 +1,14 @@
 package com.bloomhousemc.bewitchedgarden.common.entity;
 
-import com.bloomhousemc.bewitchedgarden.common.components.EffigyComponent;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Arm;
 import net.minecraft.util.collection.DefaultedList;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -25,12 +22,10 @@ public class EffigyEntity extends LivingEntity implements IAnimatable {
     AnimationFactory factory = new AnimationFactory(this);
     private final DefaultedList<ItemStack> handItems;
     private final DefaultedList<ItemStack> armorItems;
-    private final DefaultedList<ItemStack> inventoryItems;
     public EffigyEntity(EntityType<? extends LivingEntity> entityType, World world) {
         super(entityType, world);
         this.handItems = DefaultedList.ofSize(2, ItemStack.EMPTY);
         this.armorItems = DefaultedList.ofSize(4, ItemStack.EMPTY);
-        this.inventoryItems = DefaultedList.ofSize(3*18, ItemStack.EMPTY);
     }
 
     @Override

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "bewitchedgarden:item/mutandis"
+    "layer0": "bewitchedgarden:item/mutandis_brew"
   }
 }

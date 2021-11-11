@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "bewitchedgarden:item/jupiter_bulb"
+    "layer0": "bewitchedgarden:item/grabber_stem"
   }
 }

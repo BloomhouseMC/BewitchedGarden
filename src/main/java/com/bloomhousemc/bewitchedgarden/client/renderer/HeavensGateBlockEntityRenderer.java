@@ -1,10 +1,8 @@
 package com.bloomhousemc.bewitchedgarden.client.renderer;
 
-import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import com.bloomhousemc.bewitchedgarden.client.model.HeavensGateBlockModel;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.HeavensGateBlockEntity;
 import com.bloomhousemc.bewitchedgarden.mixin.RenderLayerAccessor;
-import net.minecraft.block.DoorBlock;
 import net.minecraft.client.render.*;
 import net.minecraft.client.render.block.entity.EndPortalBlockEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;

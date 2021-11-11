@@ -2,7 +2,6 @@ package com.bloomhousemc.bewitchedgarden.common.entity;
 
 import com.bloomhousemc.bewitchedgarden.common.registry.BGObjects;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.util.math.BlockPos;

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "bewitchedgarden:item/venus_poison"
+    "layer0": "bewitchedgarden:item/muncher_poison"
   }
 }

@@ -9,17 +9,16 @@ import com.bloomhousemc.bewitchedgarden.common.blocks.crops.LunarianCropBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.crops.PeasCropBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.*;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.SausageBlockEntity;
-import com.bloomhousemc.bewitchedgarden.common.blocks.snares.TeleportationSnareBlock;
+import com.bloomhousemc.bewitchedgarden.common.fluids.PoisonFluid;
 import com.bloomhousemc.bewitchedgarden.common.items.MutandisBrew;
 import com.bloomhousemc.bewitchedgarden.common.items.MutandisItem;
 import com.bloomhousemc.bewitchedgarden.common.items.SausageItem;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.item.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
@@ -33,6 +32,7 @@ import java.util.Map;
 public class BGObjects {
     public static final Map<Block, Identifier> BLOCKS = new LinkedHashMap<>();
     public static final Map<Item, Identifier> ITEMS = new LinkedHashMap<>();
+    public static final Map<FlowableFluid, Identifier> FLUIDS = new LinkedHashMap<>();
     private static final Map<BlockEntityType<?>, Identifier> BLOCK_ENTITY_TYPES = new LinkedHashMap<>();
 
     // Crops/Plants
@@ -49,9 +49,9 @@ public class BGObjects {
         public static final Block CAPTURE_SNARE = register("capture_snare", new CaptureSnareBlock(FabricBlockSettings.copyOf(SNARE)), true);
 
     //Items
-    public static final Item VENUS_POISON = register("venus_poison", new Item(gen()));
-    public static final Item JUPITER_BULB = register("jupiter_bulb", new Item(gen()));
-    public static final Item SATURN_STEM = register("saturn_stem", new Item(gen()));
+    public static final Item MUNCHER_POISON = register("muncher_poison", new Item(gen()));
+    public static final Item GLOWSHRUB_BULB = register("glowshrub_bulb", new Item(gen()));
+    public static final Item GRABBER_STEM = register("grabber_stem", new Item(gen()));
     public static final Item LUNARIAN_SEEDS = register("lunarian_seeds", new AliasedBlockItem(LUNARIAN, gen()));
     public static final Item LUNAR_PETAL = register("lunar_petal", new Item(gen()));
     public static final Item MINT_LEAVES = register("mint_leaves", new Item(gen()));
@@ -62,6 +62,11 @@ public class BGObjects {
     public static final Item MUTANDIS = register("mutandis", new MutandisItem(gen()));
     public static final Item MUTANDIS_BREW = register("mutandis_brew", new MutandisBrew(gen()));
 
+    //Fluids
+    public static final FlowableFluid POISON_FLUID_STILL = register("poison_fluid_still", new PoisonFluid.Still());
+    public static final FlowableFluid POISON_FLUID_FLOWING = register("poison_fluid_flowing", new PoisonFluid.Flowing());
+    public static final Item POISON_BUCKET = register("poison_bucket", new BucketItem(POISON_FLUID_STILL, gen().recipeRemainder(Items.BUCKET).maxCount(1)));
+    //public static final Item POISON_BUCKET = new BucketItem(POISON_FLUID_STILL, gen().recipeRemainder(Items.BUCKET).maxCount(1));
 
     //Blocks
     public static final Block SAUSAGE = register("sausage", new SausageBlock(FabricBlockSettings.copyOf(Blocks.STONE)), false);
@@ -71,6 +76,9 @@ public class BGObjects {
     public static final Block LEECH_CHEST = register("leech_chest", new LeechChestBlock(FabricBlockSettings.of(Material.PLANT).strength(2.5F).sounds(BlockSoundGroup.MOSS_BLOCK)), true);
     public static final Block HEAVENS_GATE = register("heavens_gate", new HeavensGateBlock(FabricBlockSettings.copyOf(Blocks.STONE)), true);
     public static final Block EMPTY_HEAVENS_GATE = register("empty_heavens_gate", new EmptyHeavensGateBlock(FabricBlockSettings.copyOf(Blocks.STONE)), false);
+    public static final Block POISON = register("poison_fluid_block", new PoisonBlock(POISON_FLUID_STILL, FabricBlockSettings.copy(Blocks.WATER)), false);
+    public static final Block POISON_PUDDLE = register("poison_puddle", new PoisonBlock.PoisonPuddle(POISON_FLUID_STILL, FabricBlockSettings.of(Material.WATER)), false);
+
 
 
     //Block Entities
@@ -90,6 +98,10 @@ public class BGObjects {
     public static final Item ELDER_SPAWN_EGG = register("elder_spawn_egg", new SpawnEggItem(BGEntities.ELDER_ENTITY, 0x70922d, 0x382E12, gen()));
 
 
+    private static <T extends FlowableFluid> T register(String id, T fluid){
+        FLUIDS.put(fluid, new Identifier(BewitchedGarden.MODID, id));
+        return fluid;
+    }
 
     private static <T extends BlockEntity> BlockEntityType<T> register(String id, BlockEntityType<T> type) {
         BLOCK_ENTITY_TYPES.put(type, new Identifier(BewitchedGarden.MODID, id));
@@ -117,6 +129,7 @@ public class BGObjects {
     public static void init() {
         BLOCKS.keySet().forEach(block -> Registry.register(Registry.BLOCK, BLOCKS.get(block), block));
         BLOCK_ENTITY_TYPES.keySet().forEach(blockEntityType -> Registry.register(Registry.BLOCK_ENTITY_TYPE, BLOCK_ENTITY_TYPES.get(blockEntityType), blockEntityType));
+        FLUIDS.keySet().forEach(fluid -> Registry.register(Registry.FLUID, FLUIDS.get(fluid), fluid));
         ITEMS.keySet().forEach(item -> Registry.register(Registry.ITEM, ITEMS.get(item), item));
     }
 }

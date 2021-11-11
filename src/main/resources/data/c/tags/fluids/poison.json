@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "bewitchedgarden:poison_fluid_still",
+    "bewitchedgarden:poison_fluid_flowing"
+  ]
+}

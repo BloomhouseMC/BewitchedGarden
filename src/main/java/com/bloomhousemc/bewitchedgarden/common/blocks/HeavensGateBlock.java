@@ -1,24 +1,18 @@
 package com.bloomhousemc.bewitchedgarden.common.blocks;
 
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.HeavensGateBlockEntity;
-import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.WispBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.registry.BGObjects;
 import com.bloomhousemc.bewitchedgarden.common.util.MultiBlock4x4;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityTicker;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.nbt.NbtList;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.*;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -27,13 +21,10 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.lwjgl.system.CallbackI;
 
-import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
 public class HeavensGateBlock extends HorizontalFacingBlock implements BlockEntityProvider {

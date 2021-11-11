@@ -1,6 +1,5 @@
 package com.bloomhousemc.bewitchedgarden.common.blocks.snares;
 
-import com.bloomhousemc.bewitchedgarden.common.util.SnareDamageSource;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
