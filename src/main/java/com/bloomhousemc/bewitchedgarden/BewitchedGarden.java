@@ -22,6 +22,7 @@ public class BewitchedGarden implements ModInitializer {
 		BGEntities.init();
 		BGEvents.init();
 		BGStatusEffects.init();
+		BGRitualFunctions.init();
 		BGWorld.init();
 		SOUNDS = new BGSounds();
 	}

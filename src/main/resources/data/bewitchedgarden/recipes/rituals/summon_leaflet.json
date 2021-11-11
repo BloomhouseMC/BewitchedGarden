@@ -1,0 +1,21 @@
+{
+  "type": "bewitchment:ritual_recipe",
+  "ingredients": [
+    {
+      "item": "grass_block"
+    },
+    {
+      "item": "bewitchedgarden:mutandis"
+    },
+    {
+      "item": "bewitchment:earth_ichor"
+    },
+    {
+      "item": "wheat_seeds"
+    }
+  ],
+  "inner": "normal",
+  "outer": "normal",
+  "ritual_function": "bewitchedgarden:summon_leaflet",
+  "cost": 50
+}
