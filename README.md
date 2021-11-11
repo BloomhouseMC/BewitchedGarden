@@ -2,10 +2,9 @@
 
 ## About
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+Bewitched Garden is an addon for [Bewitchment](https://www.curseforge.com/minecraft/mc-mods/bewitchment) that adds lots of creatures, items, and concepts revolving around plants and cooking. 
 
+### [Discord](https://discord.gg/GwVv8ZnbNe)
 
-=================
-bloomhousemc.com
-==================
+### [Website](bloomhousemc.com)
 
