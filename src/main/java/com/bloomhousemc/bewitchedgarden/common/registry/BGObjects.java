@@ -4,10 +4,12 @@ import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import com.bloomhousemc.bewitchedgarden.common.blocks.*;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.HeavensGateBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.LeechChestBlockEntity;
+import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.SausageBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.WispBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.crops.LunarianCropBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.crops.PeasCropBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.*;
+import com.bloomhousemc.bewitchedgarden.common.items.BGMusicDisc;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.SausageBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.fluids.PoisonFluid;
 import com.bloomhousemc.bewitchedgarden.common.items.MutandisBrew;
@@ -22,6 +24,7 @@ import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.item.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import static com.bloomhousemc.bewitchedgarden.common.registry.BGFoodComponents.*;
 
@@ -62,6 +65,7 @@ public class BGObjects {
     public static final Item MUTANDIS = register("mutandis", new MutandisItem(gen()));
     public static final Item MUTANDIS_BREW = register("mutandis_brew", new MutandisBrew(gen()));
 
+    public static final Item MUSIC_DISC_PETALS = register("music_disc_petals", new BGMusicDisc(7, BGSounds.MUSIC_DISC_PETALS, gen().maxCount(1).rarity(Rarity.RARE)));
     //Fluids
     public static final FlowableFluid POISON_FLUID_STILL = register("poison_fluid_still", new PoisonFluid.Still());
     public static final FlowableFluid POISON_FLUID_FLOWING = register("poison_fluid_flowing", new PoisonFluid.Flowing());

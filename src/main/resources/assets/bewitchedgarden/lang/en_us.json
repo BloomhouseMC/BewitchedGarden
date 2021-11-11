@@ -9,7 +9,7 @@
   "entity.bewitchedgarden.cruptid": "Cruptid",
   "entity.bewitchedgarden.effigy": "Effigy",
   "entity.bewitchedgarden.elder": "Elder",
-  
+
   "block.bewitchedgarden.lunarian": "Lunarian",
   "block.bewitchedgarden.teleportation_snare": "Teleportation Snare",
   "block.bewitchedgarden.sausage": "Sausage",
@@ -32,6 +32,8 @@
   "item.bewitchedgarden.glowshrub_bulb": "Glowshrub Bulb",
   "item.bewitchedgarden.grabber_stem": "Grabber Stem",
   "item.bewitchedgarden.pea_pod": "Pea Pod",
+  "item.bewitchedgarden.music_disc_petals": "Music Disc",
+  "item.bewitchedgarden.music_disc_petals.desc": "Safro - Petals",
   "item.bewitchedgarden.mint_leaves": "Mint Leaves",
   "item.bewitchedgarden.sausage_item": "Sausage",
   "item.bewitchedgarden.bloodroot_item": "Bloodroot",
