@@ -9,15 +9,13 @@ import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.WispBlockEntit
 import com.bloomhousemc.bewitchedgarden.common.blocks.crops.LunarianCropBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.crops.PeasCropBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.*;
-import com.bloomhousemc.bewitchedgarden.common.items.BGMusicDisc;
-import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.SausageBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.fluids.PoisonFluid;
-import com.bloomhousemc.bewitchedgarden.common.items.MutandisBrew;
-import com.bloomhousemc.bewitchedgarden.common.items.MutandisItem;
-import com.bloomhousemc.bewitchedgarden.common.items.SausageItem;
+import com.bloomhousemc.bewitchedgarden.common.items.*;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.fluid.FlowableFluid;
@@ -26,10 +24,11 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
-import static com.bloomhousemc.bewitchedgarden.common.registry.BGFoodComponents.*;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+
+import static com.bloomhousemc.bewitchedgarden.common.registry.BGFoodComponents.TIER_5_FOOD;
 
 
 public class BGObjects {
@@ -66,6 +65,10 @@ public class BGObjects {
     public static final Item MUTANDIS_BREW = register("mutandis_brew", new MutandisBrew(gen()));
 
     public static final Item MUSIC_DISC_PETALS = register("music_disc_petals", new BGMusicDisc(7, BGSounds.MUSIC_DISC_PETALS, gen().maxCount(1).rarity(Rarity.RARE)));
+
+    // Staffs
+    public static final Item MOSS_STAFF = register("moss_staff", new MossStaffItem(100, gen().maxCount(1).rarity(Rarity.UNCOMMON)));
+
     //Fluids
     public static final FlowableFluid POISON_FLUID_STILL = register("poison_fluid_still", new PoisonFluid.Still());
     public static final FlowableFluid POISON_FLUID_FLOWING = register("poison_fluid_flowing", new PoisonFluid.Flowing());
