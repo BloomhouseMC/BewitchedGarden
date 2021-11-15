@@ -45,7 +45,6 @@ public class EnchantedStaffItem extends BaseStaffItem implements IAnimatable, IS
                     }
                 }
             }
-
         }
         return super.use(world, user, hand);
     }
