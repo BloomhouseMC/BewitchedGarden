@@ -13,12 +13,9 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 @Mixin(InGameOverlayRenderer.class)
 public class InGameOverlayRendererMixin {
 
-    @Inject(method = "renderOverlays",
-    at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/hud/InGameOverlayRenderer;renderUnderwaterOverlay(Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/util/math/MatrixStack;)V"),
-    locals = LocalCapture.CAPTURE_FAILSOFT,
-    cancellable = true)
+    @Inject(method = "renderOverlays", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/hud/InGameOverlayRenderer;renderUnderwaterOverlay(Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/util/math/MatrixStack;)V"), locals = LocalCapture.CAPTURE_FAILSOFT, cancellable = true)
     private static void renderPoisonOverlay(MinecraftClient client, MatrixStack matrices, CallbackInfo ci) {
-        if(FluidOverlay.renderPoinsonOverlay(client.player, matrices)) {
+        if(FluidOverlay.renderPoisonOverlay(client.player, matrices)) {
             ci.cancel();
         }
     }

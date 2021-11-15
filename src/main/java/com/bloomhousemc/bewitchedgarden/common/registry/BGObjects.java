@@ -9,8 +9,8 @@ import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.WispBlockEntit
 import com.bloomhousemc.bewitchedgarden.common.blocks.crops.LunarianCropBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.crops.PeasCropBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.*;
-import com.bloomhousemc.bewitchedgarden.common.fluids.PoisonFluid;
 import com.bloomhousemc.bewitchedgarden.common.items.*;
+import com.bloomhousemc.bewitchedgarden.common.fluids.PoisonFluid;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
@@ -24,11 +24,10 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
+import static com.bloomhousemc.bewitchedgarden.common.registry.BGFoodComponents.*;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import static com.bloomhousemc.bewitchedgarden.common.registry.BGFoodComponents.TIER_5_FOOD;
 
 
 public class BGObjects {
@@ -59,6 +58,7 @@ public class BGObjects {
     public static final Item MINT_LEAVES = register("mint_leaves", new Item(gen()));
     public static final Item PEA_POD = register("pea_pod", new AliasedBlockItem(PEAS, gen()));
 
+
     public static final Item SAUSAGE_ITEM = register("sausage_item", new SausageItem(gen().food(TIER_5_FOOD)));
     public static final Item BLOODROOT_ITEM = register("bloodroot_item", new Item(gen()));
     public static final Item MUTANDIS = register("mutandis", new MutandisItem(gen()));
@@ -68,12 +68,12 @@ public class BGObjects {
 
     // Staffs
     public static final Item MOSS_STAFF = register("moss_staff", new MossStaffItem(100, gen().maxCount(1).rarity(Rarity.UNCOMMON)));
+    public static final Item ENCHANTED_STAFF = register("enchanted_staff", new EnchantedStaffItem(200, gen().maxCount(1).rarity(Rarity.RARE)));
 
     //Fluids
     public static final FlowableFluid POISON_FLUID_STILL = register("poison_fluid_still", new PoisonFluid.Still());
     public static final FlowableFluid POISON_FLUID_FLOWING = register("poison_fluid_flowing", new PoisonFluid.Flowing());
     public static final Item POISON_BUCKET = register("poison_bucket", new BucketItem(POISON_FLUID_STILL, gen().recipeRemainder(Items.BUCKET).maxCount(1)));
-    //public static final Item POISON_BUCKET = new BucketItem(POISON_FLUID_STILL, gen().recipeRemainder(Items.BUCKET).maxCount(1));
 
     //Blocks
     public static final Block SAUSAGE = register("sausage", new SausageBlock(FabricBlockSettings.copyOf(Blocks.STONE)), false);

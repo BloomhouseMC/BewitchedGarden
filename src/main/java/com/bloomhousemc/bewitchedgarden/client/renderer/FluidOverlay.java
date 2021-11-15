@@ -20,7 +20,7 @@ import net.minecraft.world.World;
 public class FluidOverlay {
     private static final Identifier POISON_TEXTURE_UNDERWATER = new Identifier(BewitchedGarden.MODID + ":textures/misc/poison_fluid_underwater.png");
 
-    public static boolean renderPoinsonOverlay(ClientPlayerEntity clientPlayerEntity, MatrixStack matrixStack) {
+    public static boolean renderPoisonOverlay(ClientPlayerEntity clientPlayerEntity, MatrixStack matrixStack) {
         if(!clientPlayerEntity.isSubmergedIn(BGTags.POISON)) {
             return false;
         }

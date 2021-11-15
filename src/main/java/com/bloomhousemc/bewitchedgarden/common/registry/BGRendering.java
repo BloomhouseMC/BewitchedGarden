@@ -31,6 +31,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.BlockRenderView;
+import software.bernie.geckolib3.renderers.geo.GeoItemRenderer;
 
 import java.util.function.Function;
 
@@ -69,6 +70,7 @@ public class BGRendering {
 
         // Item
         BuiltinItemRendererRegistry.INSTANCE.register(BGObjects.LEECH_CHEST, (stack, mode, matrices, vertexConsumers, light, overlay) -> MinecraftClient.getInstance().getBlockEntityRenderDispatcher().renderEntity(new LeechChestBlockEntity(BGObjects.LEECH_CHEST_BLOCK_ENTITY, BlockPos.ORIGIN, BGObjects.LEECH_CHEST.getDefaultState()), matrices, vertexConsumers, light, overlay));
+        GeoItemRenderer.registerItemRenderer(BGObjects.ENCHANTED_STAFF, new EnchantedStaffRenderer());
 
         // Sprites
         SpriteIdentifierRegistry.INSTANCE.addIdentifier(LEECH_CHEST_SPRITE);
