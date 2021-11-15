@@ -1,11 +1,12 @@
 package com.bloomhousemc.bewitchedgarden.common.items;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.thrown.SnowballEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 public class MossStaffItem extends BaseStaffItem {
@@ -19,15 +20,42 @@ public class MossStaffItem extends BaseStaffItem {
         ItemStack stack = user.getStackInHand(hand);
         if (this.getStoredPower() >= 10) {
             if (!world.isClient) {
-                SnowballEntity snowballEntity = new SnowballEntity(world, user);
-                snowballEntity.setItem(new ItemStack(Items.KELP));
-                snowballEntity.setProperties(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 1.0F);
-                world.spawnEntity(snowballEntity);
+                world.setBlockState(this.randomTL(world, user), Blocks.MOSS_BLOCK.getDefaultState());
+                world.setBlockState(this.randomTR(world, user), Blocks.MOSS_BLOCK.getDefaultState());
+                world.setBlockState(this.randomBR(world, user), Blocks.MOSS_BLOCK.getDefaultState());
+                world.setBlockState(this.randomTR(world, user), Blocks.AZALEA.getDefaultState());
+                world.setBlockState(this.randomTL(world, user), Blocks.AZALEA_LEAVES.getDefaultState());
+                world.setBlockState(this.randomBR(world, user), Blocks.FLOWERING_AZALEA.getDefaultState());
+                world.setBlockState(this.randomBL(world, user), Blocks.MOSS_BLOCK.getDefaultState());
+                this.remove(10);
+                this.checkForOverfill();
             }
-            this.remove(10);
-            this.check();
             return TypedActionResult.success(stack);
         }
         return TypedActionResult.pass(stack);
+    }
+
+    public BlockPos randomTL(World world, PlayerEntity player) {
+        BlockPos pos = player.getBlockPos();
+        BlockPos randomPos = pos.add(MathHelper.nextInt(player.getRandom(), 0, 5), 0, MathHelper.nextInt(player.getRandom(), 0, 5));
+        return randomPos;
+    }
+
+    public BlockPos randomTR(World world, PlayerEntity player) {
+        BlockPos pos = player.getBlockPos();
+        BlockPos randomPos = pos.add(MathHelper.nextInt(player.getRandom(), 0, 5), 0, MathHelper.nextInt(player.getRandom(), -5, -1));
+        return randomPos;
+    }
+
+    public BlockPos randomBR(World world, PlayerEntity player) {
+        BlockPos pos = player.getBlockPos();
+        BlockPos randomPos = pos.add(MathHelper.nextInt(player.getRandom(), -5, -1), 0, MathHelper.nextInt(player.getRandom(), -5, -1));
+        return randomPos;
+    }
+
+    public BlockPos randomBL(World world, PlayerEntity player) {
+        BlockPos pos = player.getBlockPos();
+        BlockPos randomPos = pos.add(MathHelper.nextInt(player.getRandom(), -5, -1), 0, MathHelper.nextInt(player.getRandom(), 0, 5));
+        return randomPos;
     }
 }

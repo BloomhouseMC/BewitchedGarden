@@ -1,6 +1,6 @@
 package com.bloomhousemc.bewitchedgarden.common.items;
 
-import moriyashiine.bewitchment.api.block.WitchAltarBlock;
+import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import moriyashiine.bewitchment.common.block.entity.WitchAltarBlockEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
@@ -18,7 +18,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class BaseStaffItem extends Item {
-    private int maxStorage;
+    private final int maxStorage;
     private int storedPower;
 
     public BaseStaffItem(int maxStorage, Settings settings) {
@@ -31,10 +31,12 @@ public class BaseStaffItem extends Item {
         BlockPos pos = context.getBlockPos();
         World world = context.getWorld();
         BlockState state = world.getBlockState(pos);
-        if (state.getBlock() instanceof WitchAltarBlock altar && world.getBlockEntity(pos) instanceof WitchAltarBlockEntity altarBlockEntity) {
-            while (altarBlockEntity.power > 0 && this.getStoredPower() < this.getMaxStorage()) {
-                altarBlockEntity.drain(1, false);
-                ++storedPower;
+        if (world.getBlockEntity(pos) instanceof WitchAltarBlockEntity altarBlockEntity) {
+            for (int drainTick = 0; drainTick <= altarBlockEntity.power; drainTick++) {
+                if (this.getStoredPower() < this.getMaxStorage()) {
+                    altarBlockEntity.drain(1, false);
+                    ++storedPower;
+                }
             }
             return ActionResult.SUCCESS;
         }
@@ -42,9 +44,10 @@ public class BaseStaffItem extends Item {
     }
 
     public void remove(int power) {
-        if (this.storedPower >= power) {
-            this.storedPower = this.storedPower - power;
-        }
+        if (this.getStoredPower() >= power) {
+            this.storedPower = this.getStoredPower() - power;
+        } else
+            BewitchedGarden.LOGGER.info("Error: Trying to remove more power than current power");
     }
 
     public int getMaxStorage() {
@@ -55,7 +58,7 @@ public class BaseStaffItem extends Item {
         return storedPower;
     }
 
-    public void check() {
+    public void checkForOverfill() {
         if (this.getStoredPower() > this.getMaxStorage()) {
             this.storedPower = this.getMaxStorage();
         }
