@@ -71,6 +71,7 @@ public class BGRendering {
         // Item
         BuiltinItemRendererRegistry.INSTANCE.register(BGObjects.LEECH_CHEST, (stack, mode, matrices, vertexConsumers, light, overlay) -> MinecraftClient.getInstance().getBlockEntityRenderDispatcher().renderEntity(new LeechChestBlockEntity(BGObjects.LEECH_CHEST_BLOCK_ENTITY, BlockPos.ORIGIN, BGObjects.LEECH_CHEST.getDefaultState()), matrices, vertexConsumers, light, overlay));
         GeoItemRenderer.registerItemRenderer(BGObjects.ENCHANTED_STAFF, new EnchantedStaffRenderer());
+        GeoItemRenderer.registerItemRenderer(BGObjects.PURITY_STAFF, new PurityStaffRenderer());
 
         // Sprites
         SpriteIdentifierRegistry.INSTANCE.addIdentifier(LEECH_CHEST_SPRITE);
