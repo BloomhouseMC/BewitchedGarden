@@ -11,6 +11,9 @@ import com.bloomhousemc.bewitchedgarden.common.blocks.crops.PeasCropBlock;
 import com.bloomhousemc.bewitchedgarden.common.blocks.snares.*;
 import com.bloomhousemc.bewitchedgarden.common.items.*;
 import com.bloomhousemc.bewitchedgarden.common.fluids.PoisonFluid;
+import com.bloomhousemc.bewitchedgarden.common.items.staff.EnchantedStaffItem;
+import com.bloomhousemc.bewitchedgarden.common.items.staff.MossStaffItem;
+import com.bloomhousemc.bewitchedgarden.common.items.staff.PurityStaffItem;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
@@ -69,6 +72,7 @@ public class BGObjects {
     // Staffs
     public static final Item MOSS_STAFF = register("moss_staff", new MossStaffItem(100, gen().maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item ENCHANTED_STAFF = register("enchanted_staff", new EnchantedStaffItem(200, gen().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item PURITY_STAFF = register("purity_staff", new PurityStaffItem(300, gen().maxCount(1).rarity(Rarity.UNCOMMON)));
 
     //Fluids
     public static final FlowableFluid POISON_FLUID_STILL = register("poison_fluid_still", new PoisonFluid.Still());

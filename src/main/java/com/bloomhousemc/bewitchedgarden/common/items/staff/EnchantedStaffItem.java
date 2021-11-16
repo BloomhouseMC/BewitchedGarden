@@ -1,4 +1,4 @@
-package com.bloomhousemc.bewitchedgarden.common.items;
+package com.bloomhousemc.bewitchedgarden.common.items.staff;
 
 import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
 import net.minecraft.entity.player.PlayerEntity;

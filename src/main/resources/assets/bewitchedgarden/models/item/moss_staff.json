@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"2": "bewitchedgarden:item/moss_staff"
+		"2": "bewitchedgarden:item/staff/moss_staff"
 	},
 	"elements": [
 		{
@@ -111,7 +111,8 @@
 		},
 		"gui": {
 			"rotation": [-127.49, 50.52, 129.85],
-			"translation": [1, -2.5, 0]
+			"translation": [1, -2.5, 0],
+			"scale": [0.75, 0.75, 0.75]
 		},
 		"fixed": {
 			"rotation": [0, -90, 0],

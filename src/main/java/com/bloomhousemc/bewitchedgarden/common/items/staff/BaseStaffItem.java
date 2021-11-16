@@ -1,4 +1,4 @@
-package com.bloomhousemc.bewitchedgarden.common.items;
+package com.bloomhousemc.bewitchedgarden.common.items.staff;
 
 import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import moriyashiine.bewitchment.common.block.entity.WitchAltarBlockEntity;
