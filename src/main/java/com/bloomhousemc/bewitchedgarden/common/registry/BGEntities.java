@@ -49,7 +49,7 @@ public class BGEntities {
         FabricDefaultAttributeRegistry.register(MUNCHER_ENTITY, BasePlantEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(GLOW_SHRUB_ENTITY, BasePlantEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(GRABBER_ENTITY, BasePlantEntity.createAttributes());
-        FabricDefaultAttributeRegistry.register(ELDER_ENTITY, BasePlantEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(ELDER_ENTITY, ElderEntity.createElderAttributes());
         FabricDefaultAttributeRegistry.register(LEAFLET, LeafletEntity.createLeafletAttributes());
         FabricDefaultAttributeRegistry.register(CRUPTID, CruptidEntity.createCruptidAttributes());
         FabricDefaultAttributeRegistry.register(EFFIGY, EffigyEntity.createAttributes());
