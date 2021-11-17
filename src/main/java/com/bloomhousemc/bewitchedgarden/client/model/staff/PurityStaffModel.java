@@ -1,4 +1,4 @@
-package com.bloomhousemc.bewitchedgarden.client.model;
+package com.bloomhousemc.bewitchedgarden.client.model.staff;
 
 import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import com.bloomhousemc.bewitchedgarden.common.items.staff.EnchantedStaffItem;
@@ -14,7 +14,7 @@ public class PurityStaffModel extends AnimatedGeoModel<PurityStaffItem> {
 
     @Override
     public Identifier getTextureLocation(PurityStaffItem object) {
-        return new Identifier(BewitchedGarden.MODID, "textures/item/staff/purity_staff.png");
+        return new Identifier(BewitchedGarden.MODID, "textures/item/staff/staffs.png");
     }
 
     @Override

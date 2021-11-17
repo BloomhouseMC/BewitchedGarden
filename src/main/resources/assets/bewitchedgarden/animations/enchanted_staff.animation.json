@@ -71,7 +71,7 @@
 			"bones": {
 				"glyph_1": {
 					"scale": {
-						"vector": [1, 0, 0]
+						"vector": [0, 0, 0]
 					}
 				},
 				"glyph_3": {
@@ -91,7 +91,7 @@
 				},
 				"glyph_6": {
 					"scale": {
-						"vector": [1, 0, 0]
+						"vector": [0, 0, 0]
 					}
 				}
 			}
@@ -131,17 +131,17 @@
 			"bones": {
 				"glyph_1": {
 					"scale": {
-						"vector": [1, 0, 0]
+						"vector": [0, 0, 0]
 					}
 				},
 				"glyph_2": {
 					"scale": {
-						"vector": [1, 0, 0]
+						"vector": [0, 0, 0]
 					}
 				},
 				"glyph_3": {
 					"scale": {
-						"vector": [1, 0, 0]
+						"vector": [0, 0, 0]
 					}
 				},
 				"glyph_5": {
@@ -151,7 +151,7 @@
 				},
 				"glyph_6": {
 					"scale": {
-						"vector": [1, 0, 0]
+						"vector": [0, 0, 0]
 					}
 				}
 			}
@@ -161,27 +161,27 @@
 			"bones": {
 				"glyph_1": {
 					"scale": {
-						"vector": [1, 0, 0]
+						"vector": [0, 0, 0]
 					}
 				},
 				"glyph_2": {
 					"scale": {
-						"vector": [1, 0, 0]
+						"vector": [0, 0, 0]
 					}
 				},
 				"glyph_3": {
 					"scale": {
-						"vector": [1, 0, 0]
+						"vector": [0, 0, 0]
 					}
 				},
 				"glyph_4": {
 					"scale": {
-						"vector": [1, 0, 0]
+						"vector": [0, 0, 0]
 					}
 				},
 				"glyph_6": {
 					"scale": {
-						"vector": [1, 0, 0]
+						"vector": [0, 0, 0]
 					}
 				}
 			}
@@ -211,7 +211,7 @@
 				},
 				"glyph_5": {
 					"scale": {
-						"vector": [1, 0, 0]
+						"vector": [0, 0, 0]
 					}
 				}
 			}

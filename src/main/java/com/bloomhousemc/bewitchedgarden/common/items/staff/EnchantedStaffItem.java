@@ -34,15 +34,13 @@ public class EnchantedStaffItem extends BaseStaffItem implements IAnimatable, IS
                 AnimationController controller = GeckoLibUtil.getControllerForStack(this.factory, user.getStackInHand(hand), "controller");
                 String animationName = controller.getCurrentAnimation().animationName;
                 int mode = Integer.parseInt(animationName.substring(animationName.length()-1));
-                if(mode==6)mode=1;
-                if(mode < 6){
-                    mode++;
-                    itemStack.getOrCreateNbt().putInt("mode", mode);
-                    final int id = GeckoLibUtil.guaranteeIDForStack(user.getStackInHand(hand), (ServerWorld) world);
-                    GeckoLibNetwork.syncAnimation(user, this, id, mode);
-                    for (PlayerEntity otherPlayer : PlayerLookup.tracking(user)) {
-                        GeckoLibNetwork.syncAnimation(otherPlayer, this, id, mode);
-                    }
+                if(mode>=6)mode=1;
+                mode++;
+                itemStack.getOrCreateNbt().putInt("mode", mode);
+                final int id = GeckoLibUtil.guaranteeIDForStack(user.getStackInHand(hand), (ServerWorld) world);
+                GeckoLibNetwork.syncAnimation(user, this, id, mode);
+                for (PlayerEntity otherPlayer : PlayerLookup.tracking(user)) {
+                    GeckoLibNetwork.syncAnimation(otherPlayer, this, id, mode);
                 }
             }
         }
