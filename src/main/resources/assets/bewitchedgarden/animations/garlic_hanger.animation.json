@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.garlichanger.idle": {
+			"loop": true,
+			"animation_length": 3,
+			"bones": {
+				"rope": {
+					"rotation": {
+						"0.0": {
+							"vector": [-1, 0, 0]
+						},
+						"1.48": {
+							"vector": [1, 0, 0],
+							"easing": "easeInOutQuad"
+						},
+						"2.88": {
+							"vector": [-1, 0, 0],
+							"easing": "easeInOutQuad"
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

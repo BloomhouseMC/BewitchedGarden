@@ -1,6 +1,5 @@
 package com.bloomhousemc.bewitchedgarden.common.blocks.blockentity;
 
-import com.bloomhousemc.bewitchedgarden.common.blocks.SausageBlock;
 import com.bloomhousemc.bewitchedgarden.common.registry.BGObjects;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -14,10 +13,10 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class GarlicHangerBlockEntity extends BlockEntity implements IAnimatable {
+public class HangerHerbBlockEntity extends BlockEntity implements IAnimatable {
     private final AnimationFactory factory = new AnimationFactory(this);
 
-    public GarlicHangerBlockEntity(BlockPos pos, BlockState state) {
+    public HangerHerbBlockEntity(BlockPos pos, BlockState state) {
         super(BGObjects.HANGER_HERB_BLOCK_ENTITY, pos, state);
     }
 

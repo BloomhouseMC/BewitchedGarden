@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 
-public class SausageBlock extends Block implements BlockEntityProvider {
+public class SausageBlock extends HangerHerbBlock implements BlockEntityProvider {
     public static IntProperty SAUSAGES = IntProperty.of("sausage", 1, 4);
     public SausageBlock(Settings settings) {
         super(settings.nonOpaque().breakInstantly());
@@ -58,7 +58,7 @@ public class SausageBlock extends Block implements BlockEntityProvider {
 
     @Override
     public boolean canReplace(BlockState state, ItemPlacementContext context) {
-        if(context.getStack().getItem() == (BGObjects.SAUSAGE_ITEM.asItem())){
+        if(context.getStack().getItem() == (BGObjects.SAUSAGE_HANGER_ITEM.asItem())){
             return (Integer) state.get(SAUSAGES) < 4;
         }
         return super.canReplace(state, context);
@@ -77,7 +77,7 @@ public class SausageBlock extends Block implements BlockEntityProvider {
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         super.onBreak(world, pos, state, player);
         for(int i = state.get(SAUSAGES); i > 0;i--){
-            dropStack(world, pos, new ItemStack(BGObjects.SAUSAGE_ITEM));
+            dropStack(world, pos, new ItemStack(BGObjects.SAUSAGE_HANGER_ITEM));
         }
     }
 }

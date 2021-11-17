@@ -1,7 +1,7 @@
 {
   "parent": "builtin/entity",
   "textures": {
-    "particle": "bewitchedgarden:block/garlichanger"
+    "particle": "bewitchedgarden:block/garlic_hanger"
   },
   "display": {
     "gui": {

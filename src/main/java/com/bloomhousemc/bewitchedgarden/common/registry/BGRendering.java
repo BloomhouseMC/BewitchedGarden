@@ -61,11 +61,13 @@ public class BGRendering {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BGObjects.SNARE, BGObjects.FIERY_SNARE, BGObjects.NIGHT_SNARE, BGObjects.TELEPORTATION_SNARE, BGObjects.CAPTURE_SNARE);
 
         //BlockEntity
-        BlockEntityRendererRegistry.INSTANCE.register(BGObjects.SAUSAGE_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new SausageBlockEntityRenderer());
+        BlockEntityRendererRegistry.INSTANCE.register(BGObjects.SAUSAGE_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new HangerHerbBlockEntityRenderer());
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.WISP_BLOCK_ENTITY, ctx -> new WispBlockEntityRenderer());
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.HEAVENS_GATE_BLOCK_ENTITY, ctx -> new HeavensGateBlockEntityRenderer());
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.LEECH_CHEST_BLOCK_ENTITY, LeechChestEntityRenderer::new);
-        BlockEntityRendererRegistry.INSTANCE.register(BGObjects.GARLIC_HANGER_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new GarlicHangerBlockEntityRenderer());
+        //BlockEntityRendererRegistry.INSTANCE.register(BGObjects.GARLIC_HANGER_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new GarlicHangerBlockEntityRenderer());
+
+        BlockEntityRendererRegistry.INSTANCE.register(BGObjects.HANGER_HERB_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new HangerHerbBlockEntityRenderer());
 
         //ItemEntity
         EntityRendererRegistry.INSTANCE.register(BGEntities.MUTANDIS_ENTITY_ENTITY_TYPE, (context) -> new FlyingItemEntityRenderer(context));

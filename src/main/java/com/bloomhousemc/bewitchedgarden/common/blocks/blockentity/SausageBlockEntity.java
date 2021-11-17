@@ -14,11 +14,11 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class SausageBlockEntity extends BlockEntity implements IAnimatable {
+public class SausageBlockEntity extends HangerHerbBlockEntity implements IAnimatable {
     private final AnimationFactory factory = new AnimationFactory(this);
 
     public SausageBlockEntity(BlockPos pos, BlockState state) {
-        super(BGObjects.SAUSAGE_BLOCK_ENTITY, pos, state);
+        super(pos, state);
     }
 
     private <E extends BlockEntity & IAnimatable> PlayState predicate(AnimationEvent<E> event) {

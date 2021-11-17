@@ -23,6 +23,9 @@
   "block.bewitchedgarden.corrupted_dirt": "Corrupted Dirt",
   "block.bewitchedgarden.heavens_gate": "Heavens Gate",
   "block.bewitchedgarden.leech_chest": "Leech Chest",
+  "block.bewitchedgarden.sausage_hanger": "Sausage",
+  "block.bewitchedgarden.garlic_hanger": "Garlic Hanger",
+  "block.bewitchedgardenrowan_hanger": "Rowan Hanger",
 
   "item.bewitchedgarden.lunarian_seeds": "Lunarian Seeds",
   "item.bewitchedgarden.lunar_petal": "Lunar Petal",
@@ -46,6 +49,13 @@
   "item.bewitchedgarden.poison_bucket": "Poison Bucket",
   "item.bewitchedgarden.moss_staff": "Moss Staff",
   "item.bewitchedgarden.purity_staff": "Staff of Purity",
+  "item.bewitchedgarden.dragonblood_base_staff": "Dragon's Blood Staff Base",
+  "item.bewitchedgarden.elder_base_staff": "Elder Staff Base",
+  "item.bewitchedgarden.juniper_base_staff": "Juniper Staff Base",
+  "item.bewitchedgarden.cypress_base_staff": "Cypress Staff Base",
+  "item.bewitchedgarden.enchanted_staff": "Dragon's Blood Staff",
+  "item.bewitchedgarden.juniper_staff": "Juniper Staff",
+  "item.bewitchedgarden.cypress_staff": "Cypress Staff",
 
   "ritual.bewitchedgarden.rituals.summon_leaflet": "Summon Leaflet",
 

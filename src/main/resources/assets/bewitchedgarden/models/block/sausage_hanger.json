@@ -2,7 +2,7 @@
   "credit": "Made with Blockbench",
   "parent": "builtin/entity",
   "textures": {
-    "particle": "bewitchedgarden:block/sausage"
+    "particle": "bewitchedgarden:block/sausage_hanger"
   },
   "texture_size": [
     18,
