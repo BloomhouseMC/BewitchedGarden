@@ -10,6 +10,7 @@ public class BaseStaffModel extends AnimatedGeoModel<BaseStaffItem> {
     public String getWood(BaseStaffItem item){
         return Registry.ITEM.getKey(item).get().getValue().getPath();
     }
+
     @Override
     public Identifier getModelLocation(BaseStaffItem object) {
         return new Identifier(BewitchedGarden.MODID, "geo/"+getWood(object)+".geo.json");

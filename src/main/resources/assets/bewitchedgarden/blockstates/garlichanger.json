@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "": {
+      "model": "bewitchedgarden:block/garlichanger", "uvlock": true }
+  }
+}

@@ -65,6 +65,7 @@ public class BGRendering {
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.WISP_BLOCK_ENTITY, ctx -> new WispBlockEntityRenderer());
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.HEAVENS_GATE_BLOCK_ENTITY, ctx -> new HeavensGateBlockEntityRenderer());
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.LEECH_CHEST_BLOCK_ENTITY, LeechChestEntityRenderer::new);
+        BlockEntityRendererRegistry.INSTANCE.register(BGObjects.GARLIC_HANGER_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new GarlicHangerBlockEntityRenderer());
 
         //ItemEntity
         EntityRendererRegistry.INSTANCE.register(BGEntities.MUTANDIS_ENTITY_ENTITY_TYPE, (context) -> new FlyingItemEntityRenderer(context));

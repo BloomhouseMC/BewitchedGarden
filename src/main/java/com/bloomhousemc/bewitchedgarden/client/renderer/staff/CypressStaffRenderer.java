@@ -16,6 +16,7 @@ public class CypressStaffRenderer extends GeoItemRenderer<CypressStaffItem> {
         super(new CypressStaffModel());
     }
 
+    
 
     @Override
     public RenderLayer getRenderType(CypressStaffItem animatable, float partialTicks, MatrixStack stack, VertexConsumerProvider renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn, Identifier textureLocation) {

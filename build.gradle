@@ -155,6 +155,11 @@ dependencies {
 
 	//Geckolib
 	modImplementation "software.bernie.geckolib:geckolib-fabric-${gecko_version}"
+
+	//Appleskin
+	modRuntime("squeek.appleskin:appleskin-fabric:${appleskin_version}") {
+		exclude module: 'modmenu'
+	}
 }
 
 loom {

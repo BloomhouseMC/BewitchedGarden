@@ -1,26 +1,23 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.cypress_staff.idle": {
+		"animation.garlichanger.idle": {
 			"loop": true,
-			"animation_length": 2,
+			"animation_length": 3,
 			"bones": {
-				"head": {
+				"rope": {
 					"rotation": {
 						"0.0": {
-							"vector": [0, 5, 0]
+							"vector": [-1, 0, 0]
 						},
-						"1.0": {
-							"vector": [0, -5, 0],
+						"1.48": {
+							"vector": [1, 0, 0],
 							"easing": "easeInOutQuad"
 						},
-						"2.0": {
-							"vector": [0, 5, 0],
+						"2.88": {
+							"vector": [-1, 0, 0],
 							"easing": "easeInOutQuad"
 						}
-					},
-					"scale": {
-						"vector": [0.7, 0.7, 0.7]
 					}
 				}
 			}
