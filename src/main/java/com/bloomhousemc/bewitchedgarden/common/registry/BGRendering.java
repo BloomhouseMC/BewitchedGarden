@@ -2,10 +2,7 @@ package com.bloomhousemc.bewitchedgarden.common.registry;
 
 import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import com.bloomhousemc.bewitchedgarden.client.renderer.*;
-import com.bloomhousemc.bewitchedgarden.client.renderer.staff.CypressStaffRenderer;
-import com.bloomhousemc.bewitchedgarden.client.renderer.staff.EnchantedStaffRenderer;
-import com.bloomhousemc.bewitchedgarden.client.renderer.staff.JuniperStaffRenderer;
-import com.bloomhousemc.bewitchedgarden.client.renderer.staff.PurityStaffRenderer;
+import com.bloomhousemc.bewitchedgarden.client.renderer.staff.*;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.LeechChestBlockEntity;
 import com.terraformersmc.terraform.sign.SpriteIdentifierRegistry;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -78,6 +75,12 @@ public class BGRendering {
         GeoItemRenderer.registerItemRenderer(BGObjects.PURITY_STAFF, new PurityStaffRenderer());
         GeoItemRenderer.registerItemRenderer(BGObjects.JUNIPER_STAFF, new JuniperStaffRenderer());
         GeoItemRenderer.registerItemRenderer(BGObjects.CYPRESS_STAFF, new CypressStaffRenderer());
+
+        GeoItemRenderer.registerItemRenderer(BGObjects.DRAGONBLOOD_BASE_STAFF, new BaseStaffRenderer());
+        GeoItemRenderer.registerItemRenderer(BGObjects.ELDER_BASE_STAFF, new BaseStaffRenderer());
+        GeoItemRenderer.registerItemRenderer(BGObjects.JUNIPER_BASE_STAFF, new BaseStaffRenderer());
+        GeoItemRenderer.registerItemRenderer(BGObjects.CYPRESS_BASE_STAFF, new BaseStaffRenderer());
+
 
         // Sprites
         SpriteIdentifierRegistry.INSTANCE.addIdentifier(LEECH_CHEST_SPRITE);

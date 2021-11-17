@@ -67,6 +67,12 @@ public class BGObjects {
 
     public static final Item MUSIC_DISC_PETALS = register("music_disc_petals", new BGMusicDisc(7, BGSounds.MUSIC_DISC_PETALS, gen().maxCount(1).rarity(Rarity.RARE)));
 
+    // Staff Bases
+    public static final Item DRAGONBLOOD_BASE_STAFF = register("dragonblood_base_staff", new BaseStaffItem(0, gen().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item ELDER_BASE_STAFF = register("elder_base_staff", new BaseStaffItem(0, gen().maxCount(1).rarity(Rarity.UNCOMMON)));
+    public static final Item JUNIPER_BASE_STAFF = register("juniper_base_staff", new BaseStaffItem(0, gen().maxCount(1).rarity(Rarity.UNCOMMON)));
+    public static final Item CYPRESS_BASE_STAFF = register("cypress_base_staff", new BaseStaffItem(0, gen().maxCount(1).rarity(Rarity.UNCOMMON)));
+
     // Staffs
     public static final Item MOSS_STAFF = register("moss_staff", new MossStaffItem(100, gen().maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item ENCHANTED_STAFF = register("enchanted_staff", new EnchantedStaffItem(200, gen().maxCount(1).rarity(Rarity.RARE)));

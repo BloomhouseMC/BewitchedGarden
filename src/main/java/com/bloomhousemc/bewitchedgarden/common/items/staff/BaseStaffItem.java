@@ -14,10 +14,14 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 import java.util.List;
 
-public class BaseStaffItem extends Item {
+public class BaseStaffItem extends Item implements IAnimatable {
+    public AnimationFactory factory = new AnimationFactory(this);
     private final int maxStorage;
     private int storedPower;
 
@@ -66,5 +70,17 @@ public class BaseStaffItem extends Item {
 
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(new LiteralText("Power: " + storedPower + "/" + maxStorage).formatted(Formatting.DARK_GREEN));
+    }
+
+
+    //Geckolib
+    @Override
+    public void registerControllers(AnimationData animationData) {
+
+    }
+
+    @Override
+    public AnimationFactory getFactory() {
+        return factory;
     }
 }
