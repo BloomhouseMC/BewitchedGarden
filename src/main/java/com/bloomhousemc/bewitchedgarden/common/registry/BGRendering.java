@@ -57,7 +57,7 @@ public class BGRendering {
         EntityRendererRegistry.INSTANCE.register(BGEntities.MUNCHER_ENTITY, BasePlantEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(BGEntities.GLOW_SHRUB_ENTITY, BasePlantEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(BGEntities.GRABBER_ENTITY, BasePlantEntityRenderer::new);
-        EntityRendererRegistry.INSTANCE.register(BGEntities.ELDER_ENTITY, BasePlantEntityRenderer::new);
+        EntityRendererRegistry.INSTANCE.register(BGEntities.ELDER_ENTITY, ElderEntityRenderer::new);
 
 
         EntityRendererRegistry.INSTANCE.register(BGEntities.BACKPACK_ENTITY, BackpackEntityRenderer::new);
