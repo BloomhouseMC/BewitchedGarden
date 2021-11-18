@@ -2,7 +2,6 @@ package com.bloomhousemc.bewitchedgarden.client.model.staff;
 
 import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import com.bloomhousemc.bewitchedgarden.common.items.staff.CypressStaffItem;
-import com.bloomhousemc.bewitchedgarden.common.items.staff.JuniperStaffItem;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 

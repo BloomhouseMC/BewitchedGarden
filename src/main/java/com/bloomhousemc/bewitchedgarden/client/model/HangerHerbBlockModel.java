@@ -1,10 +1,7 @@
 package com.bloomhousemc.bewitchedgarden.client.model;
 
 import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
-import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.GarlicHangerBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.HangerHerbBlockEntity;
-import com.bloomhousemc.bewitchedgarden.common.entity.BasePlantEntity;
-import com.bloomhousemc.bewitchedgarden.common.items.staff.BaseStaffItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import software.bernie.geckolib3.model.AnimatedGeoModel;

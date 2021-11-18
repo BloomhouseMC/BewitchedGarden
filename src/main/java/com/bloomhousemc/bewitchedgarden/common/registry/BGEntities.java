@@ -2,6 +2,7 @@ package com.bloomhousemc.bewitchedgarden.common.registry;
 
 import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import com.bloomhousemc.bewitchedgarden.common.entity.*;
+import com.bloomhousemc.bewitchedgarden.common.entity.player.BackpackEntity;
 import com.bloomhousemc.bewitchedgarden.common.items.itementity.MutandisEntity;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
@@ -26,6 +27,8 @@ public class BGEntities {
     public static final EntityType<LeafletEntity> LEAFLET = create("leaflet", FabricEntityTypeBuilder.<LeafletEntity>create(SpawnGroup.CREATURE, LeafletEntity::new).dimensions(EntityDimensions.fixed(0.5F, 0.6F)).build());
     public static final EntityType<CruptidEntity> CRUPTID = create("cruptid", FabricEntityTypeBuilder.<CruptidEntity>create(SpawnGroup.MONSTER, CruptidEntity::new).dimensions(EntityDimensions.fixed(0.7F, 0.6F)).build());
     public static final EntityType<EffigyEntity> EFFIGY = create("effigy", FabricEntityTypeBuilder.<EffigyEntity>create(SpawnGroup.MONSTER, EffigyEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.8F)).build());
+
+    public static final EntityType<BackpackEntity> BACKPACK_ENTITY = create("backpack_entity", FabricEntityTypeBuilder.<BackpackEntity>create(SpawnGroup.MISC, BackpackEntity::new).dimensions(EntityDimensions.fixed(0.6F, 1.8F)).build());
 
 
     public static final EntityType<MutandisEntity> MUTANDIS_ENTITY_ENTITY_TYPE = Registry.register(Registry.ENTITY_TYPE, new Identifier(BewitchedGarden.MODID, "mutanis_entity"),
@@ -53,6 +56,7 @@ public class BGEntities {
         FabricDefaultAttributeRegistry.register(LEAFLET, LeafletEntity.createLeafletAttributes());
         FabricDefaultAttributeRegistry.register(CRUPTID, CruptidEntity.createCruptidAttributes());
         FabricDefaultAttributeRegistry.register(EFFIGY, EffigyEntity.createAttributes());
+        FabricDefaultAttributeRegistry.register(BACKPACK_ENTITY, BackpackEntity.createAttributes());
         /*
         for(EntityType entityType : WKEntities.ENTITY_TYPES.keySet()){
             FabricDefaultAttributeRegistry.register(entityType, BasePlantEntity.createAttributes());

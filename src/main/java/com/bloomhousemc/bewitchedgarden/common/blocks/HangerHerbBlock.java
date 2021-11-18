@@ -1,6 +1,5 @@
 package com.bloomhousemc.bewitchedgarden.common.blocks;
 
-import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.GarlicHangerBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.HangerHerbBlockEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;

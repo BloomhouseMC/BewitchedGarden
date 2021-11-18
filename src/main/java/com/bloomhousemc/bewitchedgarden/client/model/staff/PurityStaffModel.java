@@ -1,7 +1,6 @@
 package com.bloomhousemc.bewitchedgarden.client.model.staff;
 
 import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
-import com.bloomhousemc.bewitchedgarden.common.items.staff.EnchantedStaffItem;
 import com.bloomhousemc.bewitchedgarden.common.items.staff.PurityStaffItem;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib3.model.AnimatedGeoModel;

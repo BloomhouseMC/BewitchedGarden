@@ -1,9 +1,7 @@
 package com.bloomhousemc.bewitchedgarden.client.renderer.staff;
 
 import com.bloomhousemc.bewitchedgarden.client.model.staff.CypressStaffModel;
-import com.bloomhousemc.bewitchedgarden.client.model.staff.EnchantedStaffModel;
 import com.bloomhousemc.bewitchedgarden.common.items.staff.CypressStaffItem;
-import com.bloomhousemc.bewitchedgarden.common.items.staff.EnchantedStaffItem;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;

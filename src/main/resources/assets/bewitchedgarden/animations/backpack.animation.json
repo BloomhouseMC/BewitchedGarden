@@ -1,0 +1,92 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.idle": {
+			"animation_length": 0.52,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.52": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.52": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.player.sneak": {
+			"animation_length": 0.52,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"0.0": {
+							"vector": [-32.5, 0, 0]
+						},
+						"0.52": {
+							"vector": [-32.5, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, -1.5, 0.5]
+						},
+						"0.52": {
+							"vector": [0, -1.5, 0.5]
+						}
+					}
+				}
+			}
+		},
+		"animation.player.sleep": {
+			"loop": true,
+			"bones": {
+				"strap": {
+					"scale": {
+						"vector": [0, 1, 0]
+					}
+				},
+				"strap2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"sleep": {
+					"scale": {
+						"vector": [0, 1, 0]
+					}
+				}
+			}
+		},
+		"animation.player.water": {
+			"loop": true,
+			"bones": {
+				"jar": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.player.scroll": {
+			"loop": true,
+			"bones": {
+				"pocketRight": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

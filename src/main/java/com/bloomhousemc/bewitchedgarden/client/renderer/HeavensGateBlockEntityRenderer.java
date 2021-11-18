@@ -2,7 +2,7 @@ package com.bloomhousemc.bewitchedgarden.client.renderer;
 
 import com.bloomhousemc.bewitchedgarden.client.model.HeavensGateBlockModel;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.HeavensGateBlockEntity;
-import com.bloomhousemc.bewitchedgarden.mixin.RenderLayerAccessor;
+import com.bloomhousemc.bewitchedgarden.mixin.client.RenderLayerMixin;
 import net.minecraft.client.render.*;
 import net.minecraft.client.render.block.entity.EndPortalBlockEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
@@ -13,7 +13,7 @@ import software.bernie.geckolib3.renderers.geo.GeoBlockRenderer;
 
 public class HeavensGateBlockEntityRenderer extends GeoBlockRenderer<HeavensGateBlockEntity> {
     public static Shader renderTypeCustomShader;
-    private static final RenderLayer.MultiPhase GATE = RenderLayerAccessor.callOf("end_portal", VertexFormats.POSITION, VertexFormat.DrawMode.QUADS, 256, false, false, RenderLayer.MultiPhaseParameters.builder()
+    private static final RenderLayer.MultiPhase GATE = RenderLayerMixin.callOf("end_portal", VertexFormats.POSITION, VertexFormat.DrawMode.QUADS, 256, false, false, RenderLayer.MultiPhaseParameters.builder()
     .shader(new RenderPhase.Shader(() -> renderTypeCustomShader))
     .texture(RenderPhase.Textures.create()
     .add(EndPortalBlockEntityRenderer.SKY_TEXTURE, false, false)

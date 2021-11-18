@@ -1,10 +1,44 @@
+<div align="center">
+
+<img alt="BewitchedGarden Icon" src="src/main/resources/assets/bewitchedgarden/icon.png" width="128">
+
 # Bewitched Garden
 
-## About
+<!-- todo: replace 494721 with your CurseForge project id -->
+[![Release](https://img.shields.io/github/v/release/Maleks-Modding-Studios/Terrafabricraft?style=for-the-badge&include_prereleases&sort=semver)][releases]
+[![Available For](https://img.shields.io/badge/dynamic/json?label=Available%20For&style=for-the-badge&color=34aa2f&query=gameVersionLatestFiles%5B0%5D.gameVersion&url=https%3A%2F%2Faddons-ecs.forgesvc.net%2Fapi%2Fv2%2Faddon%2F494721)][curseforge]
+<a href="https://discord.gg/hpDv9FQJAS"><img src="https://img.shields.io/discord/854223782171508799?color=5865f2&label=Feedback%20%26%20Help&style=for-the-badge" alt="Discord"></a>
+[![Downloads](https://img.shields.io/badge/dynamic/json?label=Downloads&style=for-the-badge&color=f16436&query=downloadCount&url=https%3A%2F%2Faddons-ecs.forgesvc.net%2Fapi%2Fv2%2Faddon%2F494721)][curseforge:files]
+</div>
 
-Bewitched Garden is an addon for [Bewitchment](https://www.curseforge.com/minecraft/mc-mods/bewitchment) that adds lots of creatures, items, and concepts revolving around plants and cooking. 
+A Bewitchemnt Add-on! Staring a few fun ways to mutate and grow your garden
 
-### [Discord](https://discord.gg/GwVv8ZnbNe)
+It is built on the [Fabric][fabric] mod loader and is available for modern
+versions of [Minecraft][minecraft] Java Edition.
 
-### [Website](bloomhousemc.com)
+## Feedback and Help
 
+Discord link: [BloomhouseMC][contributing]
+
+## Do you have any suggestions for what should be in Bewitched Garden?
+You can let us know in the #Suggestions channel on our Discord!
+
+
+
+## Licence
+
+* Code, Textures, Models and Sounds
+    - (c) 2021, [MrSterner], [Safrodev]
+    - [![License](https://img.shields.io/badge/License-MIT%201.0-cyan.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+
+
+
+
+[contributing]: https://discord.gg/hpDv9FQJAS
+[curseforge]: https://curseforge.com/minecraft/mc-mods/modid/files
+[curseforge:files]: https://curseforge.com/minecraft/mc-mods/modid/files
+[fabric]: https://fabricmc.net/
+[minecraft]: https://minecraft.net/
+[releases]: https://github.com/BloomhouseMC/BewitchedGarden/releases
+[mrsterner]: https://github.com/mrsterner
+[Safrodev]: https://github.com/Safrodev

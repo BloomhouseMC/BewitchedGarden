@@ -56,7 +56,9 @@ public class BGObjects {
     public static final Item MINT_LEAVES = register("mint_leaves", new Item(gen()));
     public static final Item PEA_POD = register("pea_pod", new AliasedBlockItem(PEAS, gen()));
 
+    public static final Block BACKPACK_BLOCK = register("backpack_block", new BackpackBlock(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL)), false);
 
+    public static final Item BACKPACK_ITEM = register("backpack_item", new BackpackItem(BACKPACK_BLOCK, gen()));
 
 
     public static final Item BLOODROOT_ITEM = register("bloodroot_item", new Item(gen()));
@@ -111,6 +113,8 @@ public class BGObjects {
 
     public static final BlockEntityType<SausageBlockEntity> SAUSAGE_BLOCK_ENTITY = register("sausage_block_entity", FabricBlockEntityTypeBuilder.create(SausageBlockEntity::new, SAUSAGE_HANGER).build(null));
     public static final BlockEntityType<HangerHerbBlockEntity> HANGER_HERB_BLOCK_ENTITY = register("hanger_herb", FabricBlockEntityTypeBuilder.create(HangerHerbBlockEntity::new, ROWAN_HANGER, GARLIC_HANGER, SAUSAGE_HANGER).build(null));
+
+    public static final BlockEntityType<BackpackBlockEntity> BACKPACK_BLOCK_ENTITY = register("backpack_entity", FabricBlockEntityTypeBuilder.create(BackpackBlockEntity::new, BACKPACK_BLOCK).build(null));
 
     //Oils
     public static final Item MOONLIGHT_INFUSION = register("moonlight_infusion", new Item(gen().recipeRemainder(Items.GLASS_BOTTLE)));

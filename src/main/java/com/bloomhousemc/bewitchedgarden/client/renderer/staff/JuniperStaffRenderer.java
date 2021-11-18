@@ -1,9 +1,7 @@
 package com.bloomhousemc.bewitchedgarden.client.renderer.staff;
 
 import com.bloomhousemc.bewitchedgarden.client.model.staff.JuniperStaffModel;
-import com.bloomhousemc.bewitchedgarden.client.model.staff.PurityStaffModel;
 import com.bloomhousemc.bewitchedgarden.common.items.staff.JuniperStaffItem;
-import com.bloomhousemc.bewitchedgarden.common.items.staff.PurityStaffItem;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;

@@ -10,7 +10,9 @@
     "Safro"
   ],
   "contact": {
-    "sources": "https://github.com/BloomhouseMC/BewitchedGarden"
+    "homepage": "https://bloomhousemc.github.io/",
+    "sources": "https://github.com/BloomhouseMC/BewitchedGarden",
+    "issues": "https://github.com/BloomhouseMC/BewitchedGarden/issues"
   },
 
   "license": "CC0-1.0",
@@ -25,7 +27,7 @@
       "com.bloomhousemc.bewitchedgarden.BewitchedGardenClient"
     ],
     "modmenu": [
-      "com.bloomhousemc.bewitchedgarden.common.compat.BGModMenu"
+      "com.bloomhousemc.bewitchedgarden.client.compat.BGModMenu"
     ],
     "cardinal-components-entity": [
       "com.bloomhousemc.bewitchedgarden.common.registry.BGComponents"

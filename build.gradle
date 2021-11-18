@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.9-SNAPSHOT'
+	id 'fabric-loom' version '0.10-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -86,6 +86,10 @@ repositories {
 		name = 'GeckoLib'
 		url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
 	}
+	maven {
+		name = "Conditional Crafting"
+		url = "https://ytg1234.github.io/maven"
+	}
 }
 
 dependencies {
@@ -160,6 +164,9 @@ dependencies {
 	modRuntime("squeek.appleskin:appleskin-fabric:${appleskin_version}") {
 		exclude module: 'modmenu'
 	}
+
+	//Conditional Recipes
+	include(modImplementation("io.github.ytg1234:fabric-recipe-conditions:${project.conditional_recipes_version}"))
 }
 
 loom {

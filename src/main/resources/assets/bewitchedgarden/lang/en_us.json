@@ -57,10 +57,20 @@
   "item.bewitchedgarden.juniper_staff": "Juniper Staff",
   "item.bewitchedgarden.cypress_staff": "Cypress Staff",
 
+  "item.bewitchedgarden.backpack_item": "Backpack",
+  "block.bewitchedgarden.backpack_block": "Backpack",
+
   "ritual.bewitchedgarden.rituals.summon_leaflet": "Summon Leaflet",
 
   "container.bewitchedgarden.leech_chest": "Leech Chest",
+  "container.bewitchedgarden.unequip": "Unequip",
+  "container.bewitchedgarden.equip": "Equip",
+  "container.bewitchedgarden.obstructed_block": "Obstructed Block",
+  "container.bewitchedgarden.cant_equip": "Cant Equip",
 
-  "death.attack.snare": "&s was crunched in a snare"
+  "death.attack.snare": "&s was crunched in a snare",
+
+  "text.autoconfig.bewitchedgarden.option.enableBackpack": "Enable Backpack",
+  "text.autoconfig.bewitchedgarden.title": "Bewitched garden"
 }
 

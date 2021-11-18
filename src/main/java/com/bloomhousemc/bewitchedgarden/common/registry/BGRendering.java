@@ -2,8 +2,11 @@ package com.bloomhousemc.bewitchedgarden.common.registry;
 
 import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import com.bloomhousemc.bewitchedgarden.client.renderer.*;
+import com.bloomhousemc.bewitchedgarden.client.renderer.backpack.BackpackEntityRenderer;
+import com.bloomhousemc.bewitchedgarden.client.renderer.backpack.BackpackItemRenderer;
 import com.bloomhousemc.bewitchedgarden.client.renderer.staff.*;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.LeechChestBlockEntity;
+import com.bloomhousemc.bewitchedgarden.client.renderer.backpack.BackpackRenderer;
 import com.terraformersmc.terraform.sign.SpriteIdentifierRegistry;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
@@ -56,6 +59,9 @@ public class BGRendering {
         EntityRendererRegistry.INSTANCE.register(BGEntities.GRABBER_ENTITY, BasePlantEntityRenderer::new);
         EntityRendererRegistry.INSTANCE.register(BGEntities.ELDER_ENTITY, BasePlantEntityRenderer::new);
 
+
+        EntityRendererRegistry.INSTANCE.register(BGEntities.BACKPACK_ENTITY, BackpackEntityRenderer::new);
+
         //LayerMaps
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BGObjects.LUNARIAN, BGObjects.PEAS, BGObjects.MINT, BGObjects.BLOODROOT);
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BGObjects.SNARE, BGObjects.FIERY_SNARE, BGObjects.NIGHT_SNARE, BGObjects.TELEPORTATION_SNARE, BGObjects.CAPTURE_SNARE);
@@ -65,9 +71,11 @@ public class BGRendering {
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.WISP_BLOCK_ENTITY, ctx -> new WispBlockEntityRenderer());
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.HEAVENS_GATE_BLOCK_ENTITY, ctx -> new HeavensGateBlockEntityRenderer());
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.LEECH_CHEST_BLOCK_ENTITY, LeechChestEntityRenderer::new);
-        //BlockEntityRendererRegistry.INSTANCE.register(BGObjects.GARLIC_HANGER_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new GarlicHangerBlockEntityRenderer());
+
 
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.HANGER_HERB_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new HangerHerbBlockEntityRenderer());
+        BlockEntityRendererRegistry.INSTANCE.register(BGObjects.BACKPACK_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new BackpackRenderer());
+
 
         //ItemEntity
         EntityRendererRegistry.INSTANCE.register(BGEntities.MUTANDIS_ENTITY_ENTITY_TYPE, (context) -> new FlyingItemEntityRenderer(context));
@@ -84,7 +92,7 @@ public class BGRendering {
         GeoItemRenderer.registerItemRenderer(BGObjects.JUNIPER_BASE_STAFF, new BaseStaffRenderer());
         GeoItemRenderer.registerItemRenderer(BGObjects.CYPRESS_BASE_STAFF, new BaseStaffRenderer());
 
-
+        GeoItemRenderer.registerItemRenderer(BGObjects.BACKPACK_ITEM, new BackpackItemRenderer());
         // Sprites
         SpriteIdentifierRegistry.INSTANCE.addIdentifier(LEECH_CHEST_SPRITE);
         ClientSpriteRegistryCallback.event(CHEST_ATLAS_TEXTURE).register((texture, registry) -> {

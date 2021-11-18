@@ -1,6 +1,5 @@
 package com.bloomhousemc.bewitchedgarden.common.blocks.blockentity;
 
-import com.bloomhousemc.bewitchedgarden.common.blocks.SausageBlock;
 import com.bloomhousemc.bewitchedgarden.common.registry.BGObjects;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
