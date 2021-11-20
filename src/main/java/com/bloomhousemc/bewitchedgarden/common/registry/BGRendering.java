@@ -70,6 +70,7 @@ public class BGRendering {
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.SAUSAGE_BLOCK_ENTITY, (BlockEntityRendererFactory.Context rendererDispatcherIn) -> new HangerHerbBlockEntityRenderer());
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.WISP_BLOCK_ENTITY, ctx -> new WispBlockEntityRenderer());
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.HEAVENS_GATE_BLOCK_ENTITY, ctx -> new HeavensGateBlockEntityRenderer());
+        BlockEntityRendererRegistry.INSTANCE.register(BGObjects.MOONFLOWER_BLOCK_ENTITY, ctx -> new MoonflowerBlockEntityRenderer());
         BlockEntityRendererRegistry.INSTANCE.register(BGObjects.LEECH_CHEST_BLOCK_ENTITY, LeechChestEntityRenderer::new);
 
 

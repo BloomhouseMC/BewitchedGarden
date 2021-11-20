@@ -100,6 +100,8 @@ public class BGObjects {
     public static final Block SAUSAGE_HANGER = register("sausage_hanger", new SausageBlock(FabricBlockSettings.copyOf(Blocks.STONE)), false);
     public static final Block ROWAN_HANGER = register("rowan_hanger", new HangerHerbBlock(FabricBlockSettings.copyOf(Blocks.STONE)), false);
 
+    public static final Block MOONFLOWER = register("moonflower", new MoonflowerBlock(FabricBlockSettings.copyOf(Blocks.STONE)), true);
+
     // BlockItems
     public static final Item SAUSAGE_HANGER_ITEM = register("sausage_hanger_item", new BlockItem(SAUSAGE_HANGER, gen().food(TIER_5_FOOD)));
     public static final Item GARLIC_HANGER_ITEM = register("garlic_hanger_item", new BlockItem(GARLIC_HANGER, gen().food(TIER_1_FOOD)));
@@ -110,6 +112,7 @@ public class BGObjects {
     public static final BlockEntityType<WispBlockEntity> WISP_BLOCK_ENTITY = register("wisp_block_entity", FabricBlockEntityTypeBuilder.create(WispBlockEntity::new, WISP).build(null));
     public static final BlockEntityType<LeechChestBlockEntity> LEECH_CHEST_BLOCK_ENTITY = register("leech_chest_block_entity", FabricBlockEntityTypeBuilder.create(LeechChestBlockEntity::new, LEECH_CHEST).build(null));
     public static final BlockEntityType<HeavensGateBlockEntity> HEAVENS_GATE_BLOCK_ENTITY = register("heavens_gate_block_entity", FabricBlockEntityTypeBuilder.create(HeavensGateBlockEntity::new, HEAVENS_GATE).build(null));
+    public static final BlockEntityType<MoonflowerBlockEntity> MOONFLOWER_BLOCK_ENTITY = register("moonflower_block_entity", FabricBlockEntityTypeBuilder.create(MoonflowerBlockEntity::new, MOONFLOWER).build(null));
 
     public static final BlockEntityType<SausageBlockEntity> SAUSAGE_BLOCK_ENTITY = register("sausage_block_entity", FabricBlockEntityTypeBuilder.create(SausageBlockEntity::new, SAUSAGE_HANGER).build(null));
     public static final BlockEntityType<HangerHerbBlockEntity> HANGER_HERB_BLOCK_ENTITY = register("hanger_herb", FabricBlockEntityTypeBuilder.create(HangerHerbBlockEntity::new, ROWAN_HANGER, GARLIC_HANGER, SAUSAGE_HANGER).build(null));

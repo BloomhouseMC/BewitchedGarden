@@ -1,0 +1,334 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.moonflower.fullMoon": {
+			"loop": true,
+			"bones": {
+				"newMoon": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbos": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCresent": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCresent": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbos": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.moonflower.waxingGibbous": {
+			"loop": true,
+			"bones": {
+				"fullMoon": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbos": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					},
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCresent": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCresent": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.moonflower.firstQuarter": {
+			"loop": true,
+			"bones": {
+				"fullMoon": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbos": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCresent": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCresent": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter": {
+					"scale": {
+						"vector": [1, 1, 1]
+					}
+				},
+				"waxingGibbos": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.moonflower.waxingCrescent": {
+			"loop": true,
+			"bones": {
+				"fullMoon": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbos": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCresent": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbos": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.moonflower.waningCrescent": {
+			"loop": true,
+			"bones": {
+				"fullMoon": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbos": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCresent": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbos": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.moonflower.thirdQuarter": {
+			"loop": true,
+			"bones": {
+				"fullMoon": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbos": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCresent": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCresent": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbos": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.moonflower.waningGibbous": {
+			"loop": true,
+			"bones": {
+				"fullMoon": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCresent": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCresent": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbos": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.moonflower.newMoon": {
+			"loop": true,
+			"bones": {
+				"fullMoon": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbos": {
+					"scale": {
+						"vector": [0, 0, 1]
+					}
+				},
+				"thirdQuarter": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCresent": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCresent": {
+					"scale": {
+						"vector": [0, 0, 1]
+					}
+				},
+				"firstQuarter": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbos": {
+					"scale": {
+						"vector": [0, 0, 1]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}
