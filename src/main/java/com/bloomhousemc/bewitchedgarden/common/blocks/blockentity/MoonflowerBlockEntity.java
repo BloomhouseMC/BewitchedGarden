@@ -43,6 +43,7 @@ public class MoonflowerBlockEntity extends BlockEntity implements IAnimatable {
         return PlayState.CONTINUE;
     }
 
+
     @Override
     public void readNbt(NbtCompound nbt) {
         super.readNbt(nbt);
