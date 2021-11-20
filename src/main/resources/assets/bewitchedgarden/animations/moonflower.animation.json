@@ -38,6 +38,151 @@
 					"scale": {
 						"vector": [0, 0, 0]
 					}
+				},
+				"newMoon2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbos2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCresent2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCresent2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbos3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbos4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCresent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCresent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbos4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
 				}
 			}
 		},
@@ -54,7 +199,7 @@
 						"vector": [0, 0, 0]
 					}
 				},
-				"waningGibbos": {
+				"waningGibbous": {
 					"rotation": {
 						"vector": [0, 0, 0]
 					},
@@ -67,17 +212,132 @@
 						"vector": [0, 0, 0]
 					}
 				},
-				"waningCresent": {
+				"waningCrescent": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
 				},
-				"waxingCresent": {
+				"waxingCrescent": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
 				},
 				"firstQuarter": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCresent2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCresent2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent2": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
@@ -87,42 +347,107 @@
 		"animation.moonflower.firstQuarter": {
 			"loop": true,
 			"bones": {
-				"fullMoon": {
+				"fullMoon2": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
 				},
-				"newMoon": {
+				"newMoon2": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
 				},
-				"waningGibbos": {
+				"waningGibbous2": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
 				},
-				"thirdQuarter": {
+				"thirdQuarter2": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
 				},
-				"waningCresent": {
+				"waningCrescent2": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
 				},
-				"waxingCresent": {
+				"waxingCrescent2": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
 				},
-				"firstQuarter": {
+				"waxingGibbous2": {
 					"scale": {
-						"vector": [1, 1, 1]
+						"vector": [0, 0, 0]
 					}
 				},
-				"waxingGibbos": {
+				"fullMoon3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous4": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
@@ -142,7 +467,7 @@
 						"vector": [0, 0, 0]
 					}
 				},
-				"waningGibbos": {
+				"waningGibbous": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
@@ -152,7 +477,7 @@
 						"vector": [0, 0, 0]
 					}
 				},
-				"waningCresent": {
+				"waningCrescent": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
@@ -162,7 +487,112 @@
 						"vector": [0, 0, 0]
 					}
 				},
-				"waxingGibbos": {
+				"waxingGibbous": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous4": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
@@ -182,7 +612,7 @@
 						"vector": [0, 0, 0]
 					}
 				},
-				"waningGibbos": {
+				"waningGibbous": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
@@ -192,7 +622,7 @@
 						"vector": [0, 0, 0]
 					}
 				},
-				"waxingCresent": {
+				"waxingCrescent": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
@@ -202,7 +632,112 @@
 						"vector": [0, 0, 0]
 					}
 				},
-				"waxingGibbos": {
+				"waxingGibbous": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous4": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
@@ -222,17 +757,17 @@
 						"vector": [0, 0, 0]
 					}
 				},
-				"waningGibbos": {
+				"waningGibbous": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
 				},
-				"waningCresent": {
+				"waningCrescent": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
 				},
-				"waxingCresent": {
+				"waxingCrescent": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
@@ -242,7 +777,112 @@
 						"vector": [0, 0, 0]
 					}
 				},
-				"waxingGibbos": {
+				"waxingGibbous": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous4": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
@@ -267,12 +907,12 @@
 						"vector": [0, 0, 0]
 					}
 				},
-				"waningCresent": {
+				"waningCrescent": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
 				},
-				"waxingCresent": {
+				"waxingCrescent": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
@@ -282,7 +922,112 @@
 						"vector": [0, 0, 0]
 					}
 				},
-				"waxingGibbos": {
+				"waxingGibbous": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"newMoon4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous4": {
 					"scale": {
 						"vector": [0, 0, 0]
 					}
@@ -299,7 +1044,7 @@
 				},
 				"waningGibbos": {
 					"scale": {
-						"vector": [0, 0, 1]
+						"vector": [0, 0, 0]
 					}
 				},
 				"thirdQuarter": {
@@ -314,7 +1059,7 @@
 				},
 				"waxingCresent": {
 					"scale": {
-						"vector": [0, 0, 1]
+						"vector": [0, 0, 0]
 					}
 				},
 				"firstQuarter": {
@@ -324,7 +1069,133 @@
 				},
 				"waxingGibbos": {
 					"scale": {
-						"vector": [0, 0, 1]
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon2": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon3": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingGibbous4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"firstQuarter4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waxingCrescent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningCrescent4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"thirdQuarter4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"waningGibbous4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"fullMoon4": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.moonflower.idle": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"plant2": {
+					"rotation": {
+						"0.0": {
+							"vector": [-0.5, 0, 0]
+						},
+						"1.0": {
+							"vector": [0.5, 0, 0],
+							"easing": "easeInOutQuad"
+						},
+						"2.0": {
+							"vector": [-0.5, 0, 0],
+							"easing": "easeInOutQuad"
+						}
 					}
 				}
 			}
