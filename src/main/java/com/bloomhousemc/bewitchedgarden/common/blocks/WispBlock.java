@@ -1,6 +1,7 @@
 package com.bloomhousemc.bewitchedgarden.common.blocks;
 
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.WispBlockEntity;
+import com.mojang.blaze3d.systems.RenderSystem;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.*;
@@ -24,6 +25,7 @@ public class WispBlock extends Block implements BlockEntityProvider {
             }
         }));
     }
+
     private static final VoxelShape SHAPE =
     VoxelShapes.union(
     createCuboidShape(6, 6, 6, 10, 10, 10));

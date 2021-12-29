@@ -86,10 +86,6 @@ repositories {
 		name = 'GeckoLib'
 		url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
 	}
-	maven {
-		name = "Conditional Crafting"
-		url = "https://ytg1234.github.io/maven"
-	}
 }
 
 dependencies {
