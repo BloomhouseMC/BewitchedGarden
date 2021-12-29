@@ -21,7 +21,7 @@ public class TeleportationSnareBlock extends SnareBlock {
                 user.damage(new SnareDamageSource(), 1.0F);
                 BWUtil.attemptTeleport(user, user.getBlockPos(), 40, true);
                 world.setBlockState(pos, (BlockState)state.with(CLOSED, true), 3);
-                world.getBlockTickScheduler().schedule(pos, this, 30);
+                world.createAndScheduleBlockTick(pos,this,30);
             }
         }
     }

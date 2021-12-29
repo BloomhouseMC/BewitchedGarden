@@ -21,6 +21,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -116,6 +117,7 @@ public class HeavensGateBlock extends HorizontalFacingBlock implements BlockEnti
         }
         return super.canPlaceAt(state, world, pos);
     }
+
 
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {

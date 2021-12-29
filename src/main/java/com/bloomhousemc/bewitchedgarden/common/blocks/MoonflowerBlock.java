@@ -1,7 +1,6 @@
 package com.bloomhousemc.bewitchedgarden.common.blocks;
 
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.MoonflowerBlockEntity;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.ShapeContext;

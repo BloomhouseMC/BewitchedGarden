@@ -22,6 +22,19 @@ public class GrabberEntity extends BasePlantEntity implements InventoryOwner {
     }
 
     @Override
+    public int getVariants() {
+        return getVariantsStatic();
+    }
+
+    @Override
+    protected boolean hasShiny() {
+        return true;
+    }
+    public static int getVariantsStatic() {
+        return 3;
+    }
+
+    @Override
     public void tick() {
         super.tick();
     }
@@ -30,6 +43,7 @@ public class GrabberEntity extends BasePlantEntity implements InventoryOwner {
         super.writeCustomDataToNbt(nbt);
         nbt.put("Inventory", inventory.toNbtList());
     }
+
     @Override
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);

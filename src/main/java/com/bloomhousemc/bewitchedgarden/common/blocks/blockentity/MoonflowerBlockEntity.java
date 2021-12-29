@@ -2,7 +2,6 @@ package com.bloomhousemc.bewitchedgarden.common.blocks.blockentity;
 
 import com.bloomhousemc.bewitchedgarden.common.registry.BGObjects;
 import moriyashiine.bewitchment.api.BewitchmentAPI;
-import net.fabricmc.fabric.api.client.rendering.v1.DimensionRenderingRegistry;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.nbt.NbtCompound;
@@ -51,10 +50,7 @@ public class MoonflowerBlockEntity extends BlockEntity implements IAnimatable {
         super.readNbt(nbt);
     }
 
-    @Override
-    public NbtCompound writeNbt(NbtCompound nbt) {
-        return super.writeNbt(nbt);
-    }
+
 
     @Override
     public void registerControllers(AnimationData animationData) {

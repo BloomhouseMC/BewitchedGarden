@@ -1,8 +1,6 @@
 package com.bloomhousemc.bewitchedgarden.client.renderer;
 
-import com.bloomhousemc.bewitchedgarden.client.model.HangerHerbBlockModel;
 import com.bloomhousemc.bewitchedgarden.client.model.MoonflowerModel;
-import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.HangerHerbBlockEntity;
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.MoonflowerBlockEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;

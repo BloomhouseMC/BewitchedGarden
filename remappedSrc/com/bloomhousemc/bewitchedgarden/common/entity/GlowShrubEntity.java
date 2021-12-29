@@ -8,9 +8,15 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
-public class GlowShrubEntity extends BasePlantEntity {
+@Deprecated
+public class GlowShrubEntity extends BasePlantEntity  {//TODO remove glowshrub
     public GlowShrubEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
+    }
+
+    @Override
+    public int getVariants() {
+        return 0;
     }
 
     @Override
@@ -28,5 +34,10 @@ public class GlowShrubEntity extends BasePlantEntity {
 
     @Override
     protected void initGoals() {
+    }
+
+    @Override
+    protected boolean hasShiny() {
+        return false;
     }
 }

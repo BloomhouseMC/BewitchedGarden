@@ -2,7 +2,6 @@ package com.bloomhousemc.bewitchedgarden.client.model;
 
 import com.bloomhousemc.bewitchedgarden.BewitchedGarden;
 import com.bloomhousemc.bewitchedgarden.common.entity.ElderEntity;
-import com.bloomhousemc.bewitchedgarden.common.entity.ElderEntity;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 

@@ -32,7 +32,7 @@ public class HeavensGateBlockEntityRenderer extends GeoBlockRenderer<HeavensGate
     @Override
     public void render(HeavensGateBlockEntity heavensGateBlockEntity, float partialTicks, MatrixStack stack, VertexConsumerProvider bufferIn, int packedLightIn) {
         super.render(heavensGateBlockEntity, partialTicks, stack, bufferIn, packedLightIn);
-        Matrix4f matrix = stack.peek().getModel();
+        Matrix4f matrix = stack.peek().getPositionMatrix();
         VertexConsumer vertexConsumer = bufferIn.getBuffer(GATE);
         heavensGateBlockEntity.getCachedState().get(Properties.HORIZONTAL_FACING);
         switch (heavensGateBlockEntity.getCachedState().get(Properties.HORIZONTAL_FACING)) {

@@ -68,7 +68,9 @@ public class MuncherEntity extends BasePlantEntity {
 
     @Override
     public void onDeath(DamageSource source) {
-        if(world.getBlockState(this.getBlockPos()).isAir()) world.setBlockState(this.getBlockPos(), BGObjects.POISON_PUDDLE.getDefaultState());
+        if(world.getBlockState(this.getBlockPos()).isAir()){
+            world.setBlockState(this.getBlockPos(), BGObjects.POISON_PUDDLE.getDefaultState());
+        }
         super.onDeath(source);
     }
 

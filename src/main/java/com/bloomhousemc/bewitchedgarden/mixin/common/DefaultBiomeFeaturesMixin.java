@@ -13,11 +13,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class DefaultBiomeFeaturesMixin {
     @Inject(method = "addForestGrass", at = @At("TAIL"))
     private static void addHerbs(GenerationSettings.Builder builder, CallbackInfo ci) {
-        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BGWorld.MINT);
+       //builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BGWorld.MINT);
     }
 
     @Inject(method = "addDesertVegetation(Lnet/minecraft/world/biome/GenerationSettings$Builder;)V", at = @At("TAIL"))
     private static void addDesertVegetation(GenerationSettings.Builder builder, CallbackInfo ci) {
-        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BGWorld.BLOODROOT_GEN_CONFIGURED);
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, BGWorld.BLOOD_ROOT);
     }
 }

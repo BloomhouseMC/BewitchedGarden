@@ -31,10 +31,7 @@ public class GarlicHangerBlockEntity extends BlockEntity implements IAnimatable 
         super.readNbt(nbt);
     }
 
-    @Override
-    public NbtCompound writeNbt(NbtCompound nbt) {
-        return super.writeNbt(nbt);
-    }
+
 
     @Override
     public void registerControllers(AnimationData animationData) {

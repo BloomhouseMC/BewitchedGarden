@@ -1,9 +1,7 @@
 package com.bloomhousemc.bewitchedgarden.common.entity;
 
 import moriyashiine.bewitchment.common.block.entity.interfaces.TaglockHolder;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -14,10 +12,13 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.TimeHelper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.LocalDifficulty;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -31,8 +32,9 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 import java.util.Objects;
 import java.util.UUID;
 
-public class BasePlantEntity extends PathAwareEntity implements IAnimatable, Angerable, TaglockHolder {
+public abstract class BasePlantEntity extends PathAwareEntity implements IAnimatable, Angerable, TaglockHolder {
     AnimationFactory factory = new AnimationFactory(this);
+    public static final TrackedData<Integer> VARIANT = DataTracker.registerData(BasePlantEntity.class, TrackedDataHandlerRegistry.INTEGER);
     private static final TrackedData<Integer> ANGER_TIME = DataTracker.registerData(BasePlantEntity.class, TrackedDataHandlerRegistry.INTEGER);
     public static final TrackedData<Integer> STATE = DataTracker.registerData(BasePlantEntity.class, TrackedDataHandlerRegistry.INTEGER);
     private static final UniformIntProvider ANGER_TIME_RANGE = TimeHelper.betweenSeconds(1, 2);
@@ -46,6 +48,27 @@ public class BasePlantEntity extends PathAwareEntity implements IAnimatable, Ang
     }
     public String getEntity(BasePlantEntity ghostEntity){
         return Registry.ENTITY_TYPE.getKey(ghostEntity.getType()).get().getValue().getPath();
+    }
+
+    public abstract int getVariants();
+
+    @Override
+    public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityTag) {
+        int variants = getVariants();
+        if (variants > 1) {
+            if (hasShiny()) {
+                if (random.nextInt(4096) == 0) {
+                    dataTracker.set(VARIANT, 0);
+                }
+                else {
+                    dataTracker.set(VARIANT, random.nextInt(variants - 1) + 1);
+                }
+            }
+            else {
+                dataTracker.set(VARIANT, random.nextInt(variants));
+            }
+        }
+        return super.initialize(world, difficulty, spawnReason, entityData, entityTag);
     }
 
     public static DefaultAttributeContainer.Builder createAttributes() {
@@ -64,9 +87,30 @@ public class BasePlantEntity extends PathAwareEntity implements IAnimatable, Ang
     @Override
     protected void initDataTracker() {
         super.initDataTracker();
+        if (getVariants() > 1) {
+            dataTracker.startTracking(VARIANT, 1);
+        }
         this.dataTracker.startTracking(ANGER_TIME, 0);
         this.dataTracker.startTracking(STATE, 0);
     }
+
+    @Override
+    public void readCustomDataFromNbt(NbtCompound nbt) {
+        super.readCustomDataFromNbt(nbt);
+        if (getVariants() > 1) {
+            dataTracker.set(VARIANT, nbt.getInt("Variant"));
+        }
+    }
+
+    @Override
+    public void writeCustomDataToNbt(NbtCompound nbt) {
+        super.writeCustomDataToNbt(nbt);
+        if (getVariants() > 1) {
+            nbt.putInt("Variant", dataTracker.get(VARIANT));
+        }
+    }
+
+    protected abstract boolean hasShiny();
 
     public int getAttckingState() {
         return this.dataTracker.get(STATE);

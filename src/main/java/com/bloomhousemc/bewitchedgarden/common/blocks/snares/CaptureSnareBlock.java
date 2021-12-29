@@ -18,7 +18,7 @@ public class CaptureSnareBlock extends SnareBlock {
         //    user.slowMovement(state, new Vec3d(0.001, 0.001, 0.001));
             if (!world.isClient) {
                 world.setBlockState(pos, (BlockState)state.with(CLOSED, true), 3);
-                world.getBlockTickScheduler().schedule(pos, this, 30);
+                world.createAndScheduleBlockTick(pos,this,30);
             }
         }
     }

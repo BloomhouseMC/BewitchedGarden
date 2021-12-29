@@ -1,7 +1,6 @@
 package com.bloomhousemc.bewitchedgarden.common.blocks;
 
 import com.bloomhousemc.bewitchedgarden.common.blocks.blockentity.WispBlockEntity;
-import com.mojang.blaze3d.systems.RenderSystem;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.*;

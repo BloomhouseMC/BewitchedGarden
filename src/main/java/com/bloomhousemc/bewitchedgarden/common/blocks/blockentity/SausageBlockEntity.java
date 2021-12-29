@@ -37,10 +37,6 @@ public class SausageBlockEntity extends HangerHerbBlockEntity implements IAnimat
         super.readNbt(nbt);
     }
 
-    @Override
-    public NbtCompound writeNbt(NbtCompound nbt) {
-        return super.writeNbt(nbt);
-    }
 
     @Override
     public void registerControllers(AnimationData animationData) {

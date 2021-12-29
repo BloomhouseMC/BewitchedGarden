@@ -14,7 +14,6 @@ import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.WorldAccess;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
@@ -41,7 +40,7 @@ public class BewitchedGarden implements ModInitializer {
 		BGEvents.init();
 		BGStatusEffects.init();
 		BGRitualFunctions.init();
-		BGWorld.init();
+		//BGWorld.init();
 		SOUNDS = new BGSounds();
 
 

@@ -7,6 +7,8 @@ import net.minecraft.util.registry.Registry;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class BasePlantEntityModel extends AnimatedGeoModel<BasePlantEntity> {
+    private static Identifier[] TEXTURES;
+
     public String getEntity(BasePlantEntity plantEntity){
         return Registry.ENTITY_TYPE.getKey(plantEntity.getType()).get().getValue().getPath();
     }
@@ -22,6 +24,13 @@ public class BasePlantEntityModel extends AnimatedGeoModel<BasePlantEntity> {
 
     @Override
     public Identifier getTextureLocation(BasePlantEntity entity) {
-        return new Identifier(BewitchedGarden.MODID, "textures/entity/plant/"+getEntity(entity)+".png");
+        if (TEXTURES == null) {
+            int variants = entity.getVariants();
+            TEXTURES = new Identifier[variants];
+            for (int i = 0; i < variants; i++) {
+                TEXTURES[i] = new Identifier(BewitchedGarden.MODID, "textures/entity/plant/" + i + ".png");
+            }
+        }
+        return TEXTURES[entity.getDataTracker().get(BasePlantEntity.VARIANT)];
     }
 }

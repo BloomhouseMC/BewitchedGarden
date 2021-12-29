@@ -9,22 +9,17 @@
     "common.ItemEntityMixin",
     "common.PlayerScreenHandlerMixin",
     "common.DefaultBiomeFeaturesMixin",
-    "common.EntityMixin",
     "common.ItemEntityMixin",
-    "common.LivingEntityMixin",
-    "common.PlayerEntityMixin",
     "common.ServerPlayerEntityMixin",
     "common.ServerPlayerInteractionManagerMixin"
   ],
   "client": [
-    "client.BackgroundRendererMixin",
     "client.ClientPlayerInteractionManagerMixin",
     "client.KeyBindingMixin",
     "client.MinecraftClientMixin",
     "client.PlayerEntityRendererMixin",
     "client.ClientPlayerEntityMixin",
     "client.GameRendererMixin",
-    "client.InGameOverlayRendererMixin",
     "client.RenderLayerMixin"
   ],
   "injectors": {

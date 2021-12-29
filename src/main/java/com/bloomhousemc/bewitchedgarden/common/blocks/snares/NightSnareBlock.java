@@ -24,7 +24,7 @@ public class NightSnareBlock extends SnareBlock {
                 user.damage(new SnareDamageSource(), 1.0F);
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 100, 0, true, false));
                 world.setBlockState(pos, (BlockState)state.with(CLOSED, true), 3);
-                world.getBlockTickScheduler().schedule(pos, this, 30);
+                world.createAndScheduleBlockTick(pos,this,30);
             }
         }
     }

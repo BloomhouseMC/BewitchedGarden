@@ -25,7 +25,7 @@ public class WispBlock extends Block implements BlockEntityProvider {
             }
         }));
     }
-    RenderSystem
+
     private static final VoxelShape SHAPE =
     VoxelShapes.union(
     createCuboidShape(6, 6, 6, 10, 10, 10));

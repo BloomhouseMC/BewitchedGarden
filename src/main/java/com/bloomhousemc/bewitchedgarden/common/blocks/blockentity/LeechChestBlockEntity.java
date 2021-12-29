@@ -77,10 +77,9 @@ public class LeechChestBlockEntity extends ChestBlockEntity implements ChestAnim
         Inventories.readNbt(nbt, this.inventory);
     }
 
-    public NbtCompound writeNbt(NbtCompound nbt) {
+    public void writeNbt(NbtCompound nbt) {
         super.writeNbt(nbt);
         Inventories.writeNbt(nbt, this.inventory);
-        return nbt;
     }
 
     public boolean onSyncedBlockEvent(int type, int data) {

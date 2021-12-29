@@ -20,7 +20,7 @@ public class MutandisBrew extends Item {
         if (!world.isClient) {
             MutandisEntity mutandisEntity = new MutandisEntity(world, user);
             mutandisEntity.setItem(itemStack);
-            mutandisEntity.setProperties(user, user.getPitch(), user.getYaw(), -20.0F, 0.5F, 1.0F);
+            mutandisEntity.setVelocity(user, user.getPitch(), user.getYaw(), -20.0F, 0.5F, 1.0F);
             world.spawnEntity(mutandisEntity);
         }
 
